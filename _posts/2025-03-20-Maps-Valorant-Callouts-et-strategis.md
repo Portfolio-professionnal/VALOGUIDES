@@ -6,7 +6,6 @@ category: Maps
 excerpt: "Guide complet pour maîtriser chaque carte du jeu"
 image: "https://i.postimg.cc/W119yHpV/valorant-maps.webp"
 reading_time: 15
-views: 278000
 difficulty: "Intermédiaire"
 ---
 
