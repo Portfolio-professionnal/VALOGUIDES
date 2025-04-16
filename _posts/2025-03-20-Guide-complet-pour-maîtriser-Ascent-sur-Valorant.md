@@ -8,156 +8,277 @@ image: "https://i.postimg.cc/jjYfGWtb/valorant-ascent-carte-guide.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
-    <!-- Hero Image -->
+    <!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
-      <img
+      <img 
         src="{{ page.image }}"
-        alt="{{ page.title }}"
+        alt="{{ page.title }}" 
         loading="lazy"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
-
+    
     <article class="prose prose-invert max-w-none">
-      <!-- Title & Meta -->
-      <h1 class="text-4xl font-bold mb-4 text-[#FF4655]">{{ page.title }}</h1>
-      <div class="flex items-center mb-8 text-gray-400">
-        <span class="text-sm">{{ page.date | date: "%d %B %Y" }}</span>
-        <span class="mx-2">•</span>
-        <span class="text-sm">{{ page.category }}</span>
-      </div>
+      <!-- Titre et métadonnées -->
+      <h1 class="text-4xl font-bold mb-2 text-[#FF4655]">{{ page.title }}</h1>
+      <p class="mb-8 text-gray-400 italic">16 avril 2025 • {{ page.category }}</p>
 
       <!-- Introduction -->
       <p class="mb-6 text-gray-300">
-        Ascent reste l'une des maps emblématiques de Valorant, reconnue pour son mid ouvert et ses combats de contrôle territorial intenses.  
-        Ce guide approfondi vous donnera toutes les clés pour dominer cette carte italienne, que vous soyez attaquant ou défenseur.
+        Ascent reste l'une des maps emblématiques de Valorant, reconnue pour son mid ouvert et ses combats de contrôle territorial intenses. Ce guide approfondi vous donnera toutes les clés pour dominer cette carte italienne, que vous soyez attaquant ou défenseur.
       </p>
 
       <!-- Sommaire -->
       <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Sommaire</h2>
-      <ol class="list-decimal pl-5 mb-12 text-gray-300">
-        <li class="mb-2">Layout et particularités</li>
-        <li class="mb-2">Défense (CT)</li>
-        <li class="mb-2">Attaque (T)</li>
-        <li class="mb-2">Contrôle du Mid</li>
-        <li class="mb-2">Agents recommandés</li>
-        <li class="mb-2">Post-plant et retakes</li>
-        <li class="mb-2">Conseils avancés</li>
+      <ol class="list-decimal pl-5 mb-8 text-gray-300">
+        <li class="mb-1">Layout et particularités</li>
+        <li class="mb-1">Défense (CT)
+          <ul class="list-disc pl-5">
+            <li>Setup A</li>
+            <li>Setup B</li>
+            <li>Contrôle du Mid</li>
+          </ul>
+        </li>
+        <li class="mb-1">Attaque (T)
+          <ul class="list-disc pl-5">
+            <li>Exécutes sur A</li>
+            <li>Exécutes sur B</li>
+            <li>Stratégies Mid</li>
+          </ul>
+        </li>
+        <li class="mb-1">Agents recommandés</li>
+        <li class="mb-1">Post-plant et retakes</li>
+        <li class="mb-1">Conseils avancés</li>
       </ol>
 
       <!-- Layout et particularités -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Layout et particularités</h2>
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="layout-et-particularités">Layout et particularités</h2>
+      <ul class="list-disc pl-5 mb-8 text-gray-300">
+        <li><strong>Mid ouvert</strong> avec de nombreuses lignes de vue</li>
+        <li><strong>Portes destructibles</strong> sur A et B</li>
+        <li><strong>Hauteurs exploitables</strong> (Catwalk, Heaven)</li>
+        <li><strong>Connecteurs étroits</strong> (Market, Lobby A, Tree)</li>
+      </ul>
+      <p class="mb-8 text-gray-300">
+        La carte est relativement symétrique avec deux sites bombsites, mais chacun présente des dynamiques très différentes:
+      </p>
       <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li>Mid ouvert avec de nombreuses lignes de vue</li>
-        <li>Portes destructibles sur A et B</li>
-        <li>Hauteurs exploitables : Catwalk, Heaven</li>
-        <li>Connecteurs étroits : Market, Lobby A, Tree</li>
-        <li>Sites asymétriques : A (ouvert, hauteurs), B (angles serrés)</li>
+        <li><strong>Site A</strong> : Ouvert avec des hauteurs (Heaven) et des angles serrés (Generator)</li>
+        <li><strong>Site B</strong> : Plus petit avec des angles à 90° et moins de verticalité</li>
       </ul>
 
-      <!-- Défense vs Attaque Columns -->
-      <div class="grid md:grid-cols-2 gap-12 mb-12">
-        <!-- Attaque (T) - Left -->
-        <div>
-          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Attaque (T)</h2>
-          
-          <!-- Exécutes sur A -->
-          <h3 class="text-xl font-semibold mb-2 text-gray-200">Exécutes sur A</h3>
-          <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li>1 smoke Heaven + 1 smoke CT spawn</li>
-            <li>1 flash pour l’entrée + 1 molly Generator</li>
-            <li>Variante split : 3 Main / 2 Mid → A Link</li>
-          </ul>
-          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300 mb-6">
-            Post‑plant : Heaven, Generator, A Main pour couper rotations.
-          </p>
+      <!-- Défense -->
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="défense-ct">Défense (CT)</h2>
 
-          <!-- Exécutes sur B -->
-          <h3 class="text-xl font-semibold mb-2 text-gray-200">Exécutes sur B</h3>
-          <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li>Smoke CT + smoke Market</li>
-            <li>Molly back‑site + flash pour l’entrée</li>
-            <li>Feinte B→A via Mid avec timing serré</li>
-          </ul>
-          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Post‑plant : Boathouse, Default plant, back‑site défense.
-          </p>
-        </div>
+      <!-- Setup A -->
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="setup-a">Setup A</h3>
+      <p class="mb-2 text-gray-300"><strong>Position standard (3‑1‑1)</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>2 joueurs sur le site A (un sur site, un à Heaven)</li>
+        <li>1 joueur en défense avancée à A Main</li>
+        <li>1 joueur contrôlant Mid</li>
+        <li>1 joueur sur le site B</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Utility setup optimal</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Placez des alarmes ou pièges dans A Main et A Link</li>
+        <li>Utilisez des fumigènes pour bloquer l'entrée principale</li>
+        <li>Gardez au moins une capacité pour retarder les rushes</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Angles à privilégier</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Heaven (couverture du site entier)</li>
+        <li>Generator (angle surprenant)</li>
+        <li>Hell/Cubby (position défensive)</li>
+        <li>Wine (embuscade)</li>
+      </ul>
+      <p class="mb-8 text-gray-300 italic border-l-4 border-gray-600 pl-4">
+        Astuce pro : Alternez entre une défense passive sur site et des positions agressives en A Main pour perturber le timing des attaquants.
+      </p>
 
-        <!-- Défense (CT) - Right -->
-        <div>
-          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Défense (CT)</h2>
-          
-          <!-- Setup A -->
-          <h3 class="text-xl font-semibold mb-2 text-gray-200">Setup A</h3>
-          <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li>2 sur site A (un site, un Heaven)</li>
-            <li>1 en défense avancée A Main</li>
-            <li>1 Mid, 1 sur site B</li>
-          </ul>
-          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300 mb-6">
-            Utilité : alarmes/pieges A Main, smokes obstructives, garder un kit.
-          </p>
-
-          <!-- Setup B -->
-          <h3 class="text-xl font-semibold mb-2 text-gray-200">Setup B</h3>
-          <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li>2 sur B (site & B Main)</li>
-            <li>Flexibilité Market ↔ Site</li>
-            <li>Smokes B Main, pièges à l’entrée</li>
-          </ul>
-          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Angles clés : Boîtes, CT spawn, Market, Back site.
-          </p>
-        </div>
-      </div>
+      <!-- Setup B -->
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="setup-b">Setup B</h3>
+      <p class="mb-2 text-gray-300"><strong>Position standard</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>2 joueurs sur B (un sur site, un B Main)</li>
+        <li>Position flexible entre Market et Site</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Utility setup optimal</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Bloquez B Main avec des smokes</li>
+        <li>Placez des pièges à l'entrée du site</li>
+        <li>Utilisez les portes métalliques comme information sonore</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Angles à privilégier</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Boîtes du site (headshot angle)</li>
+        <li>CT spawn (retake facilité)</li>
+        <li>Market (rotation rapide)</li>
+        <li>Back site (couverture complète)</li>
+      </ul>
+      <p class="mb-8 text-gray-300 italic border-l-4 border-gray-600 pl-4">
+        Astuce pro : Jouez parfois close sur B Main avec un shotgun pour surprendre une exécute et créer un avantage numérique.
+      </p>
 
       <!-- Contrôle du Mid -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Contrôle du Mid</h2>
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="contrôle-du-mid-en-défense">Contrôle du Mid en défense</h3>
+      <p class="mb-4 text-gray-300">
+        Le Mid est la clé d'Ascent. Sa maîtrise permet:
+      </p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Des rotations rapides</li>
+        <li>Du contrôle d'information</li>
+        <li>Des flanks efficaces</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Positions clés</strong> :</p>
+      <ul class="list-disc pl-5 mb-8 text-gray-300">
+        <li>Catwalk (vision sur Mid Courtyard)</li>
+        <li>Mid Cubby (position défensive)</li>
+        <li>Pizza (angles inattendus)</li>
+        <li>Market Window (information sans risque)</li>
+      </ul>
+      <p class="mb-12 text-gray-300 italic border-l-4 border-gray-600 pl-4">
+        Conseil : Ne contestez pas systématiquement Mid au pistolet. En éco rounds, concédez le contrôle et renforcez les sites.
+      </p>
+
+      <!-- Attaque -->
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="attaque-t">Attaque (T)</h2>
+
+      <!-- Exécutes sur A -->
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-a">Exécutes sur A</h3>
+      <p class="mb-2 text-gray-300"><strong>Exécute standard</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>1 fumigène sur Heaven</li>
+        <li>1 fumigène sur CT spawn</li>
+        <li>Flash sur site pour l'entrée</li>
+        <li>Molly sur Generator</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Variante split</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>3 joueurs A Main</li>
+        <li>2 joueurs traversant Mid vers A Link</li>
+        <li>Synchronisation des fumigènes pour isoler les défenseurs</li>
+      </ul>
+      <p class="mb-4 text-gray-300"><strong>Positions post-plant</strong> :</p>
       <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li>Catwalk, Mid Cubby, Pizza, Market Window</li>
-        <li>Permet rotations rapides, info et flanks</li>
+        <li>Heaven (control de hauteur)</li>
+        <li>Generator (angle défensif)</li>
+        <li>A Main (couper les rotations)</li>
+        <li>Position croisée entre site et A Link</li>
+      </ul>
+
+      <!-- Exécutes sur B -->
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-b">Exécutes sur B</h3>
+      <p class="mb-2 text-gray-300"><strong>Exécute standard</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Fumigène sur CT et Market</li>
+        <li>Molly sur back site</li>
+        <li>Flash pour l'entrée</li>
+        <li>Contrôle de B Main</li>
+      </ul>
+      <p class="mb-2 text-gray-300"><strong>Feinte B vers A</strong> :</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-300">
+        <li>Bruit et utility sur B</li>
+        <li>Rotation rapide vers A via Mid</li>
+        <li>Timing calculé pour surprendre les rotations CT</li>
+      </ul>
+      <p class="mb-8 text-gray-300"><strong>Positions post-plant</strong> :</p>
+      <ul class="list-disc pl-5 mb-12 text-gray-300">
+        <li>Boathouse (angle élevé)</li>
+        <li>Default plant (couverture depuis B Main)</li>
+        <li>Back site (défense du spike)</li>
+      </ul>
+
+      <!-- Stratégies Mid -->
+      <h3 class="text-xl font-semibold mb-4 text-[#FF4655]" id="stratégies-mid">Stratégies Mid</h3>
+      <p class="mb-4 text-gray-300">
+        Le contrôle du Mid offre trois options:
+      </p>
+      <ol class="list-decimal pl-5 mb-4 text-gray-300">
+        <li>Split vers A via A Link</li>
+        <li>Split vers B via Market</li>
+        <li>Contrôle d'information pour adapter votre stratégie</li>
+      </ol>
+      <p class="mb-4 text-gray-300"><strong>Setup optimal</strong> :</p>
+      <ul class="list-disc pl-5 mb-12 text-gray-300">
+        <li>Fumigène sur Mid Courtyard</li>
+        <li>Contrôle de Catwalk</li>
+        <li>Élimination de l'Operator adverse</li>
+        <li>Maintien de la pression pour forcer des rotations défensives</li>
       </ul>
 
       <!-- Agents recommandés -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Agents recommandés</h2>
-      <ul class="grid grid-cols-2 gap-4 mb-12 text-gray-300">
-        <li><strong>Omen</strong> – triple smoke & reposition</li>
-        <li><strong>Brimstone</strong> – smokes globales</li>
-        <li><strong>Jett</strong> – mobilité Heaven/Catwalk</li>
-        <li><strong>Raze</strong> – satchel jump Mid</li>
-        <li><strong>Killjoy</strong> – verrouillage site</li>
-        <li><strong>Cypher</strong> – info Mid/Main</li>
-        <li><strong>Sova</strong> – reconnaissance Mid/A</li>
-        <li><strong>KAY/O</strong> – suppression utility</li>
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="agents-recommandés">Agents recommandés</h2>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Contrôleurs</h3>
+      <ul class="list-disc pl-5 mb-6 text-gray-300">
+        <li><strong>Omen</strong> : Fumigènes polyvalents pour A, B et Mid</li>
+        <li><strong>Brimstone</strong> : Couverture parfaite des sites avec triple smoke</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Duellistes</h3>
+      <ul class="list-disc pl-5 mb-6 text-gray-300">
+        <li><strong>Jett</strong> : Mobilité verticale pour Heaven et Catwalk</li>
+        <li><strong>Raze</strong> : Satchel jumps pour contester Mid et entrées explosives</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Sentinelles</h3>
+      <ul class="list-disc pl-5 mb-6 text-gray-300">
+        <li><strong>Killjoy</strong> : Setup ultra-fort sur les sites resserrés</li>
+        <li><strong>Cypher</strong> : Contrôle d'information critique sur Mid et Main</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Initiateurs</h3>
+      <ul class="list-disc pl-5 mb-12 text-gray-300">
+        <li><strong>Sova</strong> : Recon et drones parfaitement adaptés aux layouts</li>
+        <li><strong>KAY/O</strong> : Suppression des utility défensives clés</li>
       </ul>
 
       <!-- Post-plant et retakes -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Post‑plant & Retakes</h2>
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="post-plant-et-retakes">Post-plant et retakes</h2>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Post-plant A</h3>
+      <ul class="list-disc pl-5 mb-6 text-gray-300">
+        <li>Plant par défaut : couverture depuis A Main et Tree</li>
+        <li>Plant Heaven : forcer les défenseurs à monter</li>
+        <li>Plant exposed : jouable avec un Operator couvrant depuis A Main</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Post-plant B</h3>
+      <ul class="list-disc pl-5 mb-6 text-gray-300">
+        <li>Plant par défaut : défendable depuis B Main</li>
+        <li>Plant pour Market : couvert par les boîtes</li>
+        <li>Plant shallow : visible depuis l'attaque mais risqué</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]">Retakes</h3>
       <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li><strong>A</strong> : Tree & A Main / Heaven</li>
-        <li><strong>B</strong> : Default plant / Market</li>
-        <li>Retakes : Heaven puis Generator (A) / Market → CT (B)</li>
+        <li><strong>Site A</strong> : Priorité à la reprise de Heaven puis nettoyage</li>
+        <li><strong>Site B</strong> : Coordination entre Market et CT entrances</li>
+        <li><strong>Utility</strong> : Garder des smokes et flashes pour les retakes</li>
       </ul>
 
       <!-- Conseils avancés -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Conseils avancés</h2>
+      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="conseils-avancés">Conseils avancés</h2>
       <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li>Premier contact Mid à 1:40 → utility préplacée</li>
-        <li>Éco : cédez Mid, focus sites</li>
-        <li>One‑ways : fumigènes A Main & Market</li>
-        <li>Lurk Mid pour flancs adverses</li>
-        <li>Crossfires A : Heaven + Site</li>
+        <li><strong>Timings</strong> : Le premier contact sur Mid arrive à 1:40 – anticipez avec des utility préplacées</li>
+        <li><strong>Eco rounds</strong> : Concentrez-vous sur Mid control avec des armes légères</li>
+        <li><strong>Operator</strong> : Particulièrement puissant sur Mid Courtyard, A Heaven et Market Window</li>
+        <li><strong>One-ways</strong> : Apprenez les fumigènes one-way sur A Main et Market</li>
+        <li><strong>Lurk</strong> : Extrêmement efficace depuis Mid vers les flancs adverses</li>
+        <li><strong>Crossfires</strong> : Établissez des angles complémentaires, particulièrement sur A entre Heaven et Site</li>
       </ul>
 
       <!-- Conclusion -->
       <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Conclusion</h2>
       <p class="mb-6 text-gray-300">
-        Maîtriser Ascent demande une compréhension profonde du Mid et des interactions site/site.  
-        Pratiquez setups, timings et adaptez-vous à chaque round pour prendre l’avantage tactique.
+        Maîtriser Ascent demande une compréhension profonde de la dynamique du Mid et des interactions entre les différentes zones. La carte récompense la coordination d'équipe, mais reste jouable en soloQ avec les bonnes connaissances.
       </p>
       <p class="mb-6 text-gray-300">
-        Bon jeu, et n’oubliez pas : le contrôle du Mid est la clé de la victoire !
+        Pratiquez ces setups, apprenez les timings spécifiques et adaptez votre style à cette carte iconique. Que vous soyez un vétéran ou un nouveau joueur, ce guide vous donnera l'avantage tactique nécessaire pour dominer Ascent.
+      </p>
+      <p class="mb-6 text-gray-300">
+        Bon jeu, et n'oubliez pas : le contrôle du Mid est la clé de la victoire !
       </p>
     </article>
   </div>
