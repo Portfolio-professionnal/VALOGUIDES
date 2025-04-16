@@ -63,7 +63,7 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         </div>
         <div>
           <img
-            src="/assets/images/jett.jpg"
+            src="https://i.postimg.cc/NGXc05wV/109981830-3354563147923158-8269233033200945011-n.webp"
             alt="Jett en action"
             class="w-full rounded-xl shadow-lg object-cover h-64"
           />
