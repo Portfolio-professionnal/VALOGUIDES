@@ -350,7 +350,7 @@ google_site_verification: ""
                             <!-- Guides Grid -->
                             <div id="guides-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
                                 <!-- Guide Card 1 - Agents -->
-                                {% comment %}
+      {% comment %}
   Récupère l’article dont le titre correspond exactement à "Les Agents Valorant : Guide Complet (2025)"
 {% endcomment %}
 {% assign featured = site.posts | where: "title", "Les Agents Valorant : Guide Complet (2025)" | first %}
@@ -401,24 +401,20 @@ google_site_verification: ""
       <p class="text-gray-400 mb-4">{{ featured.excerpt }}</p>
     </div>
 
-    <div class="flex justify-between items-center">
-      <a href="{{ guide.url | relative_url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
+    <!-- Bouton placé sous la description -->
+    <div class="mt-4">
+      <a href="{{ featured.url | relative_url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
         Lire le guide
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd"
-            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-            clip-rule="evenodd" />
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
         </svg>
       </a>
-      {% if guide.views %}
-        <span class="text-gray-400 text-sm">{{ guide.views | number_with_delimiter }} vues</span>
-      {% endif %}
     </div>
   </div>
 </div>
-{% assign guide = site.posts
-   | where:"title","Maps Valorant: Callouts et Stratégies"
-   | first %}
+
 
 <!-- Guide Card 2 - Maps -->
 <div class="bg-[#0F1923] rounded-lg overflow-hidden group hover:shadow-lg transition duration-300 h-full">
