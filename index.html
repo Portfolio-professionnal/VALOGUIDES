@@ -155,7 +155,7 @@ google_site_verification: ""
       <span class="text-xs bg-[#FF4655] bg-opacity-20 text-[#FF4655] px-2 py-1 rounded">{{ featured.category }}</span>
     </div>
     <h3 class="text-xl font-bold mb-2 group-hover:text-[#FF4655] transition duration-300">
-<a href="{{ site.baseurl }}{{ featured.url }}">
+<a href="{{ featured.url | relative_url }}">
     </h3>
     <p class="text-gray-400 mb-4">{{ featured.excerpt }}</p>
     <a href="{{ featured.url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
