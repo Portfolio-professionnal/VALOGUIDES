@@ -29,7 +29,7 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
       
       <!-- Introduction -->
       <p class="mb-6 text-gray-300">
-        En soloQ, vous devez porter le match sur vos épaules : vos coéquipiers sont aléatoires, la communication limitée, et chaque kill compte double. Choisir l'agent adapté à une partie solo est donc crucial pour maximiser vos chances de carry.
+        En soloQ, vous devez porter le match sur vos épaules : vos coéquipiers sont aléatoires, la communication limitée, et chaque kill compte double. Choisir l'agent adapté à une partie solo est donc crucial pour maximiser vos chances de carry.
       </p>
       <p class="mb-6 text-gray-300">
         Voici le <strong>Top 5 des agents</strong> à maîtriser pour dominer vos parties soloQ en 2025, avec leurs forces, leurs combos d’abilities et quelques conseils stratégiques.
@@ -37,7 +37,7 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
       
       <!-- Sommaire -->
       <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Sommaire</h2>
-      <ol class="list-decimal pl-5 mb-6 text-gray-300">
+      <ol class="list-decimal pl-5 mb-12 text-gray-300">
         <li class="mb-2">Jett – La duelliste ultra‑mobile</li>
         <li class="mb-2">Reyna – L’agent snowball</li>
         <li class="mb-2">Raze – L’explosive carry</li>
@@ -45,75 +45,130 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <li class="mb-2">Omen – Le contrôleur polyvalent</li>
       </ol>
       
-      <!-- Section 1 -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">1. Jett – La duelliste ultra‑mobile</h2>
-      <p class="mb-6 text-gray-300">
-        Jett reste l'une des meilleures options en soloQ grâce à sa mobilité inégalée et son burst damage. En 2025, elle affiche un pick rate de 38 % en ladder compétitif.
-      </p>
-      <ul class="list-disc pl-5 mb-6 text-gray-300">
-        <li><strong>Tailwind :</strong> un dash instantané pour surprendre ou échapper, idéal pour isoler un adversaire.</li>
-        <li><strong>Updraft :</strong> atteindre des angles inattendus, clutchez vos 1v1 depuis des positions imprenables.</li>
-        <li><strong>Cloudburst :</strong> des fumigènes rapides pour couvrir une entrée solo ou retarder une rotation ennemie.</li>
-      </ul>
-      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce soloQ : concentrez‑vous sur les entry frags : ouvrez le site en fumant le point d’impact, dash pour la surprise et éliminez la première cible.
-      </p>
+      <!-- Section 1 : Jett (image à droite) -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">1. Jett – La duelliste ultra‑mobile</h2>
+          <p class="mb-4 text-gray-300">
+            Jett reste l'une des meilleures options en soloQ grâce à sa mobilité inégalée et son burst damage. En 2025, elle affiche un pick rate de 38 % en ladder compétitif.
+          </p>
+          <ul class="list-disc pl-5 mb-4 text-gray-300">
+            <li><strong>Tailwind :</strong> un dash instantané pour surprendre ou échapper, idéal pour isoler un adversaire.</li>
+            <li><strong>Updraft :</strong> atteindre des angles inattendus, clutchez vos 1v1 depuis des positions imprenables.</li>
+            <li><strong>Cloudburst :</strong> des fumigènes rapides pour couvrir une entrée solo ou retarder une rotation ennemie.</li>
+          </ul>
+          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
+            Astuce soloQ : concentrez‑vous sur les entry frags : ouvrez le site en fumant le point d’impact, dash pour la surprise et éliminez la première cible.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/assets/images/jett.jpg"
+            alt="Jett en action"
+            class="w-full rounded-xl shadow-lg object-cover h-64"
+          />
+        </div>
+      </div>
       
-      <!-- Section 2 -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">2. Reyna – L’agent snowball</h2>
-      <p class="mb-6 text-gray-300">
-        En soloQ, obtenir des kills en début de round est souvent la clé du succès. Reyna transforme chaque frag en un avantage décisif.
-      </p>
-      <ul class="list-disc pl-5 mb-6 text-gray-300">
-        <li><strong>Leer :</strong> aveugle traversant les murs pour isoler un adversaire.</li>
-        <li><strong>Devour/Dismiss :</strong> consommation de kill pour heal instantané, ou invisibilité pour repositionner.</li>
-        <li><strong>Empress :</strong> mode berserk augmentant fire‑rate et refresh automatique sur élimination.</li>
-      </ul>
-      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce soloQ : jouez prudemment en début de partie : cherchez une ouverture, kill, puis décidez — reset ou snowball selon votre confort.
-      </p>
+      <!-- Section 2 : Reyna (image à gauche) -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        <div class="md:order-2">
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">2. Reyna – L’agent snowball</h2>
+          <p class="mb-4 text-gray-300">
+            En soloQ, obtenir des kills en début de round est souvent la clé du succès. Reyna transforme chaque frag en un avantage décisif.
+          </p>
+          <ul class="list-disc pl-5 mb-4 text-gray-300">
+            <li><strong>Leer :</strong> aveugle traversant les murs pour isoler un adversaire.</li>
+            <li><strong>Devour/Dismiss :</strong> consommation de kill pour heal instantané, ou invisibilité pour repositionner.</li>
+            <li><strong>Empress :</strong> mode berserk augmentant fire‑rate et refresh automatique sur élimination.</li>
+          </ul>
+          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
+            Astuce soloQ : jouez prudemment en début de partie : cherchez une ouverture, kill, puis décidez — reset ou snowball selon votre confort.
+          </p>
+        </div>
+        <div class="md:order-1">
+          <img
+            src="/assets/images/reyna.jpg"
+            alt="Reyna utilise Devour"
+            class="w-full rounded-xl shadow-lg object-cover h-64"
+          />
+        </div>
+      </div>
       
-      <!-- Section 3 -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">3. Raze – L’explosive carry</h2>
-      <p class="mb-6 text-gray-300">
-        Avec un win rate de 51 % sur plusieurs maps, Raze est parfaite pour nettoyer les sites encombrés et punir les angles serrés.
-      </p>
-      <ul class="list-disc pl-5 mb-6 text-gray-300">
-        <li><strong>Boom Bot :</strong> débusque les campeurs et crée de l’espace.</li>
-        <li><strong>Paint Shells :</strong> dégâts de zone massifs pour forcer la sortie.</li>
-        <li><strong>Blast Pack :</strong> mobilité verticale et horizontale pour des entrées explosives.</li>
-      </ul>
-      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce soloQ : utilisez vos grenades pour créer de l’espace avant que vos coéquipiers n'arrivent : si un ennemi est forcé de bouger, capitalisez sur cette opportunité.
-      </p>
+      <!-- Section 3 : Raze (image à droite) -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">3. Raze – L’explosive carry</h2>
+          <p class="mb-4 text-gray-300">
+            Avec un win rate de 51 % sur plusieurs maps, Raze est parfaite pour nettoyer les sites encombrés et punir les angles serrés.
+          </p>
+          <ul class="list-disc pl-5 mb-4 text-gray-300">
+            <li><strong>Boom Bot :</strong> débusque les campeurs et crée de l’espace.</li>
+            <li><strong>Paint Shells :</strong> dégâts de zone massifs pour forcer la sortie.</li>
+            <li><strong>Blast Pack :</strong> mobilité verticale et horizontale pour des entrées explosives.</li>
+          </ul>
+          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
+            Astuce soloQ : utilisez vos grenades pour créer de l’espace avant que vos coéquipiers n'arrivent : si un ennemi est forcé de bouger, capitalisez sur cette opportunité.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/assets/images/raze.jpg"
+            alt="Raze lance Paint Shells"
+            class="w-full rounded-xl shadow-lg object-cover h-64"
+          />
+        </div>
+      </div>
       
-      <!-- Section 4 -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">4. Killjoy – Le verrouillage de site</h2>
-      <p class="mb-6 text-gray-300">
-        En soloQ, l’information et la zone safe sont primordiales. Killjoy excelle pour tenir un site seul et retarder l’attaque adverse.
-      </p>
-      <ul class="list-disc pl-5 mb-6 text-gray-300">
-        <li><strong>Alarmbot + Turret :</strong> détectent et freinent les pushs adverses.</li>
-        <li><strong>Nanoswarm :</strong> dégâts post‑plant garantis si vous plantez seul.</li>
-        <li><strong>Lockdown :</strong> ulti pour nettoyer ou forcer un rush ennemi.</li>
-      </ul>
-      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce soloQ : placez votre turret dans un angle difficile et couvrez‑le avec l’Alarmbot pour un contrôle anti‑flash efficace.
-      </p>
+      <!-- Section 4 : Killjoy (image à gauche) -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        <div class="md:order-2">
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">4. Killjoy – Le verrouillage de site</h2>
+          <p class="mb-4 text-gray-300">
+            En soloQ, l’information et la zone safe sont primordiales. Killjoy excelle pour tenir un site seul et retarder l’attaque adverse.
+          </p>
+          <ul class="list-disc pl-5 mb-4 text-gray-300">
+            <li><strong>Alarmbot + Turret :</strong> détectent et freinent les pushs adverses.</li>
+            <li><strong>Nanoswarm :</strong> dégâts post‑plant garantis si vous plantez seul.</li>
+            <li><strong>Lockdown :</strong> ulti pour nettoyer ou forcer un rush ennemi.</li>
+          </ul>
+          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
+            Astuce soloQ : placez votre turret dans un angle difficile et couvrez‑le avec l’Alarmbot pour un contrôle anti‑flash efficace.
+          </p>
+        </div>
+        <div class="md:order-1">
+          <img
+            src="/assets/images/killjoy.jpg"
+            alt="Killjoy pose son Alarmbot"
+            class="w-full rounded-xl shadow-lg object-cover h-64"
+          />
+        </div>
+      </div>
       
-      <!-- Section 5 -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">5. Omen – Le contrôleur polyvalent</h2>
-      <p class="mb-6 text-gray-300">
-        Omen combine contrôle de zone et mobilité, le rendant idéal pour les joueurs soloQ qui s’adaptent à tous les scénarios. Son pick rate atteint 25 % en 2025.
-      </p>
-      <ul class="list-disc pl-5 mb-6 text-gray-300">
-        <li><strong>Dark Cover :</strong> fumigènes à distance pour exécuter seul des stratégies complexes.</li>
-        <li><strong>Shrouded Step :</strong> téléportation courte pour repositionnement tactique.</li>
-        <li><strong>From the Shadows :</strong> rotation rapide entre sites ou flanc surprise.</li>
-      </ul>
-      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce soloQ : utilisez vos fumigènes pour créer des opportunités d’entrée, puis téléportez‑vous dans un angle inattendu pour prendre l’avantage.
-      </p>
+      <!-- Section 5 : Omen (image à droite) -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">5. Omen – Le contrôleur polyvalent</h2>
+          <p class="mb-4 text-gray-300">
+            Omen combine contrôle de zone et mobilité, le rendant idéal pour les joueurs soloQ qui s’adaptent à tous les scénarios. Son pick rate atteint 25 % en 2025.
+          </p>
+          <ul class="list-disc pl-5 mb-4 text-gray-300">
+            <li><strong>Dark Cover :</strong> fumigènes à distance pour exécuter seul des stratégies complexes.</li>
+            <li><strong>Shrouded Step :</strong> téléportation courte pour repositionnement tactique.</li>
+            <li><strong>From the Shadows :</strong> rotation rapide entre sites ou flanc surprise.</li>
+          </ul>
+          <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
+            Astuce soloQ : utilisez vos fumigènes pour créer des opportunités d’entrée, puis téléportez‑vous dans un angle inattendu pour prendre l’avantage.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/assets/images/omen.jpg"
+            alt="Omen active Dark Cover"
+            class="w-full rounded-xl shadow-lg object-cover h-64"
+          />
+        </div>
+      </div>
       
       <!-- Conclusion -->
       <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Conclusion</h2>
