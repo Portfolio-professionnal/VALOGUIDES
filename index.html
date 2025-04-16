@@ -129,10 +129,10 @@ google_site_verification: ""
 
                             <!-- Featured Main Article -->
                             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                               {% comment %}
-  On récupère le post dont l’URL correspond à ton article
+{% comment %}
+  On récupère le post dont le titre correspond exactement à celui de ton article
 {% endcomment %}
-{% assign featured = site.posts | where:"url","/articles/top-5-agents-soloq-2025.html" | first %}
+{% assign featured = site.posts | where:"title","Top 5 des agents à jouer en soloQ en 2025" | first %}
 
 <div class="md:col-span-2 bg-[#1F2731] rounded-lg overflow-hidden group hover:shadow-lg transition duration-300">
   <div class="relative h-64 overflow-hidden">
@@ -150,7 +150,7 @@ google_site_verification: ""
     <div class="flex items-center mb-2">
       <span class="text-xs text-gray-400">{{ featured.date | date: "%d %B %Y" }}</span>
       <span class="mx-2 text-gray-500">•</span>
-      <span class="text-xs text-gray-400">5 min de lecture</span>
+      <span class="text-xs text-gray-400">5 min de lecture</span>
       <span class="mx-2 text-gray-500">•</span>
       <span class="text-xs bg-[#FF4655] bg-opacity-20 text-[#FF4655] px-2 py-1 rounded">{{ featured.category }}</span>
     </div>
@@ -166,6 +166,7 @@ google_site_verification: ""
     </a>
   </div>
 </div>
+
 
                                 <!-- Adsense/Promo Slot -->
                                 <div class="bg-[#1F2731] rounded-lg overflow-hidden flex flex-col">
