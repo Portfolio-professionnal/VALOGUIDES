@@ -88,7 +88,7 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         </div>
         <div class="md:order-1">
           <img
-            src="/assets/images/reyna.jpg"
+            src="https://i.postimg.cc/cCR2BtxL/128801577-2787729348132901-8193750135516032714-n.webp"
             alt="Reyna utilise Devour"
             class="w-full rounded-xl shadow-lg object-cover h-64"
           />
