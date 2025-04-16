@@ -4,7 +4,7 @@ title: "Top 5 des agents à jouer en soloQ en 2025"
 date: 2025-03-20 10:00:00 +0100
 category: Agents
 excerpt: "Découvrez les agents les plus efficaces pour grimper en classement solo cette année. Notre analyse basée sur les statistiques et le méta actuel."
-image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
+image: "https://i.postimg.cc/g03JRN99/soloq.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
