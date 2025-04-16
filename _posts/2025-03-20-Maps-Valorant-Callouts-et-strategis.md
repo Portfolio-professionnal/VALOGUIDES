@@ -5,6 +5,9 @@ date: 2025-04-16 10:00:00 +0200
 category: Maps
 excerpt: "Guide complet pour maîtriser chaque carte du jeu"
 image: "https://i.postimg.cc/W119yHpV/valorant-maps.webp"
+reading_time: 15
+views: 278000
+difficulty: "Intermédiaire"
 ---
 
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
