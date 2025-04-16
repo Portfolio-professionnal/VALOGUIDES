@@ -96,30 +96,30 @@ image: "https://i.postimg.cc/jjYfGWtb/valorant-ascent-carte-guide.webp"
         Astuce pro : Alternez entre une défense passive sur site et des positions agressives en A Main pour perturber le timing des attaquants.
       </p>
 
-      <!-- Setup B -->
-      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="setup-b">Setup B</h3>
-      <p class="mb-2 text-gray-300"><strong>Position standard</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>2 joueurs sur B (un sur site, un B Main)</li>
-        <li>Position flexible entre Market et Site</li>
-      </ul>
-      <p class="mb-2 text-gray-300"><strong>Utility setup optimal</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>Bloquez B Main avec des smokes</li>
-        <li>Placez des pièges à l'entrée du site</li>
-        <li>Utilisez les portes métalliques comme information sonore</li>
-      </ul>
-      <p class="mb-2 text-gray-300"><strong>Angles à privilégier</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>Boîtes du site (headshot angle)</li>
-        <li>CT spawn (retake facilité)</li>
-        <li>Market (rotation rapide)</li>
-        <li>Back site (couverture complète)</li>
-      </ul>
-      <p class="mb-8 text-gray-300 italic border-l-4 border-gray-600 pl-4">
-        Astuce pro : Jouez parfois close sur B Main avec un shotgun pour surprendre une exécute et créer un avantage numérique.
-      </p>
+   <!-- Deux colonnes : Défense à gauche, Attaque à droite -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Défense (CT) -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="défense-ct">Défense (CT)</h2>
 
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="setup-a">Setup A</h3>
+          <ul class="list-disc pl-5 mb-6 text-gray-300">
+            <li><strong>Position standard (3‑1‑1)</strong> : 2 joueurs A, 1 à A Main, 1 Mid, 1 B</li>
+            <li><strong>Utility setup</strong> : alarmes en A Main/A Link, fumigènes à l’entrée, une capacité en réserve</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="setup-b">Setup B</h3>
+          <ul class="list-disc pl-5 mb-6 text-gray-300">
+            <li><strong>Position standard</strong> : 2 joueurs B, flexible entre Market/Site</li>
+            <li><strong>Utility setup</strong> : smokes en B Main, pièges à l’entrée, portes métalliques comme info</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="contrôle-du-mid-en-défense">Contrôle du Mid</h3>
+          <ul class="list-disc pl-5 mb-6 text-gray-300">
+            <li>Positions clés : Catwalk, Mid Cubby, Pizza, Market Window</li>
+            <li>Conseil : cédez Mid en éco, renforcez plutôt vos sites</li>
+          </ul>
+        </div>
       <!-- Contrôle du Mid -->
       <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="contrôle-du-mid-en-défense">Contrôle du Mid en défense</h3>
       <p class="mb-4 text-gray-300">
@@ -141,53 +141,31 @@ image: "https://i.postimg.cc/jjYfGWtb/valorant-ascent-carte-guide.webp"
         Conseil : Ne contestez pas systématiquement Mid au pistolet. En éco rounds, concédez le contrôle et renforcez les sites.
       </p>
 
-      <!-- Attaque -->
-      <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="attaque-t">Attaque (T)</h2>
+     <!-- Attaque (T) -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-[#FF4655]" id="attaque-t">Attaque (T)</h2>
 
-      <!-- Exécutes sur A -->
-      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-a">Exécutes sur A</h3>
-      <p class="mb-2 text-gray-300"><strong>Exécute standard</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>1 fumigène sur Heaven</li>
-        <li>1 fumigène sur CT spawn</li>
-        <li>Flash sur site pour l'entrée</li>
-        <li>Molly sur Generator</li>
-      </ul>
-      <p class="mb-2 text-gray-300"><strong>Variante split</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>3 joueurs A Main</li>
-        <li>2 joueurs traversant Mid vers A Link</li>
-        <li>Synchronisation des fumigènes pour isoler les défenseurs</li>
-      </ul>
-      <p class="mb-4 text-gray-300"><strong>Positions post-plant</strong> :</p>
-      <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li>Heaven (control de hauteur)</li>
-        <li>Generator (angle défensif)</li>
-        <li>A Main (couper les rotations)</li>
-        <li>Position croisée entre site et A Link</li>
-      </ul>
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-a">Exécutes sur A</h3>
+          <ul class="list-disc pl-5 mb-6 text-gray-300">
+            <li>Standard : fumigène Heaven + CT, flash site, molly Generator</li>
+            <li>Split : 3 A Main + 2 via Mid → A Link, smokes synchronisées</li>
+            <li>Post-plant : Heaven, Generator, A Main, A Link</li>
+          </ul>
 
-      <!-- Exécutes sur B -->
-      <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-b">Exécutes sur B</h3>
-      <p class="mb-2 text-gray-300"><strong>Exécute standard</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>Fumigène sur CT et Market</li>
-        <li>Molly sur back site</li>
-        <li>Flash pour l'entrée</li>
-        <li>Contrôle de B Main</li>
-      </ul>
-      <p class="mb-2 text-gray-300"><strong>Feinte B vers A</strong> :</p>
-      <ul class="list-disc pl-5 mb-4 text-gray-300">
-        <li>Bruit et utility sur B</li>
-        <li>Rotation rapide vers A via Mid</li>
-        <li>Timing calculé pour surprendre les rotations CT</li>
-      </ul>
-      <p class="mb-8 text-gray-300"><strong>Positions post-plant</strong> :</p>
-      <ul class="list-disc pl-5 mb-12 text-gray-300">
-        <li>Boathouse (angle élevé)</li>
-        <li>Default plant (couverture depuis B Main)</li>
-        <li>Back site (défense du spike)</li>
-      </ul>
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="exécutes-sur-b">Exécutes sur B</h3>
+          <ul class="list-disc pl-5 mb-6 text-gray-300">
+            <li>Standard : smoke CT/Market, molly back site, flash entrée</li>
+            <li>Feinte : bruit + util B, rotation rapide via Mid vers A</li>
+            <li>Post-plant : Boathouse, Default plant, Back site</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold mb-2 text-[#FF4655]" id="stratégies-mid">Stratégies Mid</h3>
+          <ul class="list-disc pl-5 text-gray-300">
+            <li>Options : split A, split B, info control</li>
+            <li>Setup : smoke Courtyard, hold Catwalk, punir l’Operator</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Stratégies Mid -->
       <h3 class="text-xl font-semibold mb-4 text-[#FF4655]" id="stratégies-mid">Stratégies Mid</h3>
