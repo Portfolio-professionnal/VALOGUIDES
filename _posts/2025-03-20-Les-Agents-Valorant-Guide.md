@@ -4,7 +4,7 @@ title: "Les Agents Valorant : Guide Complet (2025)"
 date: 2025-04-16 10:00:00 +0200
 category: Débutant
 excerpt: "Valorant propose un large éventail d'agents avec des capacités uniques : découvrez en 2025 le rôle et le kit de chaque agent pour maîtriser le jeu."
-image: "https://i.postimg.cc/your-cover-image/agents-cover.webp"
+image: "https://i.postimg.cc/rwRV5Q6V/Chat-GPT-Image-16-avr-2025-21-49-09-1.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
