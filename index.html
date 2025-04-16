@@ -350,8 +350,8 @@ google_site_verification: ""
                             <!-- Guides Grid -->
                             <div id="guides-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
                                 <!-- Guide Card 1 - Agents -->
-   {% comment %}
-Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
+{% comment %}
+  Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
 {% endcomment %}
 {% assign featured = site.posts | where: "title", "Les Agents Valorant : Guide Complet (2025)" | first %}
 
@@ -393,7 +393,7 @@ Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
       <p class="text-gray-400 mb-4">{{ featured.excerpt }}</p>
     </div>
 
-    <div class="mt-4">
+    <div>
       <a href="{{ featured.url | relative_url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
         Lire le guide
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
@@ -405,6 +405,7 @@ Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
     </div>
   </div>
 </div>
+
 
 <!--article 2-->
 {% assign guide = site.posts
