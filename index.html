@@ -351,11 +351,15 @@ google_site_verification: ""
                             <div id="guides-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
                                 <!-- Guide Card 1 - Agents -->
 {% comment %}
-  Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
+  Récupère l’article exact
 {% endcomment %}
-{% assign featured = site.posts | where: "title", "Les Agents Valorant : Guide Complet (2025)" | first %}
+{% assign featured = site.posts
+   | where: "title", "Les Agents Valorant : Guide Complet (2025)"
+   | first %}
 
+<!-- Carte pour “Les Agents Valorant : Guide Complet (2025)” -->
 <div class="bg-[#0F1923] rounded-lg overflow-hidden group hover:shadow-lg transition duration-300 h-full">
+  <!-- Image + catégorie -->
   <div class="relative h-48 overflow-hidden">
     <img
       src="{{ featured.image }}"
@@ -369,8 +373,10 @@ google_site_verification: ""
     </div>
   </div>
 
+  <!-- Contenu texte -->
   <div class="p-6 flex flex-col justify-between h-full">
     <div>
+      <!-- Métadonnées -->
       <div class="flex items-center space-x-2 mb-3">
         <span class="text-xs text-gray-400">{{ featured.date | date: "%-d %B %Y" }}</span>
         <span class="text-xs text-gray-400">•</span>
@@ -387,12 +393,16 @@ google_site_verification: ""
         </span>
       </div>
 
+      <!-- Titre -->
       <h3 class="text-xl font-bold mb-2 group-hover:text-[#FF4655] transition duration-300">
         <a href="{{ featured.url | relative_url }}">{{ featured.title }}</a>
       </h3>
+
+      <!-- Extrait -->
       <p class="text-gray-400 mb-4">{{ featured.excerpt }}</p>
     </div>
 
+    <!-- Bouton "Lire le guide" -->
     <div>
       <a href="{{ featured.url | relative_url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
         Lire le guide
@@ -405,7 +415,6 @@ google_site_verification: ""
     </div>
   </div>
 </div>
-
 
 
 <!--article 2-->
