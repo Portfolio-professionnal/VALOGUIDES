@@ -350,8 +350,8 @@ google_site_verification: ""
                             <!-- Guides Grid -->
                             <div id="guides-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
                                 <!-- Guide Card 1 - Agents -->
-      {% comment %}
-  Récupère l’article dont le titre correspond exactement à "Les Agents Valorant : Guide Complet (2025)"
+   {% comment %}
+Récupère l’article "Les Agents Valorant : Guide Complet (2025)"
 {% endcomment %}
 {% assign featured = site.posts | where: "title", "Les Agents Valorant : Guide Complet (2025)" | first %}
 
@@ -371,28 +371,20 @@ google_site_verification: ""
 
   <div class="p-6 flex flex-col justify-between h-full">
     <div>
-      <div class="flex items-center justify-between mb-3">
-        <div class="flex items-center space-x-2">
-          <span class="text-xs text-gray-400">{{ featured.date | date: "%-d %B %Y" }}</span>
-          <span class="text-xs text-gray-400">•</span>
-          <span class="text-xs bg-[#FF4655] bg-opacity-20 text-[#FF4655] px-2 py-1 rounded">
-            {{ featured.category }}
-          </span>
-          <span class="text-xs text-gray-400">•</span>
-          <span class="text-xs text-gray-400">
-            {% if featured.reading_time %}
-              {{ featured.reading_time }} min de lecture
-            {% else %}
-              10 min de lecture
-            {% endif %}
-          </span>
-        </div>
-        <div class="text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-          </svg>
-        </div>
+      <div class="flex items-center space-x-2 mb-3">
+        <span class="text-xs text-gray-400">{{ featured.date | date: "%-d %B %Y" }}</span>
+        <span class="text-xs text-gray-400">•</span>
+        <span class="text-xs bg-[#FF4655] bg-opacity-20 text-[#FF4655] px-2 py-1 rounded">
+          {{ featured.category }}
+        </span>
+        <span class="text-xs text-gray-400">•</span>
+        <span class="text-xs text-gray-400">
+          {% if featured.reading_time %}
+            {{ featured.reading_time }} min de lecture
+          {% else %}
+            10 min de lecture
+          {% endif %}
+        </span>
       </div>
 
       <h3 class="text-xl font-bold mb-2 group-hover:text-[#FF4655] transition duration-300">
@@ -401,7 +393,6 @@ google_site_verification: ""
       <p class="text-gray-400 mb-4">{{ featured.excerpt }}</p>
     </div>
 
-    <!-- Bouton placé sous la description -->
     <div class="mt-4">
       <a href="{{ featured.url | relative_url }}" class="inline-flex items-center text-[#FF4655] hover:underline">
         Lire le guide
@@ -414,6 +405,7 @@ google_site_verification: ""
     </div>
   </div>
 </div>
+
 <!--article 2-->
 {% assign guide = site.posts
    | where:"title","Maps Valorant: Callouts et Stratégies"
