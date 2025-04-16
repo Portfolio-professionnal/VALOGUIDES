@@ -4,7 +4,7 @@ title: "Réglages pro Valorant : Guide complet pour optimiser votre performance 
 date: 2025-04-16 10:00:00 +0200
 category: "Guides techniques"
 excerpt: "Vous cherchez à maximiser votre potentiel compétitif sur Valorant ? Découvrez les réglages des pros 2025 pour améliorer votre précision, vos FPS et votre son."
-image: "https://i.postimg.cc/XYZ12345/valorant-settings-guide.webp"
+image: "https://i.postimg.cc/sfMNj85g/ten-z.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
