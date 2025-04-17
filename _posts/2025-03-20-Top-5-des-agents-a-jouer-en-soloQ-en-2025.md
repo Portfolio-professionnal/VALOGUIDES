@@ -76,15 +76,15 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <div class="md:order-2">
           <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">2. Reyna – L’agent snowball</h2>
           <p class="mb-4 text-gray-300">
-            En soloQ, obtenir des kills en début de round est souvent la clé du succès. Reyna transforme chaque frag en un avantage décisif.
+        En soloQ, obtenir des kills en début de round est souvent la clé du succès. Reyna transforme chaque frag en un avantage décisif, ou transforme chaque défaite en une raison de blâmer vos coéquipiers pour ne pas avoir trade.
           </p>
           <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li><strong>Leer :</strong> aveugle traversant les murs pour isoler un adversaire.</li>
-            <li><strong>Devour/Dismiss :</strong> consommation de kill pour heal instantané, ou invisibilité pour repositionner.</li>
-            <li><strong>Empress :</strong> mode berserk augmentant fire‑rate et refresh automatique sur élimination.</li>
+            <li><strong>Leer :</strong> blind traversant les murs pour isoler un adversaire.</li>
+            <li><strong>Devour/Dismiss :</strong> consommation de kill pour heal instantané, ou invisibilité pour repositionner et laisser vos coéquipiers mourir héroïquement pendant que vous sauvez votre précieux K/D..</li>
+            <li><strong>Empress :</strong> mode berserk augmentant fire-rate et refresh automatique sur élimination. Activer après avoir déjà tué deux ennemis pour vraiment enfoncer le clou dans leur cercueil digital.</li>
           </ul>
           <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Astuce soloQ : jouez prudemment en début de partie : cherchez une ouverture, kill, puis décidez — reset ou snowball selon votre confort.
+            Astuce soloQ : Jouer Reyna, c'est comme faire un pacte avec le diable – soit vous terminez 30-5 et postez un screenshot sur Discord, soit vous finissez 3-17 et désactivez discrètement le chat vocal.
           </p>
         </div>
         <div class="md:order-1">
@@ -101,15 +101,15 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <div>
           <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">3. Raze – L’explosive carry</h2>
           <p class="mb-4 text-gray-300">
-            Avec un win rate de 51 % sur plusieurs maps, Raze est parfaite pour nettoyer les sites encombrés et punir les angles serrés.
+    Avec un win rate de 51% sur plusieurs maps, Raze est parfaite pour nettoyer les sites encombrés et pour entendre les ennemis hurler "SKILL ISSUE" après chaque kill avec sa grenade.
           </p>
           <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li><strong>Boom Bot :</strong> débusque les campeurs et crée de l’espace.</li>
-            <li><strong>Paint Shells :</strong> dégâts de zone massifs pour forcer la sortie.</li>
-            <li><strong>Blast Pack :</strong> mobilité verticale et horizontale pour des entrées explosives.</li>
+            <li><strong>Boom Bot :</strong> débusque les campeurs et crée de l'espace... ou se cogne stupidement contre un mur pendant que vous vous faites one-tap.</li>
+            <li><strong>Paint Shells :</strong> dégâts de zone massifs pour forcer la sortie ou pour tuer accidentellement votre Sage qui tentait de ressusciter.</li>
+            <li><strong>Blast Pack :</strong> mobilité verticale et horizontale pour des entrées explosives ou pour vous propulser directement dans le crosshair ennemi à vitesse maximale.</li>
           </ul>
           <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Astuce soloQ : utilisez vos grenades pour créer de l’espace avant que vos coéquipiers n'arrivent : si un ennemi est forcé de bouger, capitalisez sur cette opportunité.
+            Astuce soloQ : Utilisez vos grenades avec précision, car rien n'est plus satisfaisant que d'entendre "C'EST QUOI CE GAME DESIGN???" dans le chat all après un triple kill avec Paint Shells. Bonus si vous tuez quelqu'un qui a déjà rage-quit la partie précédente à cause de vous.
           </p>
         </div>
         <div>
@@ -126,15 +126,15 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <div class="md:order-2">
           <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">4. Killjoy – Le verrouillage de site</h2>
           <p class="mb-4 text-gray-300">
-            En soloQ, l’information et la zone safe sont primordiales. Killjoy excelle pour tenir un site seul et retarder l’attaque adverse.
+           En soloQ, l'information et la zone safe sont primordiales. Killjoy excelle pour tenir un site seul pendant que vos quatre duellistes s'entassent de l'autre côté de la map.
           </p>
           <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li><strong>Alarmbot + Turret :</strong> détectent et freinent les pushs adverses.</li>
-            <li><strong>Nanoswarm :</strong> dégâts post‑plant garantis si vous plantez seul.</li>
-            <li><strong>Lockdown :</strong> ulti pour nettoyer ou forcer un rush ennemi.</li>
+            <li><strong>Alarmbot + Turret :</strong> détectent et freinent les pushs adverses, comme un coéquipier fiable mais en version mécanique et silencieuse.</li>
+            <li><strong>Nanoswarm :</strong> dégâts post-plant garantis si vous plantez seul, ce qui sera le cas car personne ne joue l'objectif en soloQ.</li>
+            <li><strong>Lockdown :</strong> ulti pour nettoyer ou forcer un rush ennemi... qui sera inévitablement détruit par une capacité ennemie 0.1 seconde avant son activation.</li>
           </ul>
           <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Astuce soloQ : placez votre turret dans un angle difficile et couvrez‑le avec l’Alarmbot pour un contrôle anti‑flash efficace.
+            Astuce soloQ : Placez votre turret dans un angle difficile pendant que vous campez ailleurs – laissez l'IA faire le travail pendant que vous écrivez des messages passifs-agressifs à votre équipe.
           </p>
         </div>
         <div class="md:order-1">
@@ -151,15 +151,15 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <div>
           <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">5. Omen – Le contrôleur polyvalent</h2>
           <p class="mb-4 text-gray-300">
-            Omen combine contrôle de zone et mobilité, le rendant idéal pour les joueurs soloQ qui s’adaptent à tous les scénarios. Son pick rate atteint 25 % en 2025.
+      Omen combine contrôle de zone et mobilité, le rendant idéal pour les joueurs soloQ qui s'adaptent à tous les scénarios ou qui sont las de supplier quelqu'un de jouer controller.
           </p>
           <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li><strong>Dark Cover :</strong> fumigènes à distance pour exécuter seul des stratégies complexes.</li>
-            <li><strong>Shrouded Step :</strong> téléportation courte pour repositionnement tactique.</li>
-            <li><strong>From the Shadows :</strong> rotation rapide entre sites ou flanc surprise.</li>
+            <li><strong>Dark Cover :</strong> fumigènes à distance pour exécuter seul des stratégies complexes que vos coéquipiers ignoreront systématiquement.</li>
+            <li><strong>Shrouded Step :</strong> téléportation courte pour repositionnement tactique ou pour vous cacher quand vous réalisez que vous avez fait une erreur catastrophique.</li>
+            <li><strong>From the Shadows :</strong> rotation rapide entre sites ou flanc surprise – rien de plus satisfaisant que d'apparaître derrière un ennemi qui spam-crouch en duel.</li>
           </ul>
           <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Astuce soloQ : utilisez vos fumigènes pour créer des opportunités d’entrée, puis téléportez‑vous dans un angle inattendu pour prendre l’avantage.
+            Astuce soloQ : Utilisez vos fumigènes pour masquer votre désespoir croissant face aux décisions de vos coéquipiers, puis téléportez-vous dans un coin pour pleurer silencieusement.
           </p>
         </div>
         <div>
@@ -174,13 +174,16 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
       <!-- Conclusion -->
       <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">Conclusion</h2>
       <p class="mb-6 text-gray-300">
-        En soloQ, priorisez des agents capables de créer et d’exploiter des kills seuls. Jett et Reyna pour le burst, Raze pour la pression, Killjoy pour la défense, Omen pour la polyvalence : c’est votre arsenal pour carry efficacement.
+    En soloQ, priorisez des agents capables de créer et d'exploiter des kills seuls, car votre équipe sera probablement trop occupée à discuter de qui a volé le kill à qui. Jett et Reyna pour le burst, Raze pour la pression, Killjoy pour la défense, Omen pour la polyvalence : c'est votre arsenal pour carry efficacement ou du moins avoir une excuse crédible quand vous perdez.      
+    </p>
+      <p class="mb-6 text-gray-300">
+    Travaillez chaque agent en custom & deathmatch jusqu'à automatiser vos mécaniques, ou jusqu'à ce que votre conjoint(e) commence à s'inquiéter sérieusement de votre santé mentale.
       </p>
       <p class="mb-6 text-gray-300">
-        Travaillez chaque agent en custom & deathmatch jusqu’à automatiser vos mécaniques, et adaptez toujours votre pick selon la carte et le rôle requis par votre équipe.
+    Prêt à grimper le classement ? Testez ces cinq agents, trouvez votre favori et dominez vos games soloQ en 2025. Ou plus réalistement, atteignez Platinum avant de vous convaincre que c'est la faute du système de matchmaking et non la vôtre.
       </p>
-      <p class="mb-6 text-gray-300">
-        Prêt à grimper le classement ? Testez ces cinq agents, trouvez votre favori et dominez vos games soloQ en 2025 !
+         <p class="mb-6 text-gray-300">
+      Disclaimer: Cet article ne garantit pas l'immortalité, le bonheur ou même un win rate positif. Les résultats peuvent varier selon votre capacité à supporter les flamers, votre connexion internet, et le nombre de smurfs Radiant dans votre lobby Bronze.      
       </p>
     </article>
   </div>
