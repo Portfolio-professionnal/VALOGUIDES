@@ -29,10 +29,11 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
       
       <!-- Introduction -->
       <p class="mb-6 text-gray-300">
-        En soloQ, vous devez porter le match sur vos épaules : vos coéquipiers sont aléatoires, la communication limitée, et chaque kill compte double. Choisir l'agent adapté à une partie solo est donc crucial pour maximiser vos chances de carry.
+        En soloQ, la triste réalité est que vous devez porter le match sur vos épaules parce que vos coéquipiers semblent avoir été sélectionnés par un algorithme sadique qui déteste votre historique de rank. La communication se limite généralement à des insultes en cinq langues différentes, et chaque kill compte double – surtout quand c'est vous qui mourez. Choisir l'agent adapté est donc crucial pour maximiser vos chances de ne pas jeter votre clavier par la fenêtre après trois défaites consécutives.
+
       </p>
       <p class="mb-6 text-gray-300">
-        Voici le <strong>Top 5 des agents</strong> à maîtriser pour dominer vos parties soloQ en 2025, avec leurs forces, leurs combos d’abilities et quelques conseils stratégiques.
+        Voici le <strong>Top 5 des agents</strong> à maîtriser pour dominer vos parties soloQ en 2025, ou du moins prétendre que c'était la faute des autres quand vous perdez.
       </p>
       
       <!-- Sommaire -->
@@ -50,15 +51,15 @@ image: "https://i.postimg.cc/g03JRN99/soloq.webp"
         <div>
           <h2 class="text-2xl font-bold mb-4 text-[#FF4655]">1. Jett – La duelliste ultra‑mobile</h2>
           <p class="mb-4 text-gray-300">
-            Jett reste l'une des meilleures options en soloQ grâce à sa mobilité inégalée et son burst damage. En 2025, elle affiche un pick rate de 38 % en ladder compétitif.
+            Jett reste l'une des meilleures options en soloQ grâce à sa mobilité inégalée et son burst damage. En 2025, elle affiche un pick rate de 38% en ladder compétitif, ce qui signifie que vous devrez vous battre avec trois autres personnes dans le lobby pour la jouer.
           </p>
           <ul class="list-disc pl-5 mb-4 text-gray-300">
-            <li><strong>Tailwind :</strong> un dash instantané pour surprendre ou échapper, idéal pour isoler un adversaire.</li>
-            <li><strong>Updraft :</strong> atteindre des angles inattendus, clutchez vos 1v1 depuis des positions imprenables.</li>
-            <li><strong>Cloudburst :</strong> des fumigènes rapides pour couvrir une entrée solo ou retarder une rotation ennemie.</li>
+            <li><strong>Tailwind :</strong> un dash instantané pour surprendre ou échapper, idéal pour isoler un adversaire ou fuir après avoir raté votre combo à l'Operator.</li>
+            <li><strong>Updraft :</strong> atteindre des angles inattendus, clutchez vos 1v1 depuis des positions imprenables que même votre équipe qualifiera de "toxic".</li>
+            <li><strong>Cloudburst :</strong> des fumigènes rapides pour couvrir une entrée solo ou pour vous cacher quand vous réalisez que vous avez rush seul comme un idiot.</li>
           </ul>
           <p class="italic border-l-4 border-gray-600 pl-4 text-gray-300">
-            Astuce soloQ : concentrez‑vous sur les entry frags : ouvrez le site en fumant le point d’impact, dash pour la surprise et éliminez la première cible.
+            Astuce soloQ : Concentrez-vous sur les entry frags, mais préparez-vous à entendre "WHY YOU BAIT???" quand vous mourrez et "JETT DIFF" quand vous survivez. La vie est injuste.
           </p>
         </div>
         <div>
