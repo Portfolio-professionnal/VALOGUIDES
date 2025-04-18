@@ -2,14 +2,14 @@
 lang: fr
 layout: default
 title: "CHAMBER | Guides"
-description: "Découvre des guides Valorant optimisés, des builds d'agents, des astuces de maps et des réglages pro pour améliorer ton gameplay et progresser rapidement dans le jeu de tir tactique de Riot Games."
+description: "Découvre des guides Valorant optimisés pour Chamber, des builds de compétences, des astuces de maps et des réglages pro pour sniper avec style et gérer tes téléporteurs."
 robots: "index, follow"
 keywords: ""
 author: "VALOGUIDES"
 canonical: "https://.../chamber.html"
 og_title: "CHAMBER | Guides"
-og_description: "Découvre des guides Valorant optimisés, des builds d'agents, des astuces de maps et des réglages pro pour améliorer ton gameplay et progresser rapidement dans le jeu de tir tactique de Riot Games."
-og_image: "image.png"
+og_description: "Découvre des guides Valorant optimisés pour Chamber, des builds de compétences, des astuces de maps et des réglages pro pour sniper avec style et gérer tes téléporteurs."
+og_image: "chamber.png"
 og_url: "https://.../chamber.html"
 ---
 <!-- Hero Section -->
@@ -19,7 +19,9 @@ og_url: "https://.../chamber.html"
       <h1 class="text-5xl md:text-6xl font-extrabold mb-4 flex items-center">
         <span class="text-[#FF4655] mr-2">CHAMBER</span>
       </h1>
-      <p class="text-xl md:text-2xl mb-6 text-gray-300">L'AGENT QUI TRANSFORME VALORANT EN DÉFILÉ DE MODE MORTEL</p>
+      <p class="text-xl md:text-2xl mb-6 text-gray-300">
+        L'AGENT QUI TRANSFORME VALORANT EN DÉFILÉ DE MODE MORTEL
+      </p>
       <button class="bg-[#FF4655] hover:bg-red-600 text-white py-3 px-6 rounded-md font-medium transition-colors duration-300">
         Maîtriser le style mortel
       </button>
@@ -32,71 +34,128 @@ og_url: "https://.../chamber.html"
   <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#FF4655] opacity-5 blur-3xl"></div>
 </header>
 
+<!-- Main Content -->
 <main class="relative overflow-hidden bg-[#0F1923] py-16">
   <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
-    
-    <!-- Left column: Introduction, Compétences, Guide, Combos, Conclusion -->
-    <div class="lg:col-span-2 space-y-8 text-gray-300">
-      
+
+    <!-- Colonne de gauche : Introduction + Compétences + Guide + Combos + Conclusion -->
+    <div class="lg:col-span-2 space-y-12 text-gray-300">
+
       <!-- Introduction -->
       <section>
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-4">Introduction</h2>
-        <p>Bienvenue sur la page dédiée à Chamber, ou comme on l'appelle dans le milieu : "le mannequin Armani qui a décidé que tuer avec style était un métier". Si vous êtes ici, c'est soit que vous avez une aversion profonde pour marcher comme tout le monde, soit que vous êtes ce type de joueur qui pense qu'un FPS est avant tout une question de look et de pose victorieuse, ou encore que vous êtes simplement convaincu que votre accent français rend vos headshots plus élégants. Dans tous les cas, vous êtes au bon endroit pour apprendre l'art subtil de dépenser 150 crédits pour un pistolet qui fait le travail d'un Operator, tout en ajustant constamment votre cravate virtuelle.</p>
+        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Introduction</h2>
+        <p>
+          Bienvenue sur la page dédiée à Chamber, ou comme on l'appelle dans le milieu : "le mannequin Armani qui a décidé que tuer avec style était un métier". Si vous êtes ici, c'est soit que vous avez une aversion profonde pour marcher comme tout le monde, soit que vous êtes ce type de joueur qui pense qu'un FPS est avant tout une question de look et de pose victorieuse, ou encore que vous êtes simplement convaincu que votre accent français rend vos headshots plus élégants. Dans tous les cas, vous êtes au bon endroit pour apprendre l'art subtil de dépenser 150 crédits pour un pistolet qui fait le travail d'un Operator, tout en ajustant constamment votre cravate virtuelle.
+        </p>
       </section>
-      
+
       <!-- Compétences -->
       <section>
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-4">Compétences</h2>
-        
+        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Compétences</h2>
+
+        <!-- Q - HEADHUNTER -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">Q - HEADHUNTER</h3>
-          <p>Un pistolet de précision qui coûte 150 crédits par balle. En théorie, c'est pour éliminer les ennemis avec des tirs parfaitement placés. En pratique, vous allez dépenser tout votre budget en munitions, rater chaque tir, puis passer les 40 prochaines secondes à courir avec votre couteau parce que vous n'avez plus assez d'argent pour acheter une vraie arme.</p>
-          <p class="italic text-[#FF4655]">Astuce pro : Pour une utilisation optimale, achetez les huit balles au début du round, ne touchez aucun tir, puis expliquez à votre équipe que "le registre de dégâts est buggé" quand ils vous demandent pourquoi vous avez fait 0 dégât avec 1200 crédits. Bonus si vous blâmez le "ping norvégien" tout en étant à Paris.</p>
+          <div class="flex flex-col md:flex-row items-start">
+            <div class="md:w-1/6 mb-4 md:mb-0">
+              <div class="bg-[#FF4655] p-4 rounded-full w-16 h-16 flex items-center justify-center text-white font-bold text-xl">Q</div>
+            </div>
+            <div class="md:w-5/6">
+              <h3 class="text-xl font-bold text-white mb-2">HEADHUNTER</h3>
+              <p class="mb-4">
+                Un pistolet de précision qui coûte 150 crédits par balle. En théorie, c'est pour éliminer les ennemis avec des tirs parfaitement placés. En pratique, vous allez dépenser tout votre budget en munitions, rater chaque tir, puis passer les 40 prochaines secondes à courir avec votre couteau parce que vous n'avez plus assez d'argent pour acheter une vraie arme.
+              </p>
+              <p class="italic text-[#FF4655]">
+                Astuce pro : Pour une utilisation optimale, achetez les huit balles au début du round, ne touchez aucun tir, puis expliquez à votre équipe que "le registre de dégâts est buggé" quand ils vous demandent pourquoi vous avez fait 0 dégât avec 1200 crédits. Bonus si vous blâmez le "ping norvégien" tout en étant à Paris.
+              </p>
+            </div>
+          </div>
         </div>
-        
+
+        <!-- E - RENDEZVOUS -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">E - RENDEZVOUS</h3>
-          <p>Placez deux téléporteurs qui vous permettent de vous déplacer instantanément entre eux. En théorie, c'est pour créer des positions de tir imprévisibles et des rotations rapides. En pratique, vous allez placer votre téléporteur dans un coin "stratégique", l'oublier pendant tout le round, puis vous téléporter accidentellement au moment crucial, vous envoyant directement dans le crosshair d'un ennemi qui n'en revient pas de sa chance.</p>
-          <p class="italic text-[#FF4655]">Astuce tactique : Placez systématiquement votre téléporteur de secours dans la zone la plus exposée de la carte, puis activez-le précisément quand vous êtes à un HP, garantissant ainsi une mort spectaculaire que toute l'équipe adverse pourra admirer en même temps. N'oubliez pas de dire "C'était calculé" dans le chat.</p>
+          <div class="flex flex-col md:flex-row items-start">
+            <div class="md:w-1/6 mb-4 md:mb-0">
+              <div class="bg-[#FF4655] p-4 rounded-full w-16 h-16 flex items-center justify-center text-white font-bold text-xl">E</div>
+            </div>
+            <div class="md:w-5/6">
+              <h3 class="text-xl font-bold text-white mb-2">RENDEZVOUS</h3>
+              <p class="mb-4">
+                Placez deux téléporteurs qui vous permettent de vous déplacer instantanément entre eux. En théorie, c'est pour créer des positions de tir imprévisibles et des rotations rapides. En pratique, vous allez placer votre téléporteur dans un coin "stratégique", l'oublier pendant tout le round, puis vous téléporter accidentellement au moment crucial, vous envoyant directement dans le crosshair d'un ennemi qui n'en revient pas de sa chance.
+              </p>
+              <p class="italic text-[#FF4655]">
+                Astuce tactique : Placez systématiquement votre téléporteur de secours dans la zone la plus exposée de la carte, puis activez-le précisément quand vous êtes à un HP, garantissant ainsi une mort spectaculaire que toute l'équipe adverse pourra admirer en même temps. N'oubliez pas de dire "C'était calculé" dans le chat.
+              </p>
+            </div>
+          </div>
         </div>
-        
+
+        <!-- C - MARQUE DÉPOSÉE -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">C - MARQUE DÉPOSÉE</h3>
-          <p>Placez un piège qui ralentit les ennemis. En théorie, c'est pour surveiller les flancs et sécuriser les zones. En pratique, il va soit être détruit immédiatement, soit rester intact pendant tout le round car personne ne passe jamais à l'endroit où vous l'avez mis, généralement à trois mètres du spawn allié.</p>
-          <p class="italic text-[#FF4655]">Conseil d'utilisation : Pour une efficacité maximale, placez vos pièges dans des endroits si obscurs et improbables que même l'IA du jeu se demande pourquoi ils sont là. Puis, quand un ennemi les détruit ou les évite complètement, expliquez avec condescendance à votre équipe que "vous recueilliez des informations cruciales" et que "c'était une stratégie avancée".</p>
+          <div class="flex flex-col md:flex-row items-start">
+            <div class="md:w-1/6 mb-4 md:mb-0">
+              <div class="bg-[#FF4655] p-4 rounded-full w-16 h-16 flex items-center justify-center text-white font-bold text-xl">C</div>
+            </div>
+            <div class="md:w-5/6">
+              <h3 class="text-xl font-bold text-white mb-2">MARQUE DÉPOSÉE</h3>
+              <p class="mb-4">
+                Placez un piège qui ralentit les ennemis. En théorie, c'est pour surveiller les flancs et sécuriser les zones. En pratique, il va soit être détruit immédiatement, soit rester intact pendant tout le round car personne ne passe jamais à l'endroit où vous l'avez mis, généralement à trois mètres du spawn allié.
+              </p>
+              <p class="italic text-[#FF4655]">
+                Conseil d'utilisation : Pour une efficacité maximale, placez vos pièges dans des endroits si obscurs et improbables que même l'IA du jeu se demande pourquoi ils sont là. Puis, quand un ennemi les détruit ou les évite complètement, expliquez avec condescendance à votre équipe que "vous recueilliez des informations cruciales" et que "c'était une stratégie avancée".
+              </p>
+            </div>
+          </div>
         </div>
-        
+
+        <!-- X - TOUR DE FORCE -->
         <div class="bg-[#1F2731] p-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">X - TOUR DE FORCE (ULT)</h3>
-          <p>Invoquez un fusil de sniper de luxe qui tue en un coup. En théorie, c'est pour éliminer plusieurs ennemis avec précision et élégance. En pratique, vous allez zoomer au maximum, avoir les mains qui tremblent comme si vous veniez de boire huit expressos, rater tous vos tirs sur des ennemis immobiles, puis être éliminé par un Classic à 50 mètres.</p>
-          <p class="italic text-[#FF4655]">Réalité statistique : 85% des ultimes de Chamber sont gaspillés en tirant dans le vide ou sur des Cypher cams, 14% touchent un ennemi à l'orteil pour 140 dégâts, et le 1% restant résulte en un headshot accidentel suivi d'un spray personnalisé appliqué avec tant d'empressement que vous vous faites tuer par le coéquipier de votre victime.</p>
+          <div class="flex flex-col md:flex-row items-start">
+            <div class="md:w-1/6 mb-4 md:mb-0">
+              <div class="bg-[#FF4655] p-4 rounded-full w-16 h-16 flex items-center justify-center text-white font-bold text-xl">X</div>
+            </div>
+            <div class="md:w-5/6">
+              <h3 class="text-xl font-bold text-white mb-2">TOUR DE FORCE (ULT)</h3>
+              <p class="mb-4">
+                Invoquez un fusil de sniper de luxe qui tue en un coup. En théorie, c'est pour éliminer plusieurs ennemis avec précision et élégance. En pratique, vous allez zoomer au maximum, avoir les mains qui tremblent comme si vous veniez de boire huit expressos, rater tous vos tirs sur des ennemis immobiles, puis être éliminé par un Classic à 50 mètres.
+              </p>
+              <p class="italic text-[#FF4655]">
+                Réalité statistique : 85% des ultimes de Chamber sont gaspillés en tirant dans le vide ou sur des Cypher cams, 14% touchent un ennemi à l'orteil pour 140 dégâts, et le 1% restant résulte en un headshot accidentel suivi d'un spray personnalisé appliqué avec tant d'empressement que vous vous faites tuer par le coéquipier de votre victime.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      
+
       <!-- Guide de jeu -->
       <section>
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-4">Guide de jeu</h2>
-        <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Guide de jeu</h2>
+        <div class="space-y-8">
           <div>
             <h3 class="text-xl font-bold text-white mb-2">Pour les débutants</h3>
-            <p>Vous venez d'installer Valorant et avez immédiatement été attiré par "le type en costume qui a l'air important" ? Félicitations ! Votre tactique principale consistera à camper au fond du site avec un Operator, rater votre tir, paniquer en essayant de vous téléporter, puis écrire "???????" dans le chat quand un Neon vous oneshot en courant. N'oubliez pas de blâmer votre équipe pour ne pas avoir "créé assez d'espace" pour que vous puissiez admirer votre propre reflet dans le miroir.</p>
+            <p>
+              Vous venez d'installer Valorant et avez immédiatement été attiré par "le type en costume qui a l'air important" ? Félicitations ! Votre tactique principale consistera à camper au fond du site avec un Operator, rater votre tir, paniquer en essayant de vous téléporter, puis écrire "???????" dans le chat quand un Neon vous oneshot en courant. N'oubliez pas de blâmer votre équipe pour ne pas avoir "créé assez d'espace" pour que vous puissiez admirer votre propre reflet dans le miroir.
+            </p>
           </div>
           <div>
             <h3 class="text-xl font-bold text-white mb-2">Pour les joueurs intermédiaires</h3>
-            <p>À ce stade, vous avez probablement appris à ne pas gaspiller toute votre économie sur des balles de Headhunter que vous ne toucherez jamais... enfin, pas systématiquement. Vous commencez à comprendre que crier "JE SUIS LE SNIPER DE L'ÉQUIPE!" n'est pas une stratégie complète en soi, mais vous insistez toujours pour acheter un Operator au troisième round alors que le reste de votre équipe économise avec des Sheriffs.</p>
+            <p>
+              À ce stade, vous avez probablement appris à ne pas gaspiller toute votre économie sur des balles de Headhunter que vous ne toucherez jamais... enfin, pas systématiquement. Vous commencez à comprendre que crier "JE SUIS LE SNIPER DE L'ÉQUIPE!" n'est pas une stratégie complète en soi, mais vous insistez toujours pour acheter un Operator au troisième round alors que le reste de votre équipe économise avec des Sheriffs.
+            </p>
           </div>
           <div>
             <h3 class="text-xl font-bold text-white mb-2">Pour les joueurs avancés</h3>
-            <p>Félicitations ! Vous avez maintenant compris qu'il existe d'autres positions que le fond de la carte. Vous savez faire la différence entre "tenir un angle avec style" et "être complètement inutile pendant que votre équipe se fait massacrer". Malheureusement, vos coéquipiers sont tellement traumatisés par vos précédentes performances qu'ils évitent systématiquement de vous donner le spike, convaincus que vous allez le déposer dans un coin pour admirer votre animation d'inspection d'arme jusqu'à la fin du round.</p>
+            <p>
+              Félicitations ! Vous avez maintenant compris qu'il existe d'autres positions que le fond de la carte. Vous savez faire la différence entre "tenir un angle avec style" et "être complètement inutile pendant que votre équipe se fait massacrer". Malheureusement, vos coéquipiers sont tellement traumatisés par vos précédentes performances qu'ils évitent systématiquement de vous donner le spike, convaincus que vous allez le déposer dans un coin pour admirer votre animation d'inspection d'arme jusqu'à la fin du round.
+            </p>
           </div>
         </div>
       </section>
-      
+
       <!-- Combos puissants -->
       <section>
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-4">Combos puissants</h2>
+        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Combos puissants</h2>
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">Le "Fashionista Faillible"</h3>
+          <h3 class="text-xl font-bold text-white mb-4">Le "Fashionista Faillible"</h3>
           <ol class="list-decimal list-inside text-gray-300">
             <li>Achetez un Operator dès le deuxième round</li>
             <li>Postez-vous sur un angle ultra-prévisible</li>
@@ -106,7 +165,7 @@ og_url: "https://.../chamber.html"
           </ol>
         </div>
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">Le "Économiste de luxe"</h3>
+          <h3 class="text-xl font-bold text-white mb-4">Le "Économiste de luxe"</h3>
           <ol class="list-decimal list-inside text-gray-300">
             <li>Dépensez tout votre argent en balles de Headhunter</li>
             <li>Ratez 7 tirs sur 8</li>
@@ -116,7 +175,7 @@ og_url: "https://.../chamber.html"
           </ol>
         </div>
         <div class="bg-[#1F2731] p-6 rounded-lg">
-          <h3 class="text-xl font-bold text-white mb-2">Le "Gardien absent"</h3>
+          <h3 class="text-xl font-bold text-white mb-4">Le "Gardien absent"</h3>
           <ol class="list-decimal list-inside text-gray-300">
             <li>Placez des téléporteurs et des pièges sur un site</li>
             <li>Allez ensuite défendre l'autre site</li>
@@ -126,29 +185,34 @@ og_url: "https://.../chamber.html"
           </ol>
         </div>
       </section>
-      
+
       <!-- Conclusion -->
       <section class="p-8 bg-[#1F2731] rounded-2xl">
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-4">Conclusion</h2>
-        <p>Chamber est l'agent parfait pour ceux qui ont toujours trouvé que les jeux tactiques manquaient cruellement de style français, ou pour ceux qui sont convaincus que leur KDA serait meilleur si seulement leur équipe comprenait leur "génie tactique". Si après avoir lu ce guide, vous avez toujours envie de jouer Chamber, nous ne pouvons que vous conseiller d'investir dans un bon parfum - pas pour impressionner qui que ce soit, mais pour masquer l'odeur de désespoir quand vous expliquerez pour la centième fois que "le hitreg est clairement cassé sur ce serveur".</p>
-        <p class="italic text-gray-300 mt-4">N'oubliez pas notre devise à Valo Guides : "Si vos coéquipiers ne vous ont pas encore signalé pour sabotage d'équipe après votre performance, c'est que vous ne jouez pas correctement Chamber."</p>
+        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Conclusion</h2>
+        <p>
+          Chamber est l'agent parfait pour ceux qui ont toujours trouvé que les jeux tactiques manquaient cruellement de style français, ou pour ceux qui sont convaincus que leur KDA serait meilleur si seulement leur équipe comprenait leur "génie tactique". Si après avoir lu ce guide, vous avez toujours envie de jouer Chamber, nous ne pouvons que vous conseiller d'investir dans un bon parfum - pas pour impressionner qui que ce soit, mais pour masquer l'odeur de désespoir quand vous expliquerez pour la centième fois que "le hitreg est clairement cassé sur ce serveur".
+        </p>
+        <p class="italic text-gray-300 mt-4">
+          N'oubliez pas notre devise à Valo Guides : "Si vos coéquipiers ne vous ont pas encore signalé pour sabotage d'équipe après votre performance, c'est que vous ne jouez pas correctement Chamber."
+        </p>
       </section>
 
     </div>
 
-    <!-- Right column: Biographie, Synergies, Contre-pick -->
-    <div class="space-y-8">
-      <div class="bg-[#1F2731] p-6 rounded-lg text-gray-300">
+    <!-- Colonne de droite : Biographie, Synergies, Contre‑pick -->
+    <div class="space-y-8 text-gray-300">
+
+      <!-- Biographie -->
+      <div class="bg-[#1F2731] p-6 rounded-lg">
         <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Biographie</h2>
-        <p>
-          **Nom réel** : Vincent Fabron<br>
-          **Origine** : France (là où apparemment tirer sur des gens tout en faisant des remarques sur leur manque de style est considéré comme du patriotisme)<br>
-          **Rôle** : Sentinelle (traduction : "Je campe avec classe, donc j'impressionne")<br><br>
-          **Histoire secrète** : Avant de rejoindre VALORANT, Chamber était designer pour une célèbre marque de luxe, mais a été renvoyé après avoir "accidentellement" incorporé des mécanismes d'armes à feu fonctionnels dans une collection de montres de luxe. Il a ensuite brièvement travaillé comme conseiller en image pour des politiciens avant d'être licencié pour avoir suggéré que "les débats parlementaires seraient plus efficaces si chaque orateur était équipé d'un revolver de précision". Son appartement est un mélange déconcertant de mobilier Louis XV et d'arsenal militaire high-tech, où chaque arme est assortie aux rideaux. Ses voisins ont depuis longtemps cessé de se plaindre du bruit de ses entraînements de tir après qu'il leur ait offert des montres qui "malheureusement" explosent si on critique son style vestimentaire.
-        </p>
+        <p><strong>Nom réel :</strong> Vincent Fabron</p>
+        <p><strong>Origine :</strong> France (là où apparemment tirer sur des gens tout en faisant des remarques sur leur manque de style est considéré comme du patriotisme)</p>
+        <p><strong>Rôle :</strong> Sentinelle (traduction : "Je campe avec classe, donc j'impressionne")</p>
+        <p><strong>Histoire secrète :</strong> Avant de rejoindre VALORANT, Chamber était designer pour une célèbre marque de luxe, mais a été renvoyé après avoir "accidentellement" incorporé des mécanismes d'armes à feu fonctionnels dans une collection de montres de luxe. Il a ensuite brièvement travaillé comme conseiller en image pour des politiciens avant d'être licencié pour avoir suggéré que "les débats parlementaires seraient plus efficaces si chaque orateur était équipé d'un revolver de précision". Son appartement est un mélange déconcertant de mobilier Louis XV et d'arsenal militaire high-tech, où chaque arme est assortie aux rideaux. Ses voisins ont depuis longtemps cessé de se plaindre du bruit de ses entraînements de tir après qu'il leur ait offert des montres qui "malheureusement" explosent si on critique son style vestimentaire.</p>
       </div>
 
-      <div class="bg-[#1F2731] p-6 rounded-lg text-gray-300">
+      <!-- Synergies -->
+      <div class="bg-[#1F2731] p-6 rounded-lg">
         <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Synergies avec les autres agents</h2>
         <p><strong>Jett :</strong> Ensemble, vous formez le duo "Narcissiques Anonymes", garantissant que votre équipe aura deux joueurs convaincus d'être les stars du show et refusant de jouer l'objectif. Vous pouvez comparer qui a la plus belle animation de mort tout en faisant perdre votre équipe.</p>
         <p><strong>Sage :</strong> Elle peut vous ressusciter quand votre sens de la mode vous a conduit à une mort prématurée. C'est ce qu'on appelle du style durable.</p>
@@ -156,15 +220,18 @@ og_url: "https://.../chamber.html"
         <p><strong>Brimstone :</strong> Il vous rappelle constamment que la vieille école a encore sa place. Vous le trouvez excessivement mal habillé, mais secrètement, vous enviez sa capacité à réellement aider l'équipe.</p>
       </div>
 
-      <div class="bg-[#1F2731] p-6 rounded-lg text-gray-300">
+      <!-- Contre‑pick -->
+      <div class="bg-[#1F2731] p-6 rounded-lg">
         <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Contre‑pick</h2>
-        <p>Vous jouez contre un Chamber ? Pas d'inquiétude ! Il suffit généralement d'attendre qu'il gaspille toutes ses balles de précision en essayant d'impressionner ses followers Twitch imaginaires, puis d'attaquer quand il contemple son animation d'inspection d'arme pour la quarantième fois. Si vous entendez le son de son téléporteur, ne vous inquiétez pas - il y a 90% de chances qu'il se téléporte directement dans votre ligne de mire par accident. Et si vous entendez son ultime, contentez-vous de sauter et de courir de façon imprévisible - le Chamber moyen est incapable de toucher une cible en mouvement avec son sniper de luxe, préférant viser les ennemis parfaitement immobiles qui n'existent que dans ses rêves.</p>
+        <p>
+          Vous jouez contre un Chamber ? Pas d'inquiétude ! Il suffit généralement d'attendre qu'il gaspille toutes ses balles de précision en essayant d'impressionner ses followers Twitch imaginaires, puis d'attaquer quand il contemple son animation d'inspection d'arme pour la quarantième fois. Si vous entendez le son de son téléporteur, ne vous inquiétez pas - il y a 90% de chances qu'il se téléporte directement dans votre ligne de mire par accident. Et si vous entendez son ultime, contentez-vous de sauter et de courir de façon imprévisible - le Chamber moyen est incapable de toucher une cible en mouvement avec son sniper de luxe, préférant viser les ennemis parfaitement immobiles qui n'existent que dans ses rêves.
+        </p>
       </div>
+
     </div>
 
   </div>
 </main>
-
 <!-- Related Agents -->
 <section class="bg-[#1F2731] py-12">
   <div class="container mx-auto px-4">
