@@ -27,7 +27,7 @@ og_url: "https://.../chamber.html"
       </button>
     </div>
     <div class="w-full md:w-1/2 relative flex justify-center">
-      <img src="https://i.postimg.cc/rp00X6wX/chamber.jpg" alt="Portrait de Chamber" class="w-64 h-auto rounded-lg shadow-xl" />
+      <img src="/api/placeholder/300/150" alt="Portrait de Chamber" class="w-64 h-auto rounded-lg shadow-xl" />
     </div>
   </div>
   <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-[#FF4655] opacity-5 blur-3xl"></div>
@@ -38,11 +38,11 @@ og_url: "https://.../chamber.html"
 <main class="relative overflow-hidden bg-[#0F1923] py-16">
   <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-    <!-- Colonne de gauche : Introduction + Compétences + Guide + Combos + Conclusion -->
+    <!-- Colonne de gauche -->
     <div class="lg:col-span-2 space-y-12 text-gray-300">
 
       <!-- Introduction -->
-      <section>
+      <section class="mb-12">
         <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Introduction</h2>
         <p>
           Bienvenue sur la page dédiée à Chamber, ou comme on l'appelle dans le milieu : "le mannequin Armani qui a décidé que tuer avec style était un métier". Si vous êtes ici, c'est soit que vous avez une aversion profonde pour marcher comme tout le monde, soit que vous êtes ce type de joueur qui pense qu'un FPS est avant tout une question de look et de pose victorieuse, ou encore que vous êtes simplement convaincu que votre accent français rend vos headshots plus élégants. Dans tous les cas, vous êtes au bon endroit pour apprendre l'art subtil de dépenser 150 crédits pour un pistolet qui fait le travail d'un Operator, tout en ajustant constamment votre cravate virtuelle.
@@ -50,10 +50,10 @@ og_url: "https://.../chamber.html"
       </section>
 
       <!-- Compétences -->
-      <section>
+      <section class="mb-12">
         <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Compétences</h2>
 
-        <!-- Q - HEADHUNTER -->
+        <!-- Q -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
           <div class="flex flex-col md:flex-row items-start">
             <div class="md:w-1/6 mb-4 md:mb-0">
@@ -71,7 +71,7 @@ og_url: "https://.../chamber.html"
           </div>
         </div>
 
-        <!-- E - RENDEZVOUS -->
+        <!-- E -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
           <div class="flex flex-col md:flex-row items-start">
             <div class="md:w-1/6 mb-4 md:mb-0">
@@ -89,7 +89,7 @@ og_url: "https://.../chamber.html"
           </div>
         </div>
 
-        <!-- C - MARQUE DÉPOSÉE -->
+        <!-- C -->
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
           <div class="flex flex-col md:flex-row items-start">
             <div class="md:w-1/6 mb-4 md:mb-0">
@@ -107,7 +107,7 @@ og_url: "https://.../chamber.html"
           </div>
         </div>
 
-        <!-- X - TOUR DE FORCE -->
+        <!-- X -->
         <div class="bg-[#1F2731] p-6 rounded-lg">
           <div class="flex flex-col md:flex-row items-start">
             <div class="md:w-1/6 mb-4 md:mb-0">
@@ -116,10 +116,10 @@ og_url: "https://.../chamber.html"
             <div class="md:w-5/6">
               <h3 class="text-xl font-bold text-white mb-2">TOUR DE FORCE (ULT)</h3>
               <p class="mb-4">
-                Invoquez un fusil de sniper de luxe qui tue en un coup. En théorie, c'est pour éliminer plusieurs ennemis avec précision et élégance. En pratique, vous allez zoomer au maximum, avoir les mains qui tremblent comme si vous veniez de boire huit expressos, rater tous vos tirs sur des ennemis immobiles, puis être éliminé par un Classic à 50 mètres.
+                Invoquez un fusil de sniper de luxe qui tue en un coup. En théorie, c'est pour éliminer plusieurs ennemis avec précision et élégance. En pratique, vous allez zoomer au maximum, avoir les mains qui tremblent comme si vous veniez de boire huit expressos, rater tous vos tirs sur des ennemis immobiles, puis être éliminé par un Classic à 50 mètres.
               </p>
               <p class="italic text-[#FF4655]">
-                Réalité statistique : 85% des ultimes de Chamber sont gaspillés en tirant dans le vide ou sur des Cypher cams, 14% touchent un ennemi à l'orteil pour 140 dégâts, et le 1% restant résulte en un headshot accidentel suivi d'un spray personnalisé appliqué avec tant d'empressement que vous vous faites tuer par le coéquipier de votre victime.
+                Réalité statistique : 85% des ultimes de Chamber sont gaspillés en tirant dans le vide ou sur des Cypher cams, 14% touchent un ennemi à l'orteil pour 140 dégâts, et le 1% restant résulte en un headshot accidentel suivi d'un spray personnalisé appliqué avec tant d'empressement que vous vous faites tuer par le coéquipier de votre victime.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ og_url: "https://.../chamber.html"
       </section>
 
       <!-- Guide de jeu -->
-      <section>
+      <section class="mb-12">
         <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Guide de jeu</h2>
         <div class="space-y-8">
           <div>
@@ -151,8 +151,64 @@ og_url: "https://.../chamber.html"
         </div>
       </section>
 
+    </div>
+
+    <!-- Colonne de droite -->
+    <div class="space-y-8 text-gray-300">
+      <!-- Biographie -->
+      <div class="bg-[#1F2731] p-6 mb-8 rounded-lg">
+        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Biographie</h2>
+        <div class="mb-4">
+          <strong class="text-white">Nom réel :</strong>
+          <span class="text-gray-300">Vincent Fabron</span>
+        </div>
+        <div class="mb-4">
+          <strong class="text-white">Origine :</strong>
+          <span class="text-gray-300">France (là où apparemment tirer sur des gens tout en faisant des remarques sur leur manque de style est considéré comme du patriotisme)</span>
+        </div>  
+        <div class="mb-4">
+          <strong class="text-white">Rôle :</strong>
+          <span class="text-gray-300">Sentinelle (traduction : "Je campe avec classe, donc j'impressionne")</span>
+        </div>
+        <div>
+          <strong class="text-white">Histoire secrète :</strong>
+          <p class="text-gray-300">
+            Avant de rejoindre VALORANT, Chamber était designer pour une célèbre marque de luxe, mais a été renvoyé après avoir "accidentellement" incorporé des mécanismes d'armes à feu fonctionnels dans une collection de montres de luxe. Il a ensuite brièvement travaillé comme conseiller en image pour des politiciens avant d'être licencié pour avoir suggéré que "les débats parlementaires seraient plus efficaces si chaque orateur était équipé d'un revolver de précision". Son appartement est un mélange déconcertant de mobilier Louis XV et d'arsenal militaire high-tech, où chaque arme est assortie aux rideaux. Ses voisins ont depuis longtemps cessé de se plaindre du bruit de ses entraînements de tir après qu'il leur ait offert des montres qui "malheureusement" explosent si on critique son style vestimentaire.
+          </p>
+        </div>
+      </div>
+
+      <!-- Synergies -->
+      <div class="bg-[#1F2731] p-6 mb-8 rounded-lg">
+        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Synergies avec les autres agents</h2>
+        <div class="mb-4">
+          <strong class="text-white">Jett :</strong>
+          <p class="text-gray-300">Ensemble, vous formez le duo "Narcissiques Anonymes", garantissant que votre équipe aura deux joueurs convaincus d'être les stars du show et refusant de jouer l'objectif.</p>
+        </div>
+        <div class="mb-4">
+          <strong class="text-white">Sage :</strong>
+          <p class="text-gray-300">Elle peut vous ressusciter quand votre sens de la mode vous a conduit à une mort prématurée. C'est ce qu'on appelle du style durable.</p>
+        </div>
+        <div class="mb-4">
+          <strong class="text-white">Killjoy :</strong>
+          <p class="text-gray-300">Une autre agent qui pense que la technologie est la réponse à tout. Vous pouvez rivaliser pour déterminer qui a les gadgets les plus brillants mais les moins utiles en situation réelle.</p>
+        </div>
+        <div>
+          <strong class="text-white">Brimstone :</strong>
+          <p class="text-gray-300">Il vous rappelle constamment que la vieille école a encore sa place. Vous le trouvez excessivement mal habillé, mais secrètement, vous enviez sa capacité à réellement aider l'équipe.</p>
+        </div>
+      </div>
+
+      <!-- Contre‑pick -->
+      <div class="bg-[#1F2731] p-6 mb-8 rounded-lg">
+        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Contre‑pick</h2>
+        <p>
+          Vous jouez contre un Chamber ? Pas d'inquiétude ! Il suffit généralement d'attendre qu'il gaspille toutes ses balles de précision en essayant d'impressionner ses followers Twitch imaginaires, puis d'attaquer quand il contemple son animation d'inspection d'arme pour la quarantième fois. Si vous entendez le son de son téléporteur, ne vous inquiétez pas – il y a 90% de chances qu'il se téléporte directement dans votre ligne de mire par accident. Et si vous entendez son ultime, contentez-vous de sauter et de courir de façon imprévisible – le Chamber moyen est incapable de toucher une cible en mouvement avec son sniper de luxe, préférant viser les ennemis parfaitement immobiles qui n'existent que dans ses rêves.
+        </p>
+      </div>
+
       <!-- Combos puissants -->
-      <section>
+      <section class="mb-12">
         <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Combos puissants</h2>
         <div class="bg-[#1F2731] p-6 mb-6 rounded-lg">
           <h3 class="text-xl font-bold text-white mb-4">Le "Fashionista Faillible"</h3>
@@ -186,52 +242,11 @@ og_url: "https://.../chamber.html"
         </div>
       </section>
 
-      <!-- Conclusion -->
-      <section class="p-8 bg-[#1F2731] rounded-2xl">
-        <h2 class="text-3xl font-bold text-[#FF4655] uppercase mb-6">Conclusion</h2>
-        <p>
-          Chamber est l'agent parfait pour ceux qui ont toujours trouvé que les jeux tactiques manquaient cruellement de style français, ou pour ceux qui sont convaincus que leur KDA serait meilleur si seulement leur équipe comprenait leur "génie tactique". Si après avoir lu ce guide, vous avez toujours envie de jouer Chamber, nous ne pouvons que vous conseiller d'investir dans un bon parfum - pas pour impressionner qui que ce soit, mais pour masquer l'odeur de désespoir quand vous expliquerez pour la centième fois que "le hitreg est clairement cassé sur ce serveur".
-        </p>
-        <p class="italic text-gray-300 mt-4">
-          N'oubliez pas notre devise à Valo Guides : "Si vos coéquipiers ne vous ont pas encore signalé pour sabotage d'équipe après votre performance, c'est que vous ne jouez pas correctement Chamber."
-        </p>
-      </section>
-
-    </div>
-
-    <!-- Colonne de droite : Biographie, Synergies, Contre‑pick -->
-    <div class="space-y-8 text-gray-300">
-
-      <!-- Biographie -->
-      <div class="bg-[#1F2731] p-6 rounded-lg">
-        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Biographie</h2>
-        <p><strong>Nom réel :</strong> Vincent Fabron</p>
-        <p><strong>Origine :</strong> France (là où apparemment tirer sur des gens tout en faisant des remarques sur leur manque de style est considéré comme du patriotisme)</p>
-        <p><strong>Rôle :</strong> Sentinelle (traduction : "Je campe avec classe, donc j'impressionne")</p>
-        <p><strong>Histoire secrète :</strong> Avant de rejoindre VALORANT, Chamber était designer pour une célèbre marque de luxe, mais a été renvoyé après avoir "accidentellement" incorporé des mécanismes d'armes à feu fonctionnels dans une collection de montres de luxe. Il a ensuite brièvement travaillé comme conseiller en image pour des politiciens avant d'être licencié pour avoir suggéré que "les débats parlementaires seraient plus efficaces si chaque orateur était équipé d'un revolver de précision". Son appartement est un mélange déconcertant de mobilier Louis XV et d'arsenal militaire high-tech, où chaque arme est assortie aux rideaux. Ses voisins ont depuis longtemps cessé de se plaindre du bruit de ses entraînements de tir après qu'il leur ait offert des montres qui "malheureusement" explosent si on critique son style vestimentaire.</p>
-      </div>
-
-      <!-- Synergies -->
-      <div class="bg-[#1F2731] p-6 rounded-lg">
-        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Synergies avec les autres agents</h2>
-        <p><strong>Jett :</strong> Ensemble, vous formez le duo "Narcissiques Anonymes", garantissant que votre équipe aura deux joueurs convaincus d'être les stars du show et refusant de jouer l'objectif. Vous pouvez comparer qui a la plus belle animation de mort tout en faisant perdre votre équipe.</p>
-        <p><strong>Sage :</strong> Elle peut vous ressusciter quand votre sens de la mode vous a conduit à une mort prématurée. C'est ce qu'on appelle du style durable.</p>
-        <p><strong>Killjoy :</strong> Une autre agent qui pense que la technologie est la réponse à tout. Vous pouvez rivaliser pour déterminer qui a les gadgets les plus brillants mais les moins utiles en situation réelle.</p>
-        <p><strong>Brimstone :</strong> Il vous rappelle constamment que la vieille école a encore sa place. Vous le trouvez excessivement mal habillé, mais secrètement, vous enviez sa capacité à réellement aider l'équipe.</p>
-      </div>
-
-      <!-- Contre‑pick -->
-      <div class="bg-[#1F2731] p-6 rounded-lg">
-        <h2 class="text-2xl font-bold text-[#FF4655] uppercase mb-4">Contre‑pick</h2>
-        <p>
-          Vous jouez contre un Chamber ? Pas d'inquiétude ! Il suffit généralement d'attendre qu'il gaspille toutes ses balles de précision en essayant d'impressionner ses followers Twitch imaginaires, puis d'attaquer quand il contemple son animation d'inspection d'arme pour la quarantième fois. Si vous entendez le son de son téléporteur, ne vous inquiétez pas - il y a 90% de chances qu'il se téléporte directement dans votre ligne de mire par accident. Et si vous entendez son ultime, contentez-vous de sauter et de courir de façon imprévisible - le Chamber moyen est incapable de toucher une cible en mouvement avec son sniper de luxe, préférant viser les ennemis parfaitement immobiles qui n'existent que dans ses rêves.
-        </p>
-      </div>
-
     </div>
 
   </div>
 </main>
+
 <!-- Related Agents -->
 <section class="bg-[#1F2731] py-12">
   <div class="container mx-auto px-4">
