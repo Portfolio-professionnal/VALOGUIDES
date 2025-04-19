@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Agent - Découvre quel agent supportera tes décisions douteuses</title>
+    <style>
+        :root {
+            --primary-color: #ff4655;
+            --secondary-color: #0f1923;
+            --accent-color: #ece8e1;
+            --text-color: #383e3a;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .intro {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .question-container {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .option:hover {
+                background-color: #f0f0f0;
+                border-color: var(--primary-color);
+            }
+
+            .option.selected {
+                background-color: var(--primary-color);
+                color: white;
+                border-color: var(--primary-color);
+            }
+
+            .option input[type="radio"] {
+                margin-right: 10px;
+            }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #e02e3d;
+            }
+
+            button:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+
+        .result-container {
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .result-agent {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .agent-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 3px solid var(--primary-color);
+        }
+
+        .result-description {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+
+            10%, 30%, 50%, 70%, 90% {
+                transform: translateX(-5px);
+            }
+
+            20%, 40%, 60%, 80% {
+                transform: translateX(5px);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-color);
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Test d'Agent Personnalisé</h1>
+            <p>Découvre quel agent supportera tes décisions douteuses</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>T'es perdu dans ton choix d'agent?</h2>
+            <p>Ce test va révéler quel agent est suffisamment désespéré pour s'associer à ta stratégie de jeu. Réponds honnêtement, ou pas, on s'en fiche tant que tu finiras par mourir en premier quand même.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+
+        <div id="quiz-container">
+            <!-- Les questions seront injectées ici -->
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" disabled>Précédent</button>
+            <button id="next-btn">Suivant</button>
+            <button id="submit-btn" class="hidden">Voir mon destin</button>
+        </div>
+
+        <div id="result-container" class="result-container">
+            <h2>Ton agent spirituel est...</h2>
+            <div class="result-agent" id="result-agent">Chargement...</div>
+            <div id="agent-image" class="agent-image">
+                <!-- Image d'agent ici -->
+                <img src="/api/placeholder/150/150" alt="Agent profile" id="agent-img" />
+            </div>
+            <div class="result-description" id="result-description"></div>
+            <button id="restart-btn">Recommencer (parce que tu n'aimes pas la vérité)</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Note: Ce test est purement sarcastique. Aucun agent n'a été maltraité durant sa création, on ne peut pas en dire autant de ton équipe quand tu joues.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Données des questions
+        const questions = [
+            {
+                question: "Lorsque tu es le dernier survivant de ton équipe, tu:",
+                options: [
+                    "Te caches dans un coin en espérant que tout le monde s'entretue",
+                    "Fonces tête baissée, parce que mourir avec style c'est mieux que de vivre dans la honte",
+                    "Poses des pièges et attends patiemment, comme le psychopathe que tu es",
+                    "Demandes à tes coéquipiers morts de te dire où sont les ennemis, parce que c'est leur faute"
+                ]
+            },
+            {
+                question: "Ta stratégie préférée est:",
+                options: [
+                    "Rush B, cyka blyat!",
+                    "Élaborer un plan complexe que personne ne suivra de toute façon",
+                    "Distraire l'ennemi pendant que ton équipe fait le travail (c'est ça, prends-toi pour un stratège)",
+                    "Camper. Tu vas dire que c'est 'tenir une position', mais on sait tous que c'est du camping"
+                ]
+            },
+            {
+                question: "Comment réagis-tu quand un coéquipier vole ton kill?",
+                options: [
+                    "Tu hurles dans ton micro comme si on t'arrachait un rein sans anesthésie",
+                    "Tu le traques lors des prochaines parties pour te venger",
+                    "Tu fais comme si de rien n'était, mais tu notes son nom dans ton petit carnet",
+                    "Tu le félicites, puis débranches discrètement son support de vie"
+                ]
+            },
+            {
+                question: "Quand tu as l'ultime chargé, tu:",
+                options: [
+                    "L'utilises immédiatement sur le premier ennemi que tu vois, même si c'est juste un orteil qui dépasse",
+                    "Le gardes tellement longtemps que la partie se termine sans que tu l'aies utilisé",
+                    "L'utilises dans une situation parfaite, puis manques toutes tes cibles",
+                    "Attends le moment parfait pour faire un clip, qui finira avec toi en train de mourir lamentablement"
+                ]
+            },
+            {
+                question: "L'objet que tu achètes systématiquement en début de partie est:",
+                options: [
+                    "L'arme la plus chère, puis tu meurs en 5 secondes",
+                    "Des flashes pour aveugler tes coéquipiers, 'accidentellement'",
+                    "Un sniper, même sur les petites cartes, parce que c'est comme ça que tu compenses",
+                    "Rien du tout, parce que tu économises pour un round où tu mourras avant de pouvoir dépenser"
+                ]
+            },
+            {
+                question: "Tes coéquipiers te décrivent comme:",
+                options: [
+                    "Celui qui crie des ordres que personne n'écoute",
+                    "Le fantôme silencieux qui apparaît de nulle part (et disparaît tout aussi vite)",
+                    "Le boulet qu'on doit toujours ressusciter",
+                    "Le tryhard qui joue comme si sa vie en dépendait"
+                ]
+            },
+            {
+                question: "Ta réaction quand tu perds une partie serrée:",
+                options: [
+                    "Tu accuses la connexion, le ping, les hackers, le gouvernement et les illuminati",
+                    "Tu analyses froidement ce qui s'est passé (et conclut que c'est la faute des autres)",
+                    "Tu quittes silencieusement et vas pleurer sous ta douche",
+                    "Tu félicites l'équipe adverse tout en insultant la tienne en chat privé"
+                ]
+            },
+            {
+                question: "Pendant le temps mort, tu:",
+                options: [
+                    "Élabores une stratégie détaillée que tu seras le premier à abandonner",
+                    "Vérifies frénétiquement tes réseaux sociaux, parce que le jeu n'est qu'un moyen de combler ton vide existentiel",
+                    "Insultes préventivement l'équipe adverse pour établir ta dominance",
+                    "Comptes les pixels sur ton écran en te demandant pourquoi tu continues à jouer à ce jeu"
+                ]
+            },
+            {
+                question: "Si tu pouvais avoir un super pouvoir dans le jeu, ce serait:",
+                options: [
+                    "Voir à travers les murs, parce que ton skill naturel ne suffit pas",
+                    "Être invisible, comme ton impact sur la partie",
+                    "Avoir des munitions infinies pour compenser ta précision de stormtrooper",
+                    "Pouvoir muter tous les joueurs qui osent respirer dans leur micro"
+                ]
+            },
+            {
+                question: "Ta plus grande fierté dans le jeu:",
+                options: [
+                    "Ce clutch 1v5 dont tu parles encore mais dont personne n'a été témoin",
+                    "Ton skin rare qui ne te rend pas meilleur, juste plus visible pour les snipers",
+                    "Ton rang élevé que tu as atteint en faisant jouer ton cousin pro-gamer sur ton compte",
+                    "Le fait que tu n'aies jamais été banni, même si ce n'est pas faute d'avoir essayé"
+                ]
+            }
+        ];
+
+        // Données des agents avec leurs descriptions sarcastiques
+        const agents = [
+            {
+                name: "Jett",
+                description: "Félicitations, tu es Jett ! Rapide, arrogante et morte avant même que ton équipe ait fini de sortir du spawn. Tu adores foncer seul pour faire ton highlight, mourir, puis blâmer ton équipe pour ne pas t'avoir suivi dans ton suicide tactique. Au moins tu auras l'air cool pendant les 3 secondes avant ta mort.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Cypher",
+                description: "Tu es Cypher, le voyeur professionnel. Tu passes plus de temps à regarder tes caméras qu'à réellement jouer. Tu connais la position de chaque ennemi mais tu es trop occupé à le signaler à ton équipe pour faire quoi que ce soit. Bonus : tu peux maintenant justifier ton comportement de stalker comme étant 'dans le rôle'.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Brimstone",
+                description: "Vieux, lent et toujours en retard pour le combat - tu es Brimstone ! Tu passes ton temps à dire aux jeunes comment on jouait 'dans ton temps'. Tu lances tes smokes avec la précision d'un ivrogne lançant des fléchettes, mais au moins tu as des molotovs pour faire croire que tu contrôles la situation.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Reyna",
+                description: "Reyna, la diva narcissique du champ de bataille, tout comme toi. Tu ne vis que pour les kills et si tu n'es pas le MVP, c'est forcément la faute du lag. Tu serais prêt à sacrifier toute ton équipe pour une élimination de plus. Mais sans kills, tu es aussi utile qu'un pistolet à eau dans un incendie.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Sage",
+                description: "Tu es Sage, le support qui se prend pour un duelliste. On te supplie de ressusciter, mais tu préfères garder ton ultime 'pour plus tard' (spoiler : ce plus tard n'arrive jamais). Tu mets des murs qui bloquent plus ton équipe que les ennemis, mais au moins tu peux te soigner toi-même après tes mauvaises décisions.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Omen",
+                description: "Mystérieux, dramatique et généralement inutile - c'est toi, Omen ! Tu te téléportes dans des endroits où personne ne te cherche, pas même ton équipe. Tes smokes sont pratiques, mais admettons-le, tu les utilises surtout pour cacher ta honte après avoir raté ce tir facile.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Phoenix",
+                description: "Phoenix, le héros de sa propre histoire imaginaire. Comme toi, il est bruyant, impulsif et meurt souvent de ses propres flammes. Tu crois que ton ultime est une seconde chance, alors qu'en réalité c'est juste une occasion de mourir deux fois pour le prix d'une.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Killjoy",
+                description: "Tu es Killjoy, le 'génie' qui passe plus de temps à installer des gadgets qu'à viser correctement. Tes alliés attendent désespérément que ton ultime fasse quelque chose d'utile, pendant que toi, tu te caches en attendant que tes tourelles fassent le travail à ta place. La technologie ne peut pas compenser ton manque de skill, mais bon essai.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Sova",
+                description: "Sova, l'expert en flèches qui touchent tout sauf l'ennemi. Tu passes 90% de ton temps à viser le ciel avec tes flèches de reconnaissance, pour finalement révéler... absolument rien. Mais tu continues à dire 'J'ai des infos' pour te sentir utile. Au moins ton drone peut avancer plus loin que toi sans mourir.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            },
+            {
+                name: "Viper",
+                description: "Toxique dans le jeu comme dans le chat, tu es Viper ! Tu places ton mur qui coupe la carte en deux, confondant autant ton équipe que les ennemis. Ton ultime transforme le site en chambre à gaz où tu te perds toi-même. Les seules choses plus venimeuses que tes compétences sont tes commentaires envers tes coéquipiers.",
+                image: "/api/placeholder/150/150" // Placeholder pour l'image
+            }
+        ];
+
+        // Variables pour le quiz
+        let currentQuestion = 0;
+        let answers = [];
+
+        // Éléments DOM
+        const quizContainer = document.getElementById('quiz-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const resultContainer = document.getElementById('result-container');
+        const resultAgent = document.getElementById('result-agent');
+        const resultDescription = document.getElementById('result-description');
+        const agentImg = document.getElementById('agent-img');
+        const restartBtn = document.getElementById('restart-btn');
+
+        // Initialisation du quiz
+        function initQuiz() {
+            showQuestion(currentQuestion);
+            updateProgressBar();
+
+            // Événements des boutons
+            prevBtn.addEventListener('click', showPreviousQuestion);
+            nextBtn.addEventListener('click', showNextQuestion);
+            submitBtn.addEventListener('click', showResult);
+            restartBtn.addEventListener('click', restartQuiz);
+        }
+
+        // Afficher une question
+        function showQuestion(index) {
+            quizContainer.innerHTML = '';
+
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('question-container', 'fade-in');
+
+            const questionText = document.createElement('div');
+            questionText.classList.add('question');
+            questionText.textContent = questions[index].question;
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.classList.add('options');
+
+            questions[index].options.forEach((option, i) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.classList.add('option');
+
+                if (answers[index] === i) {
+                    optionDiv.classList.add('selected');
+                }
+
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'question' + index;
+                radio.value = i;
+                radio.id = 'option' + i;
+                radio.checked = answers[index] === i;
+
+                const label = document.createElement('label');
+                label.htmlFor = 'option' + i;
+                label.textContent = option;
+
+                optionDiv.appendChild(radio);
+                optionDiv.appendChild(label);
+
+                optionDiv.addEventListener('click', () => {
+                    selectOption(i);
+                });
+
+                optionsDiv.appendChild(optionDiv);
+            });
+
+            questionDiv.appendChild(questionText);
+            questionDiv.appendChild(optionsDiv);
+            quizContainer.appendChild(questionDiv);
+
+            // Mise à jour des boutons
+            updateButtons();
+        }
+
+        // Sélectionner une option
+        function selectOption(index) {
+            answers[currentQuestion] = index;
+            showQuestion(currentQuestion);
+        }
+
+        // Question suivante
+        function showNextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                if (answers[currentQuestion] === undefined) {
+                    // L'utilisateur n'a pas répondu, secouer la question
+                    const questionContainer = document.querySelector('.question-container');
+                    questionContainer.classList.add('shake');
+                    setTimeout(() => {
+                        questionContainer.classList.remove('shake');
+                    }, 500);
+                    return;
+                }
+
+                currentQuestion++;
+                showQuestion(currentQuestion);
+                updateProgressBar();
+            } else {
+                // C'est la dernière question, montrer le bouton de soumission
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            }
+        }
+
+        // Question précédente
+        function showPreviousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+                updateProgressBar();
+
+                // Si on était à la dernière question, cacher le bouton de soumission
+                submitBtn.classList.add('hidden');
+                nextBtn.classList.remove('hidden');
+            }
+        }
+
+        // Mise à jour des boutons
+        function updateButtons() {
+            prevBtn.disabled = currentQuestion === 0;
+
+            if (currentQuestion === questions.length - 1) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+        }
+
+        // Mise à jour de la barre de progression
+        function updateProgressBar() {
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        // Calculer le résultat
+        function calculateResult() {
+            // Un calcul simple basé sur les réponses
+            // On va créer un tableau de scores pour chaque agent
+            const scores = Array(agents.length).fill(0);
+
+            // Attribution des points en fonction des réponses
+            answers.forEach((answer, qIndex) => {
+                // Pour chaque réponse, on attribue des points aux agents selon un pattern
+                // C'est une logique simplifiée, vous pouvez la rendre plus complexe
+                const agentIndex = (qIndex + answer) % agents.length;
+                scores[agentIndex] += 1;
+
+                // Donnons aussi des points aux agents "adjacents" pour plus de variété
+                scores[(agentIndex + 1) % agents.length] += 0.5;
+                scores[(agentIndex + agents.length - 1) % agents.length] += 0.5;
+            });
+
+            // Trouver l'agent avec le score le plus élevé
+            let maxScore = -1;
+            let resultIndex = 0;
+
+            scores.forEach((score, index) => {
+                if (score > maxScore) {
+                    maxScore = score;
+                    resultIndex = index;
+                }
+            });
+
+            return agents[resultIndex];
+        }
+
+        // Afficher le résultat
+        function showResult() {
+            if (answers.length < questions.length || answers.includes(undefined)) {
+                // Il reste des questions sans réponse
+                alert("Réponds à toutes les questions, espèce de lâche !");
+                return;
+            }
+
+            const result = calculateResult();
+
+            quizContainer.classList.add('hidden');
+            prevBtn.classList.add('hidden');
+            submitBtn.classList.add('hidden');
+
+            resultAgent.textContent = result.name;
+            resultDescription.textContent = result.description;
+            agentImg.src = result.image;
+
+            resultContainer.style.display = 'block';
+            resultContainer.classList.add('fade-in');
+        }
+
+        // Redémarrer le quiz
+        function restartQuiz() {
+            currentQuestion = 0;
+            answers = [];
+
+            resultContainer.style.display = 'none';
+            quizContainer.classList.remove('hidden');
+            prevBtn.classList.remove('hidden');
+
+            showQuestion(currentQuestion);
+            updateProgressBar();
+        }
+
+        // Initialiser le quiz au chargement
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>
