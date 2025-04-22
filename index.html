@@ -18,52 +18,55 @@ google_site_verification: ""
 
 
                 <div id="root">
-                    <section id="hero" class="relative overflow-hidden bg-[#0F1923] text-white pt-28 pb-16 md:pt-32 md:pb-24">
+                <section id="hero" class="relative overflow-hidden bg-[#0F1923] text-white pt-28 pb-16 md:pt-32 md:pb-24" aria-labelledby="hero-title">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center">
             <div class="w-full md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                    <span class="text-[#FF4655]">Valorant</span> Guides
+                <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                    <span class="text-[#FF4655]">Valorant</span> Guides Pro
                 </h1>
-                <p class="text-xl md:text-2xl mb-6 text-gray-300">
-                    Améliore ton gameplay Valorant avec des guides simples et efficaces
+                <p class="text-xl md:text-2xl mb-6 text-gray-300 animate-fade-in">
+                    Transforme ton gameplay avec des stratégies assassines
                 </p>
                 <p class="text-base md:text-lg mb-8 text-gray-400">
-                    Tout ce dont tu as besoin pour progresser : agents, maps, réglages et stratégies pro.
+                    Maîtrise les agents, maps et réglages pour dominer chaque match
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#latest-articles" class="bg-[#FF4655] hover:bg-red-600 text-white py-3 px-6 rounded-md font-medium transition-colors duration-300 text-center">
-                        Derniers Articles
+                    <a href="#latest-articles" class="group relative bg-[#FF4655] hover:bg-red-600 text-white py-3 px-6 rounded-md font-medium transition-all duration-300 text-center shadow-md hover:shadow-xl overflow-hidden">
+                        <span class="relative z-10">Derniers Articles</span>
+                        <span class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                     </a>
-                    <a href="#agents-overview" class="bg-transparent border border-[#FF4655] hover:bg-[#FF4655] hover:bg-opacity-10 text-[#FF4655] py-3 px-6 rounded-md font-medium transition-colors duration-300 text-center">
-                        Découvrir les Agents
+                    <a href="#agents-overview" class="group relative bg-transparent border border-[#FF4655] hover:bg-[#FF4655] text-[#FF4655] hover:text-white py-3 px-6 rounded-md font-medium transition-all duration-300 text-center overflow-hidden">
+                        <span class="relative z-10">Découvrir les Agents</span>
+                        <span class="absolute inset-0 bg-[#FF4655] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                     </a>
                 </div>
             </div>
             <div class="w-full md:w-1/2 relative">
-                <div class="relative h-64 md:h-80 lg:h-96 bg-[#1F2731] rounded-lg overflow-hidden">
-                    <!-- Hero Design Element -->
+                <div class="relative h-64 md:h-80 lg:h-96 bg-[#1F2731] rounded-lg overflow-hidden shadow-2xl">
                     <div class="absolute inset-0 bg-gradient-to-br from-[#FF4655] to-[#0F1923] opacity-20"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-[#FF4655] rounded-full opacity-20 animate-pulse"></div>
                     </div>
-                    <div class="absolute bottom-8 left-8">
+                    <div class="absolute bottom-8 left-8 space-y-2">
                         <div class="flex space-x-2">
                             <div class="w-16 h-4 bg-[#FF4655] rounded-sm"></div>
                             <div class="w-24 h-4 bg-white rounded-sm opacity-20"></div>
                             <div class="w-12 h-4 bg-white rounded-sm opacity-20"></div>
                         </div>
-                        <div class="mt-2 w-32 h-8 bg-white rounded-sm opacity-10"></div>
+                        <div class="w-32 h-8 bg-white rounded-sm opacity-10"></div>
                     </div>
                 </div>
-                <!-- Search Bar -->
-                <div class="absolute -bottom-6 left-0 right-0 mx-auto w-4/5">
+                <div class="absolute -bottom-6 left-0 right-0 mx-auto w-4/5 z-10">
                     <div class="relative">
-                        <input type="text"
+                        <label for="search-hero" class="sr-only">Rechercher un guide</label>
+                        <input type="search"
                                id="search-hero"
+                               name="search"
                                placeholder="Rechercher un guide..."
-                               class="w-full py-3 pl-4 pr-12 rounded-md bg-[#1F2731] border border-gray-700 focus:outline-none focus:border-[#FF4655] text-white">
-                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#FF4655]">
+                               aria-label="Recherche de guides Valorant"
+                               class="w-full py-3 pl-4 pr-12 rounded-md bg-[#1F2731] border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#FF4655] text-white transition-all duration-300">
+                        <button type="submit" aria-label="Lancer la recherche" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#FF4655] transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
@@ -73,17 +76,15 @@ google_site_verification: ""
             </div>
         </div>
 
-        <!-- Featured Tags -->
         <div class="mt-16 flex flex-wrap gap-2 justify-center">
-            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm">#TacticalShooter</span>
-            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm">#ProSettings</span>
-            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm">#AgentGuides</span>
-            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm">#MapStrategies</span>
-            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm">#ValorantTips</span>
+            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm hover:bg-[#FF4655] hover:text-white transition-colors duration-300 cursor-pointer">#TacticalShooter</span>
+            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm hover:bg-[#FF4655] hover:text-white transition-colors duration-300 cursor-pointer">#ProSettings</span>
+            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm hover:bg-[#FF4655] hover:text-white transition-colors duration-300 cursor-pointer">#AgentGuides</span>
+            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm hover:bg-[#FF4655] hover:text-white transition-colors duration-300 cursor-pointer">#MapStrategies</span>
+            <span class="px-3 py-1 bg-[#1F2731] rounded-full text-sm hover:bg-[#FF4655] hover:text-white transition-colors duration-300 cursor-pointer">#ValorantTips</span>
         </div>
 
-        <!-- AdSense Placeholder / Affiliate Banner -->
-        <div class="mt-12 p-4 border border-gray-700 rounded-md bg-[#1F2731] bg-opacity-50 text-center">
+        <div class="mt-12 p-4 border border-gray-700 rounded-md bg-[#1F2731] bg-opacity-50 text-center hover:bg-opacity-70 transition-all duration-300">
             <p class="text-sm text-gray-400 mb-1">Partenaire</p>
             <div class="h-16 flex items-center justify-center">
                 <p class="text-sm text-gray-300">Améliore ta connexion gaming avec <span class="text-[#FF4655] font-medium">ExitLag</span> - Réduis ton ping et tes lags</p>
@@ -91,24 +92,56 @@ google_site_verification: ""
         </div>
     </div>
 
-    <!-- Background Elements -->
     <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-[#FF4655] opacity-5 blur-3xl"></div>
     <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#FF4655] opacity-5 blur-3xl"></div>
 </section>
 
 <script>
-    // Search functionality
-    document.getElementById('search-hero').addEventListener('keyup', function(e) {
-      if (e.key === 'Enter') {
+    // Enhanced search functionality
+    const searchInput = document.getElementById('search-hero');
+    searchInput.addEventListener('keyup', function(e) {
         const searchValue = this.value.trim();
-        if (searchValue) {
-          console.log('Searching for:', searchValue);
-          // In a real implementation, this would trigger search results
-          alert('Recherche pour: ' + searchValue + '\n(Fonctionnalité à implémenter)');
-        }
-      }
+        
+        // Debounce search to reduce unnecessary processing
+        clearTimeout(this.searchTimeout);
+        this.searchTimeout = setTimeout(() => {
+            if (searchValue) {
+                // Placeholder for more sophisticated search
+                console.log('Searching for:', searchValue);
+                
+                // Optional: Show search suggestions or partial results
+                try {
+                    // Simulated search suggestions
+                    const suggestions = [
+                        'Guide Jett',
+                        'Stratégies Ascent',
+                        'Réglages Pro',
+                        'Lineups Sova'
+                    ].filter(suggestion => 
+                        suggestion.toLowerCase().includes(searchValue.toLowerCase())
+                    );
+
+                    // You could display these suggestions in a dropdown
+                    if (suggestions.length) {
+                        console.log('Suggestions:', suggestions);
+                    }
+                } catch (error) {
+                    console.error('Search error:', error);
+                }
+            }
+        }, 300); // 300ms debounce
     });
 </script>
+
+<style>
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.8s ease-out;
+    }
+</style>
                 </div>
 
             </element><element id="01429ff6-57b5-4159-9dab-8c4079117932" data-section-id="01429ff6-57b5-4159-9dab-8c4079117932">
