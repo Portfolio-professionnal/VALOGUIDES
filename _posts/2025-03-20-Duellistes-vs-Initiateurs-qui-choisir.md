@@ -4,7 +4,7 @@ title: "Duellistes vs. Initiateurs: Qui Choisir?"
 date: 2025-04-20 10:00:00 +0100
 category: Agents & Méta
 excerpt: "Analyse détaillée des forces et faiblesses de chaque rôle et comment choisir selon la carte et la composition d'équipe."
-image: "https://i.postimg.cc/jjYfGWtb/valorant-duelistes-vs-initiateurs.webp"
+image: "https://i.postimg.cc/5Np9654S/Design-sans-titre-1.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
