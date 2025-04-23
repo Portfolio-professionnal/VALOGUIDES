@@ -725,17 +725,17 @@ google_site_verification: ""
 
 
 <!-- Featured Agent Analysis -->
+{% assign jett_post = site.posts | where:"title","Jett: Pourquoi elle domine le méta actuel (2025)" | first %}
 <div class="mt-12 bg-[#1F2731] rounded-lg overflow-hidden">
     <div class="p-6 md:p-8">
         <div class="flex flex-col md:flex-row">
             <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
                 <div class="flex items-center mb-4">
-                    <span class="px-3 py-1 bg-[#FF4655] text-white rounded-full text-xs mr-3">Analyse Pro</span>
-                    <span class="text-gray-400 text-sm">Mis à jour le 22 Avril 2025</span>
+                    <span class="px-3 py-1 bg-[#FF4655] text-white rounded-full text-xs mr-3">{{ jett_post.category }}</span>
+                    <span class="text-gray-400 text-sm">Mis à jour le {{ jett_post.date | date: "%-d %B %Y" }}</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Jett: Pourquoi elle domine le méta actuel (2025)</h3>
-                <p class="text-gray-400 mb-6">Une analyse approfondie de Jett, l'agent le plus utilisé dans les tournois professionnels et pourquoi sa mobilité reste inégalée dans le méta actuel.</p>
-
+                <h3 class="text-2xl font-bold mb-4">{{ jett_post.title }}</h3>
+                <p class="text-gray-400 mb-6">{{ jett_post.excerpt }}</p>
                 <div class="bg-[#0F1923] p-5 rounded-lg mb-6">
                     <h4 class="font-bold mb-3">Points clés de l'agent:</h4>
                     <ul class="space-y-2 text-gray-300">
@@ -753,19 +753,17 @@ google_site_verification: ""
                         </li>
                     </ul>
                 </div>
-
-                <a href=_posts/2025-03-20-Jett-pourquoi-elle-domine-la-meta-actuel.md" class="inline-flex items-center bg-[#FF4655] hover:bg-opacity-90 text-white py-2 px-4 rounded-md transition duration-300">
+                <a href="{{ jett_post.url | relative_url }}" class="inline-flex items-center bg-[#FF4655] hover:bg-opacity-90 text-white py-2 px-4 rounded-md transition duration-300">
                     Lire l'analyse complète
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </a>
             </div>
-
             <div class="md:w-1/2 relative">
                 <div class="h-64 md:h-full bg-[#0F1923] rounded-lg overflow-hidden relative">
-                    <img src="{{ site.baseurl }}/assets/images/jett-banner.webp"
-                         alt="Jett utilisant ses capacités en plein match"
+                    <img src="{{ jett_post.image | relative_url }}"
+                         alt="{{ jett_post.title }}"
                          onerror="this.onerror=null; this.src='https://i.postimg.cc/NGXc05wV/jett-banner.webp'"
                          class="w-full h-full object-cover opacity-80"
                          width="1920"
