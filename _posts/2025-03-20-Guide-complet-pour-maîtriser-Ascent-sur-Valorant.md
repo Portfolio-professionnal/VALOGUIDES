@@ -3,7 +3,7 @@ layout: post
 title: "Guide complet pour maîtriser Ascent sur Valorant"
 date: 2025-04-16 10:00:00 +0100
 category: Maps & Stratégies
-excerpt: "Toutes les clés pour dominer Ascent en attaque et défense : setups, contrôles de mid, post‑plant, retakes et plus encore."
+excerpt: "Une analyse approfondie de Jett, l'agent le plus utilisé dans les tournois professionnels et pourquoi sa mobilité reste inégalée dans le méta actuel."
 image: "https://i.postimg.cc/jjYfGWtb/valorant-ascent-carte-guide.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
