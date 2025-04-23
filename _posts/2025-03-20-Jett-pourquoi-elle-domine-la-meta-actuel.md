@@ -4,7 +4,7 @@ title: "Jett: Pourquoi elle domine le méta actuel (2025)"
 date: 2025-04-23 10:00:00 +0100
 category: Agents & Méta
 excerpt: "Analyse complète des raisons qui font de Jett l'agent incontournable en 2025 : mobilité, versatilité, modifications récentes et contre-stratégies."
-image: "https://i.postimg.cc/jjYfGWtb/valorant-jett-meta-2025.webp"
+image: "https://i.postimg.cc/j2QQY3rf/JETTMEME.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0F1923] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
