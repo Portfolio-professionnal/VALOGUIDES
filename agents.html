@@ -1481,9 +1481,9 @@ google_site_verification: ""
 
 </htmlCode>
             </element><element id="c7e5b8aa-b30a-40a5-b99a-9af296885ed9" data-section-id="c7e5b8aa-b30a-40a5-b99a-9af296885ed9">
-
                 <htmlCode>
-                    <div id="root">
+
+     <div id="root">
                         <section id="agentAbilities" class="py-16 bg-neutral-900 text-white">
                             <div class="container mx-auto px-4 md:px-8">
                                 <div class="text-center mb-12 animate__animated animate__fadeInUp">
@@ -2416,75 +2416,254 @@ google_site_verification: ""
                                     }
 
                                     // Fonction pour générer des points de synergie entre deux agents
-                                    function generateSynergies(agent1, agent2) {
-                                        const synergies = [];
-
-                                        // Comparer les rôles
-                                        const role1 = agent1.role;
-                                        const role2 = agent2.role;
-
-                                        if (role1 === role2) {
-                                            synergies.push(`Deux ${role1}s peuvent créer une redondance, mais aussi une spécialisation forte dans ce domaine.`);
-                                        }
-
-                                        // Duelliste + Initiateur
-                                        if ((role1 === 'Duelliste' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Duelliste')) {
-                                            synergies.push("L'initiateur peut recueillir des informations et désorienter les ennemis avant que le duelliste n'entre sur site.");
-                                        }
-
-                                        // Duelliste + Contrôleur
-                                        if ((role1 === 'Duelliste' && role2 === 'Contrôleur') || (role1 === 'Contrôleur' && role2 === 'Duelliste')) {
-                                            synergies.push("Le contrôleur peut bloquer les lignes de vue avec ses fumées pendant que le duelliste entre sur site.");
-                                        }
-
-                                        // Sentinelle + Initiateur
-                                        if ((role1 === 'Sentinelle' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Sentinelle')) {
-                                            synergies.push("L'information recueillie par l'initiateur peut aider la sentinelle à positionner ses dispositifs de manière optimale.");
-                                        }
-
-                                        // Sentinelle + Contrôleur
-                                        if ((role1 === 'Sentinelle' && role2 === 'Contrôleur') || (role1 === 'Contrôleur' && role2 === 'Sentinelle')) {
-                                            synergies.push("Excellente combinaison défensive: la sentinelle sécurise les zones et le contrôleur limite l'accès aux sites.");
-                                        }
-
-                                        // Contrôleur + Initiateur
-                                        if ((role1 === 'Contrôleur' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Contrôleur')) {
-                                            synergies.push("Le contrôleur peut bloquer la vision pendant que l'initiateur obtient des informations sur les positions ennemies.");
-                                        }
-
-                                        // Ajouter des synergies spécifiques aux agents
-                                        if ((agent1.name === 'Sova' && agent2.name === 'Brimstone') || (agent1.name === 'Brimstone' && agent2.name === 'Sova')) {
-                                            synergies.push("Sova peut repérer les ennemis pour que Brimstone puisse placer précisément son ultimate.");
-                                        }
-
-                                        if ((agent1.name === 'Reyna' && agent2.name === 'Sage') || (agent1.name === 'Sage' && agent2.name === 'Reyna')) {
-                                            synergies.push("Sage peut soigner Reyna après ses combats ou la ressusciter si elle tombe.");
-                                        }
-
-                                        if ((agent1.name === 'Cypher' && agent2.name === 'Killjoy') || (agent1.name === 'Killjoy' && agent2.name === 'Cypher')) {
-                                            synergies.push("Ensemble, ils peuvent créer un réseau de surveillance et de pièges pratiquement impénétrable.");
-                                        }
-
-                                        if ((agent1.name === 'Jett' && agent2.name === 'Omen') || (agent1.name === 'Omen' && agent2.name === 'Jett')) {
-                                            synergies.push("Les fumées d'Omen peuvent créer des opportunités pour que Jett prenne des angles inattendus.");
-                                        }
-
-                                        if ((agent1.name === 'Breach' && agent2.name === 'Raze') || (agent1.name === 'Raze' && agent2.name === 'Breach')) {
-                                            synergies.push("Breach peut étourdir les ennemis avant que Raze n'entre avec ses explosifs pour nettoyer le site.");
-                                        }
-
-                                        if ((agent1.name === 'Viper' && agent2.name === 'Phoenix') || (agent1.name === 'Phoenix' && agent2.name === 'Viper')) {
-                                            synergies.push("Phoenix peut jouer agressivement dans le poison de Viper sans être affecté par la vulnérabilité.");
-                                        }
-
-                                        // Si pas assez de synergies, ajouter des génériques
-                                        if (synergies.length < 3) {
-                                            synergies.push("Ces agents peuvent se compléter en combinant leurs forces respectives.");
-                                            synergies.push("La polyvalence de cette combinaison permet une adaptation à différentes situations de jeu.");
-                                        }
-
-                                        return synergies;
-                                    }
+                                 // Fonction pour générer des synergies spécifiques entre deux agents
+function generateSynergies(agent1, agent2) {
+    const synergies = [];
+    
+    // Dictionnaire de synergies spécifiques entre agents (structuré par paires)
+    const specificSynergies = {
+        // Duellistes entre eux
+        "jett-phoenix": "Jett peut créer des angles aériens pendant que Phoenix flash et entre, offrant deux axes d'attaque différents.",
+        "jett-reyna": "Jett peut créer une ouverture initiale puis Reyna peut suivre et capitaliser sur les éliminations avec ses dismiss.",
+        "jett-raze": "Combinaison explosive: Jett attaque par les airs tandis que Raze force les ennemis hors de leurs positions avec ses explosifs.",
+        "jett-yoru": "Jett peut attirer l'attention par ses mouvements aériens tandis que Yoru peut prendre des flancs avec sa téléportation.",
+        "jett-neon": "Duo ultra-mobile qui peut attaquer simultanément depuis plusieurs angles à une vitesse que peu d'équipes peuvent contrer.",
+        
+        "phoenix-reyna": "Phoenix peut flash pour lui-même et Reyna, permettant à cette dernière d'obtenir ses premiers kills plus facilement.",
+        "phoenix-raze": "Le mur de Phoenix peut sécuriser l'entrée de Raze qui peut ensuite nettoyer le site avec ses explosifs.",
+        "phoenix-yoru": "Phoenix peut entrer avec son ultime pendant que Yoru crée des diversions avec ses leurres.",
+        "phoenix-neon": "Phoenix peut utiliser son mur et ses flashs pour créer un couloir sécurisé que Neon peut traverser à toute vitesse.",
+        
+        "reyna-raze": "Reyna peut enchaîner les éliminations tandis que Raze déplace les défenseurs de leurs positions avec ses utilités.",
+        "reyna-yoru": "Deux spécialistes des flancs: Yoru avec sa téléportation et Reyna avec son dismiss après élimination.",
+        "reyna-neon": "Neon peut créer des ouvertures rapides et Reyna peut suivre pour transformer ces ouvertures en avantage numérique.",
+        
+        "raze-yoru": "Les explosifs de Raze peuvent forcer les ennemis dans des positions où ils sont vulnérables aux flancs de Yoru.",
+        "raze-neon": "Double mobilité: Raze avec ses satchels verticaux et Neon avec sa vitesse horizontale, couvrant tous les axes d'attaque.",
+        
+        "yoru-neon": "Neon peut attirer l'attention par sa vitesse tandis que Yoru peut utiliser ses téléportations pour des flancs inattendus.",
+        
+        // Duellistes avec autres agents (déjà existants + nouveaux)
+        "jett-sova": "Les flèches de repérage de Sova permettent à Jett de planifier ses dash aériens sur des cibles marquées.",
+        "jett-omen": "Les fumées d'Omen créent des couloirs parfaits pour les dash agressifs de Jett.",
+        "jett-sage": "Le mur de Sage permet à Jett d'atteindre des angles aériens uniques inaccessibles autrement.",
+        "jett-breach": "Les flashs de Breach permettent à Jett d'entrer de façon ultra-agressive avec son dash.",
+        "jett-brimstone": "Le stimulant de Brimstone augmente la cadence de tir de Jett, idéal avec son ultimate Blade Storm.",
+        "jett-skye": "Les flashes de Skye peuvent couvrir l'entrée de Jett et son information permet des dash plus précis.",
+        "jett-killjoy": "Jett peut utiliser son dash pour éliminer rapidement les utilités de Killjoy repérées par l'équipe.",
+        
+        "reyna-skye": "Skye peut flash et soigner, compensant parfaitement les faiblesses de Reyna quand elle ne parvient pas à confirmer ses kills.",
+        "reyna-sage": "Sage peut ressusciter Reyna si elle tombe, lui donnant une seconde chance d'activer ses compétences de survie.",
+        "reyna-breach": "Les flashs de Breach préparent parfaitement les entrées de Reyna pour qu'elle puisse obtenir ses premiers kills.",
+        "reyna-viper": "Reyna peut utiliser son dismiss pour sortir du poison de Viper après avoir obtenu un kill, échappant ainsi à la vulnérabilité.",
+        
+        "phoenix-brimstone": "Les ultis combinés peuvent nettoyer des zones entières: Phoenix entre en reconnaissance avec Run it Back pendant que Brimstone lance son orbital.",
+        "phoenix-astra": "Astra peut créer des étoiles concave/gravity wells pour retenir les ennemis dans la zone du mur de feu de Phoenix.",
+        "phoenix-viper": "Phoenix peut traverser le poison de Viper sans subir la vulnérabilité quand il utilise son ulti Run it Back.",
+        
+        "raze-breach": "Breach peut étourdir des ennemis dans les coins, que Raze peut ensuite déloger facilement avec ses grenades.",
+        "raze-sova": "Sova peut marquer des ennemis avec sa flèche, permettant à Raze de lancer parfaitement son ulti Showstopper.",
+        "raze-viper": "Les grenades et robots de Raze peuvent forcer les ennemis à sortir du rideau toxique de Viper.",
+        "raze-killjoy": "Les alarmbots de Killjoy peuvent marquer des cibles que Raze peut ensuite éliminer avec ses explosifs.",
+        
+        "yoru-cypher": "Les téléportations de Yoru peuvent traverser les trapwires de Cypher sans les déclencher si bien coordonnées.",
+        "yoru-killjoy": "Yoru peut utiliser son ulti pour localiser les setups de Killjoy puis se téléporter dessus pour les détruire.",
+        "yoru-omen": "Double jeu de téléportation et diversion qui crée une confusion extrême dans les rangs ennemis.",
+        
+        "neon-astra": "Astra peut stun des ennemis que Neon peut ensuite éliminer rapidement avec son sprint et son slide.",
+        "neon-chamber": "Le ralentissement de Chamber combiné avec la vitesse de Neon crée un déséquilibre parfait contre les ennemis.",
+        "neon-fade": "Les révélations de Fade permettent à Neon de cibler précisément ses slides rapides.",
+        
+        // Sentinelles entre elles
+        "sage-chamber": "Chamber peut tenir des angles agressifs tandis que Sage peut ralentir les rushs et sécuriser les sites.",
+        "sage-killjoy": "Killjoy peut défendre un site seule pendant que Sage apporte son soutien sur l'autre site.",
+        "sage-cypher": "Défense infranchissable: Cypher pour l'information et Sage pour bloquer les passages critiques.",
+        
+        "chamber-killjoy": "Chamber peut jouer agressivement aux extrémités tandis que Killjoy verrouille les zones centrales.",
+        "chamber-cypher": "Contrôle total de l'information: la surveillance de Cypher combinée aux pièges de ralentissement de Chamber.",
+        
+        "killjoy-cypher": "Défense impénétrable: les trapwires de Cypher peuvent protéger les setups de Killjoy des rushes ennemis.",
+        
+        // Sentinelles avec autres agents
+        "sage-viper": "Le mur de Sage peut renforcer les séparations créées par Viper, rendant certains sites impénétrables.",
+        "sage-cypher": "Cypher peut surveiller les flancs pendant que Sage sécurise les entrées principales avec ses slows et son mur.",
+        "sage-kayo": "Le couteau suppressif de KAY/O protège Sage des capacités ennemies pendant qu'elle ressuscite un allié.",
+        
+        "chamber-jett": "Double op setup: Chamber et Jett peuvent tenir des angles différents avec leur capacité à se repositionner rapidement.",
+        "chamber-cypher": "Contrôle total de l'information: la surveillance de Cypher combinée aux pièges de ralentissement de Chamber.",
+        "chamber-brimstone": "Les fumées de Brimstone permettent à Chamber de repositionner ses téléporteurs sans être vu.",
+        
+        "killjoy-cypher": "Défense impénétrable: les trapwires de Cypher peuvent protéger les setups de Killjoy des rushes ennemis.",
+        "killjoy-viper": "Les setups de Killjoy peuvent être placés dans le poison de Viper, forçant les ennemis à choisir entre subir des dégâts ou être détectés.",
+        "killjoy-sova": "Sova peut utiliser son drone pour repérer les ennemis qui tentent de détruire les équipements de Killjoy.",
+        
+        "cypher-sova": "Contrôle total de l'information: Cypher surveille les flancs pendant que Sova recueille des informations à l'avant.",
+        "cypher-omen": "Omen peut téléporter et placer des fumées pour protéger les caméras et trapwires de Cypher.",
+        
+        // Initiateurs entre eux
+        "sova-breach": "Sova repère les ennemis que Breach peut ensuite aveugler et étourdir avec précision.",
+        "sova-skye": "Double collecte d'informations: Sova à distance et Skye dans les zones plus proches.",
+        "sova-kayo": "KAY/O peut supprimer les capacités ennemies que Sova a repérées avec ses flèches.",
+        "sova-fade": "Sova peut obtenir des informations à longue distance tandis que Fade peut traquer les ennemis en zone rapprochée.",
+        
+        "breach-skye": "Double initiation: Breach étourdit les ennemis que Skye peut ensuite traquer avec son pisteur.",
+        "breach-kayo": "Breach peut forcer les ennemis hors position tandis que KAY/O supprime leurs capacités.",
+        "breach-fade": "Les capacités de Breach et Fade combinées créent une désorientation totale des défenseurs.",
+        
+        "skye-kayo": "Skye peut soigner KAY/O s'il est abattu pendant son ultimate, permettant sa réanimation.",
+        "skye-fade": "Double information: les pisteurs de Skye et les cauchemars de Fade peuvent couvrir des zones différentes simultanément.",
+        
+        "kayo-fade": "KAY/O supprime les capacités tandis que Fade marque et traque les ennemis vulnérables.",
+        
+        // Initiateurs avec autres agents
+        "breach-astra": "Astra peut stun après que Breach ait utilisé son Fault Line pour une désorientation prolongée.",
+        
+        "skye-sage": "Double support: Skye et Sage peuvent maintenir l'équipe en vie grâce à leurs capacités de soin.",
+        
+        "kayo-viper": "Le couteau suppressif de KAY/O peut désactiver les capacités de Viper, permettant de neutraliser son contrôle de zone.",
+        "kayo-astra": "KAY/O peut supprimer les capacités ennemies pendant qu'Astra prépare ses exécutions d'équipe.",
+        
+        "sova-viper": "Les flèches de Sova peuvent repérer des ennemis à travers le poison de Viper pour des tirs précis.",
+        "sova-brimstone": "Sova repère les ennemis pour que Brimstone puisse parfaitement placer son ulti orbital.",
+        
+        "fade-cypher": "Les capacités de Fade peuvent forcer les ennemis à déclencher les trapwires de Cypher.",
+        "fade-viper": "Les capacités de traque de Fade combinées au poison de Viper créent des zones mortelles pour les ennemis.",
+        
+        // Contrôleurs entre eux
+        "omen-brimstone": "Les fumées d'Omen et de Brimstone peuvent couvrir plusieurs entrées simultanément, parfait pour les sites étendus.",
+        "omen-viper": "Les fumées d'Omen peuvent être utilisées pour étendre la zone de contrôle du poison de Viper.",
+        "omen-astra": "Contrôle total de la map: les fumées Omen et les étoiles d'Astra peuvent bloquer plusieurs entrées simultanément.",
+        "omen-harbor": "Omen peut téléporter au-dessus ou à travers les murs d'eau de Harbor pour des angles surprenants.",
+        
+        "brimstone-viper": "Le molly de Brimstone combiné au poison de Viper crée une zone mortelle où les ennemis subissent des dégâts amplifiés.",
+        "brimstone-astra": "Les fumées de Brimstone et les étoiles d'Astra permettent un contrôle complet des lignes de vue.",
+        "brimstone-harbor": "Le stim beacon de Brimstone peut donner un avantage aux alliés qui jouent dans les barrières d'eau de Harbor.",
+        
+        "viper-astra": "Viper peut créer une barrière chimique pendant qu'Astra utilise ses capacités globales pour contrôler d'autres zones.",
+        "viper-harbor": "Le mur de Viper et les barrières d'eau de Harbor créent des divisions de site impénétrables.",
+        
+        "astra-harbor": "Les capacités de contrôle d'Astra peuvent être combinées avec les barrières d'eau de Harbor pour des exécutions coordonnées."
+    };
+    
+    // Créer une clé pour rechercher des synergies spécifiques (dans les deux sens)
+    const key1 = `${agent1.name.toLowerCase()}-${agent2.name.toLowerCase()}`;
+    const key2 = `${agent2.name.toLowerCase()}-${agent1.name.toLowerCase()}`;
+    
+    // Ajouter des synergies spécifiques si elles existent
+    if (specificSynergies[key1]) {
+        synergies.push(specificSynergies[key1]);
+    } else if (specificSynergies[key2]) {
+        synergies.push(specificSynergies[key2]);
+    }
+    
+    // Ajouter des synergies basées sur les rôles
+    const role1 = agent1.role;
+    const role2 = agent2.role;
+    
+    // Synergies pour agents du même rôle
+    if (role1 === role2) {
+        if (role1 === 'Duelliste') {
+            synergies.push("Deux duellistes peuvent créer une pression énorme sur les défenseurs en attaquant simultanément depuis différents angles.");
+            synergies.push("Cette combinaison offensive peut rapidement prendre le contrôle d'un site, mais nécessite une bonne coordination pour ne pas être trop agressive.");
+        } else if (role1 === 'Sentinelle') {
+            synergies.push("Double sentinelle permet de verrouiller complètement les flancs et de créer des setups défensifs quasi-impénétrables.");
+            synergies.push("Cette composition défensive excelle en post-plant et pour ralentir les rushes adverses, mais peut manquer d'utilités offensives.");
+        } else if (role1 === 'Initiateur') {
+            synergies.push("Deux initiateurs offrent une collecte d'informations constante et des possibilités d'initiation multiples.");
+            synergies.push("Cette combinaison permet de désorienter complètement l'adversaire avant chaque exécution et d'adapter les stratégies en temps réel.");
+        } else if (role1 === 'Contrôleur') {
+            synergies.push("Double contrôleur permet un contrôle total de la map avec des fumées et utilités qui peuvent couvrir plusieurs zones simultanément.");
+            synergies.push("Cette composition excelle pour des exécutions méthodiques et pour isoler des défenseurs, mais peut manquer de puissance offensive directe.");
+        }
+    } else {
+        // Duelliste + Initiateur
+        if ((role1 === 'Duelliste' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Duelliste')) {
+            synergies.push("L'initiateur désoriente et recueille des informations précises pour que le duelliste puisse entrer efficacement sur site.");
+            synergies.push("Cette combinaison crée un duo d'entrée parfait: l'initiateur prépare le terrain et le duelliste confirme les éliminations.");
+        }
+        
+        // Duelliste + Contrôleur
+        if ((role1 === 'Duelliste' && role2 === 'Contrôleur') || (role1 === 'Contrôleur' && role2 === 'Duelliste')) {
+            synergies.push("Le contrôleur bloque stratégiquement les lignes de vue ennemies pendant que le duelliste crée l'espace nécessaire pour l'équipe.");
+            synergies.push("Les fumées du contrôleur permettent au duelliste de prendre des angles surprenants et d'exploiter l'avantage d'initiative.");
+        }
+        
+        // Duelliste + Sentinelle
+        if ((role1 === 'Duelliste' && role2 === 'Sentinelle') || (role1 === 'Sentinelle' && role2 === 'Duelliste')) {
+            synergies.push("La sentinelle assure la sécurité des flancs pendant que le duelliste peut se concentrer sur les entrées agressives.");
+            synergies.push("Le duelliste ouvre l'espace sur site que la sentinelle peut ensuite verrouiller et défendre efficacement.");
+        }
+        
+        // Sentinelle + Initiateur
+        if ((role1 === 'Sentinelle' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Sentinelle')) {
+            synergies.push("L'information recueillie par l'initiateur permet à la sentinelle de positionner ses dispositifs de manière optimale.");
+            synergies.push("La sentinelle sécurise les zones pendant que l'initiateur peut avancer sans craindre les flancs pour obtenir plus d'informations.");
+        }
+        
+        // Sentinelle + Contrôleur
+        if ((role1 === 'Sentinelle' && role2 === 'Contrôleur') || (role1 === 'Contrôleur' && role2 === 'Sentinelle')) {
+            synergies.push("Excellente combinaison défensive: la sentinelle sécurise les zones clés pendant que le contrôleur limite l'accès aux sites.");
+            synergies.push("Le contrôleur peut utiliser ses utilités pour protéger les setups de la sentinelle des rushes ennemis.");
+        }
+        
+        // Contrôleur + Initiateur
+        if ((role1 === 'Contrôleur' && role2 === 'Initiateur') || (role1 === 'Initiateur' && role2 === 'Contrôleur')) {
+            synergies.push("Le contrôleur bloque la vision ennemie pendant que l'initiateur obtient des informations précises sur les positions adverses.");
+            synergies.push("Cette combinaison permet des exécutions parfaites: l'initiateur désoriente les défenseurs que le contrôleur isole avec ses fumées.");
+        }
+    }
+    
+    // Synergies basées sur les statistiques principales des agents
+    const getTopStat = (agent) => {
+        const stats = agent.stats;
+        if (!stats) return null;
+        let topStat = null;
+        let topValue = -1;
+        
+        for (const [stat, value] of Object.entries(stats)) {
+            if (value > topValue) {
+                topValue = value;
+                topStat = stat;
+            }
+        }
+        
+        return { stat: topStat, value: topValue };
+    };
+    
+    const topStat1 = getTopStat(agent1);
+    const topStat2 = getTopStat(agent2);
+    
+    if (topStat1 && topStat2 && topStat1.stat !== topStat2.stat) {
+        // Traduire les noms des stats
+        const statNames = {
+            mobilite: "mobilité",
+            information: "collecte d'informations",
+            degats: "capacité de dégâts",
+            soutien: "soutien d'équipe",
+            polyvalence: "polyvalence"
+        };
+        
+        const stat1Name = statNames[topStat1.stat] || topStat1.stat;
+        const stat2Name = statNames[topStat2.stat] || topStat2.stat;
+        
+        synergies.push(`La ${stat1Name} exceptionnelle de ${agent1.name} complète parfaitement la ${stat2Name} de ${agent2.name}, créant un duo équilibré.`);
+    }
+    
+    // Si pas assez de synergies, ajouter des génériques basées sur le style de jeu
+    if (synergies.length < 3) {
+        // Utiliser le verdict ou le style de jeu pour générer des synergies
+        if (agent1.verdict && agent2.verdict) {
+            synergies.push(`Le style ${agent1.verdict.toLowerCase()} se marie bien avec l'approche ${agent2.verdict.toLowerCase()}.`);
+        }
+        
+        // Ajouter une synergie générique en dernier recours
+        if (synergies.length < 3) {
+            synergies.push("Ces agents peuvent se compléter en combinant leurs forces respectives lors des phases d'attaque et de défense.");
+        }
+    }
+    
+    return synergies;
+}
 
                                     // Fonction pour mettre à jour les détails d'un agent
                                     function updateAgentDetails(elementId, agent) {
@@ -2637,91 +2816,325 @@ google_site_verification: ""
                                     }
 
                                     // Fonction pour mettre à jour la synergie et la recommandation
-                                    function updateSynergyAndRecommendation(agent1, agent2) {
-                                        // Synergie
-                                        const synergySection = document.getElementById('synergySection');
-                                        if (synergySection) {
-                                            const synergyTitle = synergySection.querySelector('h4');
-                                            if (synergyTitle) {
-                                                synergyTitle.textContent = `Synergie entre ${agent1.name} et ${agent2.name}`;
-                                            }
+function updateSynergyAndRecommendation(agent1, agent2) {
+    // Synergie
+    const synergySection = document.getElementById('synergySection');
+    if (synergySection) {
+        const synergyTitle = synergySection.querySelector('h4');
+        if (synergyTitle) {
+            synergyTitle.textContent = `Synergie entre ${agent1.name} et ${agent2.name}`;
+        }
 
-                                            // Générer dynamiquement la synergie entre les agents
-                                            const synergyList = synergySection.querySelector('ul');
-                                            if (synergyList) {
-                                                synergyList.innerHTML = '';
+        // Générer dynamiquement la synergie entre les agents
+        const synergyList = synergySection.querySelector('ul');
+        if (synergyList) {
+            synergyList.innerHTML = '';
 
-                                                // Logique pour déterminer les points de synergie
-                                                const synergies = generateSynergies(agent1, agent2);
-                                                synergies.forEach(point => {
-                                                    synergyList.innerHTML += `<li>${point}</li>`;
-                                                });
-                                            }
-                                        }
+            // Logique pour déterminer les points de synergie
+            const synergies = generateSynergies(agent1, agent2);
+            synergies.forEach(point => {
+                synergyList.innerHTML += `<li>${point}</li>`;
+            });
+        }
+    }
 
-                                        // Styles de jeu
-                                        const styleSection = document.getElementById('recommendSection');
-                                        if (styleSection) {
-                                            const styleTitle = styleSection.querySelector('h4');
-                                            if (styleTitle) {
-                                                styleTitle.textContent = `Styles de jeu`;
-                                            }
+    // Styles de jeu
+    const styleSection = document.getElementById('recommendSection');
+    if (styleSection) {
+        const styleTitle = styleSection.querySelector('h4');
+        if (styleTitle) {
+            styleTitle.textContent = `Styles de jeu`;
+        }
 
-                                            const styleDivs = styleSection.querySelectorAll('.grid.grid-cols-2 div');
-                                            if (styleDivs && styleDivs.length >= 2) {
-                                                const h5Elements = styleSection.querySelectorAll('h5');
-                                                if (h5Elements && h5Elements.length >= 2) {
-                                                    h5Elements[0].textContent = agent1.name;
-                                                    h5Elements[1].textContent = agent2.name;
-                                                }
+        const styleDivs = styleSection.querySelectorAll('.grid.grid-cols-2 div');
+        if (styleDivs && styleDivs.length >= 2) {
+            const h5Elements = styleSection.querySelectorAll('h5');
+            if (h5Elements && h5Elements.length >= 2) {
+                h5Elements[0].textContent = agent1.name;
+                h5Elements[1].textContent = agent2.name;
+            }
 
-                                                const styleList1 = styleDivs[0].querySelector('ul');
-                                                if (styleList1) {
-                                                    styleList1.innerHTML = '';
-                                                    const styles1 = agent1.styleJeu || [];
-                                                    styles1.forEach(style => {
-                                                        styleList1.innerHTML += `<li>${style}</li>`;
-                                                    });
-                                                }
+            const styleList1 = styleDivs[0].querySelector('ul');
+            if (styleList1) {
+                styleList1.innerHTML = '';
+                const styles1 = agent1.styleJeu || [];
+                styles1.forEach(style => {
+                    styleList1.innerHTML += `<li>${style}</li>`;
+                });
+            }
 
-                                                const styleList2 = styleDivs[1].querySelector('ul');
-                                                if (styleList2) {
-                                                    styleList2.innerHTML = '';
-                                                    const styles2 = agent2.styleJeu || [];
-                                                    styles2.forEach(style => {
-                                                        styleList2.innerHTML += `<li>${style}</li>`;
-                                                    });
-                                                }
-                                            }
-                                        }
+            const styleList2 = styleDivs[1].querySelector('ul');
+            if (styleList2) {
+                styleList2.innerHTML = '';
+                const styles2 = agent2.styleJeu || [];
+                styles2.forEach(style => {
+                    styleList2.innerHTML += `<li>${style}</li>`;
+                });
+            }
+        }
+    }
 
-                                        // Verdict final
-                                        const conclusionSection = document.getElementById('conclusionSection');
-                                        if (conclusionSection) {
-                                            const conclusionTitle = conclusionSection.querySelector('h4');
-                                            if (conclusionTitle) {
-                                                conclusionTitle.textContent = `Verdict final: ${agent1.name} vs ${agent2.name}`;
-                                            }
+    // Verdict final
+    const conclusionSection = document.getElementById('conclusionSection');
+    if (conclusionSection) {
+        const conclusionTitle = conclusionSection.querySelector('h4');
+        if (conclusionTitle) {
+            conclusionTitle.textContent = `Verdict final: ${agent1.name} vs ${agent2.name}`;
+        }
 
-                                            // Générer une comparaison significative
-                                            const mainStrength1 = getMainStrength(agent1);
-                                            const mainStrength2 = getMainStrength(agent2);
+        // Dictionnaire des caractéristiques spécifiques à chaque agent
+        const agentSpecifics = {
+            // Duellistes
+            "jett": {
+                strength: "mobilité verticale et angles aériens uniques",
+                weakness: "vulnérabilité après avoir utilisé ses mouvements",
+                playstyle: "agressive, prenant les premiers duels et créant des angles surprenants",
+                skill_ceiling: "élevé, nécessitant une excellente maîtrise mécanique et un sens aigu du timing"
+            },
+            "phoenix": {
+                strength: "auto-guérison et kit polyvalent (flash, mur, molly)",
+                weakness: "portée limitée de ses utilités et flash prévisible",
+                playstyle: "équilibrée entre créer de l'espace et contrôler des zones",
+                skill_ceiling: "moyen, accessible pour les nouveaux joueurs tout en offrant de la profondeur"
+            },
+            "reyna": {
+                strength: "capacité à enchaîner les éliminations et à survivre après les combats",
+                weakness: "totalement dépendante des éliminations pour activer ses capacités",
+                playstyle: "extrêmement agressive, recherchant constamment des duels",
+                skill_ceiling: "moyen en termes de mécaniques, élevé en termes de positionnement et timing"
+            },
+            "raze": {
+                strength: "dégâts explosifs de zone et mobilité verticale avec les sachet-bombes",
+                weakness: "bruyante et prévisible si mal utilisée",
+                playstyle: "destructive, délogeant les ennemis de positions fortes avec ses explosifs",
+                skill_ceiling: "élevé pour maîtriser les mouvements avec les sachets-bombes"
+            },
+            "yoru": {
+                strength: "tromperie et flancs imprévisibles grâce à ses téléportations",
+                weakness: "difficile à utiliser efficacement et kit technique",
+                playstyle: "créative, basée sur la déception et les jeux mentaux",
+                skill_ceiling: "très élevé, nécessitant une connaissance approfondie des cartes et timings"
+            },
+            "neon": {
+                strength: "vitesse inégalée et entrées rapides sur site",
+                weakness: "difficile à contrôler à haute vitesse et fragilité après le sprint",
+                playstyle: "ultra-mobile, jouant à un rythme que peu de joueurs peuvent suivre",
+                skill_ceiling: "élevé, demandant une excellente coordination main-œil et prise de décision rapide"
+            },
+            
+            // Sentinelles
+            "sage": {
+                strength: "soin, résurrection et blocage des passages clés",
+                weakness: "faible mobilité et capacités défensives prévisibles",
+                playstyle: "défensive, soutenant l'équipe et ralentissant les avancées ennemies",
+                skill_ceiling: "moyen, accessible mais nécessitant un bon sens du timing pour les résurrections"
+            },
+            "cypher": {
+                strength: "contrôle de l'information et surveillance des flancs",
+                weakness: "utilités statiques et vulnérables à la destruction",
+                playstyle: "méthodique, anticipant les mouvements ennemis et contrôlant les zones clés",
+                skill_ceiling: "élevé, demandant créativité pour le placement des utilités et lecture du jeu"
+            },
+            "killjoy": {
+                strength: "verrouillage de site et contrôle de zone",
+                weakness: "utilités liées à sa présence et setup chronophage",
+                playstyle: "stratégique, préparant des pièges et défendant des zones avec ses dispositifs",
+                skill_ceiling: "moyen à élevé, requérant connaissance des setups optimaux selon les cartes"
+            },
+            "chamber": {
+                strength: "puissance de feu améliorée et mobilité tactique",
+                weakness: "téléporteurs à portée limitée et dépendance à la précision",
+                playstyle: "précise, tenant des angles agressifs tout en ayant une échappatoire",
+                skill_ceiling: "élevé, nécessitant une excellente précision de tir et positionnement"
+            },
+            
+            // Initiateurs
+            "sova": {
+                strength: "collecte d'informations à distance et dégâts à travers les murs",
+                weakness: "nécessite une connaissance approfondie des lineups",
+                playstyle: "méthodique, recueillant des informations pour l'équipe avant chaque action",
+                skill_ceiling: "très élevé, demandant maîtrise des rebonds de flèche et des lineups"
+            },
+            "breach": {
+                strength: "capacités désorientation à travers les murs et setup d'équipe",
+                weakness: "peu efficace en solo et dépendant de la coordination d'équipe",
+                playstyle: "facilitateur, créant des ouvertures pour l'équipe et désorganisant les défenses",
+                skill_ceiling: "élevé, nécessitant une excellente coordination et connaissance des timings"
+            },
+            "skye": {
+                strength: "flashes contrôlables donnant des informations et capacité de soin",
+                weakness: "vulnérabilité lors de l'utilisation de ses capacités",
+                playstyle: "polyvalente, alternant entre initiation et soutien selon les besoins",
+                skill_ceiling: "élevé, requérant maîtrise du contrôle des flashes et du pisteur"
+            },
+            "kayo": {
+                strength: "suppression des capacités ennemies et flashes rapides",
+                weakness: "utilisation risquée de son ultimate qui le rend vulnérable",
+                playstyle: "perturbateur, neutralisant les capacités ennemies avant les engagements",
+                skill_ceiling: "moyen à élevé, demandant connaissance des positions et timings ennemis"
+            },
+            "fade": {
+                strength: "marquage et pistage des ennemis à travers les obstacles",
+                weakness: "complexité de ses capacités et courbe d'apprentissage",
+                playstyle: "traqueuse, marquant les ennemis pour les rendre vulnérables aux attaques",
+                skill_ceiling: "élevé, nécessitant une bonne compréhension de ses utilités variées"
+            },
+            
+            // Contrôleurs
+            "brimstone": {
+                strength: "fumées précises, durables et stim beacon pour l'équipe",
+                weakness: "mobilité limitée et portée restreinte de ses fumées",
+                playstyle: "méthodique, exécutant des stratégies précises avec ses fumées et son orbital",
+                skill_ceiling: "moyen, accessible mais requérant de bonnes connaissances stratégiques"
+            },
+            "omen": {
+                strength: "fumées rechargeables et mobilité avec téléportation",
+                weakness: "téléportation bruyante et vulnérabilité pendant certaines capacités",
+                playstyle: "furtive, utilisant des angles inattendus et contrôlant le rythme du jeu",
+                skill_ceiling: "élevé, demandant créativité et imprévisibilité dans les téléportations"
+            },
+            "viper": {
+                strength: "contrôle de zone prolongé et division efficace des sites",
+                weakness: "dépendance au carburant et setup nécessitant du temps",
+                playstyle: "territoriale, définissant et contrôlant des zones spécifiques avec son poison",
+                skill_ceiling: "très élevé, nécessitant connaissance des lineups et gestion du carburant"
+            },
+            "astra": {
+                strength: "contrôle global de la carte et capacités polyvalentes",
+                weakness: "vulnérabilité en forme astrale et complexité de son kit",
+                playstyle: "stratégique, manipulant le flux du jeu depuis sa forme astrale",
+                skill_ceiling: "extrêmement élevé, requérant une vision macro exceptionnelle"
+            },
+            "harbor": {
+                strength: "murs d'eau incurvables et bulle de protection mobile",
+                weakness: "courte durée des utilités et absence de capacités de dégâts",
+                playstyle: "adaptative, créant des passages sécurisés et bloquant des lignes de vue",
+                skill_ceiling: "élevé, nécessitant une bonne vision spatiale et timing"
+            }
+        };
 
-                                            const conclusionP = conclusionSection.querySelector('p');
-                                            if (conclusionP) {
-                                                conclusionP.textContent = `${agent1.name} et ${agent2.name} représentent deux approches différentes du jeu. ${agent1.name} excelle en ${mainStrength1}, tandis que ${agent2.name} brille en ${mainStrength2}. Votre choix devrait dépendre de votre style de jeu personnel et de la composition de votre équipe.`;
-                                            }
+        // Fonction pour obtenir les caractéristiques d'un agent (nom en minuscules)
+        const getAgentSpecifics = (agent) => {
+            const agentKey = agent.name.toLowerCase();
+            return agentSpecifics[agentKey] || {
+                strength: "polyvalence",
+                weakness: "spécialisation limitée",
+                playstyle: "équilibrée",
+                skill_ceiling: "variable selon le joueur"
+            };
+        };
 
-                                            const verdictPs = conclusionSection.querySelectorAll('.grid p');
-                                            if (verdictPs && verdictPs.length >= 2) {
-                                                const verdict1 = agent1.verdict || "";
-                                                const verdict2 = agent2.verdict || "";
-                                                verdictPs[0].textContent = `${agent1.name}: ${verdict1}`;
-                                                verdictPs[1].textContent = `${agent2.name}: ${verdict2}`;
-                                            }
-                                        }
-                                    }
+        // Générer un verdict personnalisé basé sur les agents spécifiques
+        const generatePersonalizedVerdict = (agent1, agent2) => {
+            const spec1 = getAgentSpecifics(agent1);
+            const spec2 = getAgentSpecifics(agent2);
+            
+            // Obtenir les meilleures cartes pour chaque agent
+            const getTopMaps = (agent) => {
+                if (!agent.cartes) return "diverses cartes";
+                const topTierMaps = agent.cartes.filter(map => map.topTier).map(map => map.name);
+                if (topTierMaps.length > 0) {
+                    return topTierMaps.join(' et ');
+                }
+                return agent.cartes[0].name;
+            };
+            
+            const bestMaps1 = getTopMaps(agent1);
+            const bestMaps2 = getTopMaps(agent2);
+            
+            // Comparer la difficulté
+            const difficulty1 = agent1.difficulty || 3;
+            const difficulty2 = agent2.difficulty || 3;
+            let difficultyText = "";
+            
+            if (Math.abs(difficulty1 - difficulty2) >= 2) {
+                if (difficulty1 > difficulty2) {
+                    difficultyText = `${agent1.name} a une courbe d'apprentissage plus élevée, mais peut offrir plus de potentiel une fois maîtrisé. ${agent2.name} est plus accessible pour les débutants.`;
+                } else {
+                    difficultyText = `${agent2.name} présente une courbe d'apprentissage plus élevée, tandis que ${agent1.name} est plus facile à prendre en main pour les nouveaux joueurs.`;
+                }
+            }
+            
+            // Générer un verdict détaillé comparant les agents
+            return `${agent1.name} excelle par sa ${spec1.strength}, mais souffre de ${spec1.weakness}. Son style de jeu est ${spec1.playstyle} et il performe particulièrement bien sur ${bestMaps1}.
 
+À l'inverse, ${agent2.name} se distingue par sa ${spec2.strength}, malgré sa ${spec2.weakness}. Avec un style ${spec2.playstyle}, cet agent est particulièrement efficace sur ${bestMaps2}.
+
+${difficultyText}
+
+Votre choix devrait dépendre de votre style de jeu personnel et de la composition de votre équipe. ${agent1.name} pourrait être préférable si vous cherchez à ${getUseCase(agent1)}, tandis que ${agent2.name} serait un meilleur choix pour ${getUseCase(agent2)}.`;
+        };
+        
+        // Fonction pour déterminer les cas d'usage idéaux
+        const getUseCase = (agent) => {
+            switch(agent.name.toLowerCase()) {
+                // Duellistes
+                case "jett":
+                    return "créer des angles surprenants et prendre les premiers duels";
+                case "phoenix":
+                    return "jouer de façon équilibrée avec une capacité d'auto-soin";
+                case "reyna":
+                    return "enchaîner les éliminations et dominer en mode 'snowball'";
+                case "raze":
+                    return "nettoyer les positions fortes et créer du chaos";
+                case "yoru":
+                    return "déstabiliser l'ennemi avec des jeux mentaux et des flancs";
+                case "neon":
+                    return "jouer à un rythme ultra-rapide et couvrir rapidement le terrain";
+                
+                // Sentinelles
+                case "sage":
+                    return "soutenir l'équipe et bloquer des passages clés";
+                case "cypher":
+                    return "contrôler l'information et sécuriser les flancs";
+                case "killjoy":
+                    return "verrouiller des sites et contrôler des zones";
+                case "chamber":
+                    return "tenir des angles agressifs avec une porte de sortie";
+                
+                // Initiateurs
+                case "sova":
+                    return "recueillir des informations précises à distance";
+                case "breach":
+                    return "créer des ouvertures pour votre équipe";
+                case "skye":
+                    return "alterner entre initiation et soutien d'équipe";
+                case "kayo":
+                    return "neutraliser les capacités ennemies avant les engagements";
+                case "fade":
+                    return "traquer et marquer les ennemis pour les éliminations";
+                
+                // Contrôleurs
+                case "brimstone":
+                    return "exécuter des stratégies précises avec vos fumées";
+                case "omen":
+                    return "contrôler le rythme du jeu et prendre des angles inattendus";
+                case "viper":
+                    return "établir un contrôle territorial fort sur des zones spécifiques";
+                case "astra":
+                    return "manipuler le flux de jeu à l'échelle de la carte";
+                case "harbor":
+                    return "créer des passages sécurisés et des exécutions adaptatives";
+                
+                default:
+                    return "adapter votre jeu aux besoins de l'équipe";
+            }
+        };
+
+        const conclusionP = conclusionSection.querySelector('p');
+        if (conclusionP) {
+            conclusionP.innerHTML = generatePersonalizedVerdict(agent1, agent2);
+        }
+
+        const verdictPs = conclusionSection.querySelectorAll('.grid p');
+        if (verdictPs && verdictPs.length >= 2) {
+            const verdict1 = agent1.verdict || "";
+            const verdict2 = agent2.verdict || "";
+            verdictPs[0].textContent = `${agent1.name}: ${verdict1}`;
+            verdictPs[1].textContent = `${agent2.name}: ${verdict2}`;
+        }
+    }
+}
                                     // Fonction pour préparer les conteneurs de détails des agents
                                     function prepareAgentDetailsContainers() {
                                         const agent1Details = document.getElementById('agent1Details');
@@ -2860,6 +3273,279 @@ google_site_verification: ""
                                     });
                                 </script>
 
+
+
+
+                                                              <!--Articles and Guides-->
+                                                              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                                                                  <div class="md:col-span-2">
+                                                                      <h3 class="text-2xl font-bold mb-6">Articles Liés à la Comparaison d'Agents</h3>
+                                                                      <div class="space-y-6">
+                                                                          <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                                                                              <div class="md:w-1/3 bg-neutral-800 h-full p-6 flex items-center justify-center">
+                                                                                  <div class="w-24 h-24 rounded-full bg-red-800/30 flex items-center justify-center text-4xl font-bold">VS</div>
+                                                                              </div>
+                                                                              <div class="md:w-2/3 p-6">
+                                                                                  <h4 class="text-xl font-bold mb-2">Duellistes vs. Initiateurs: Qui Choisir?</h4>
+                                                                                  <p class="text-neutral-300 mb-4">Analyse détaillée des forces et faiblesses de chaque rôle et comment choisir selon la carte et la composition d'équipe.</p>
+                                                                                  <div class="flex items-center text-sm text-neutral-400">
+                                                                                      <span class="mr-4">Il y a 3 jours</span>
+                                                                                      <span>12 min de lecture</span>
+                                                                                  </div>
+                                                                                  <a href="#" class="inline-block mt-4 text-red-500 hover:text-red-400 font-medium">Lire l'article →</a>
+                                                                              </div>
+                                                                          </div>
+
+                                                                          <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row">
+                                                                              <div class="md:w-1/3 bg-neutral-800 h-full p-6 flex items-center justify-center">
+                                                                                  <div class="w-24 h-24 rounded-full bg-yellow-800/30 flex items-center justify-center text-4xl font-bold">Top</div>
+                                                                              </div>
+                                                                              <div class="md:w-2/3 p-6">
+                                                                                  <h4 class="text-xl font-bold mb-2">Top 5 des agents à jouer en soloQ en 2025</h4>
+                                                                                  <p class="text-neutral-300 mb-4">Découvrez quels agents ont le plus d'impact en solo queue dans le meta actuel, avec statistiques et conseils à l'appui.</p>
+                                                                                  <div class="flex items-center text-sm text-neutral-400">
+                                                                                      <span class="mr-4">Il y a 1 semaine</span>
+                                                                                      <span>15 min de lecture</span>
+                                                                                  </div>
+                                                                                  <a href="#" class="inline-block mt-4 text-red-500 hover:text-red-400 font-medium">Lire l'article →</a>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+
+                                                                  <div>
+                                                                      <div class="bg-neutral-900 rounded-lg shadow-lg overflow-hidden h-full">
+                                                                          <div class="p-6 border-b border-neutral-700">
+                                                                              <h3 class="text-xl font-bold mb-2">Nos Recommandations</h3>
+                                                                              <p class="text-neutral-300">Améliorez votre gameplay avec ces produits sélectionnés:</p>
+                                                                          </div>
+                                                                          <div class="p-6">
+                                                                              <div class="space-y-6">
+                                                                                  <div class="flex items-start">
+                                                                                      <div class="w-16 h-16 bg-neutral-800 rounded flex-shrink-0 flex items-center justify-center mr-4">
+                                                                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                                                          </svg>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                          <h4 class="font-semibold">ExitLag - Réducteur de Ping</h4>
+                                                                                          <p class="text-sm text-neutral-300 mb-2">Optimisez votre connexion et réduisez la latence pour des réflexes plus rapides.</p>
+                                                                                          <a href="#" class="text-sm text-red-500 hover:text-red-400 flex items-center">
+                                                                                              <span>Essai gratuit</span>
+                                                                                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                                                              </svg>
+                                                                                          </a>
+                                                                                      </div>
+                                                                                  </div>
+
+                                                                                  <div class="flex items-start">
+                                                                                      <div class="w-16 h-16 bg-neutral-800 rounded flex-shrink-0 flex items-center justify-center mr-4">
+                                                                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                                                          </svg>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                          <h4 class="font-semibold">Guide Complet Master Valorant</h4>
+                                                                                          <p class="text-sm text-neutral-300 mb-2">Plus de 200 pages de stratégies pro, setups, lineups et tips pour tous les agents.</p>
+                                                                                          <a href="#" class="text-sm text-red-500 hover:text-red-400 flex items-center">
+                                                                                              <span>Télécharger l'e-book</span>
+                                                                                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                                                              </svg>
+                                                                                          </a>
+                                                                                      </div>
+                                                                                  </div>
+
+                                                                                  <div class="bg-gradient-to-r from-red-900 to-neutral-700 p-4 rounded-lg">
+                                                                                      <h4 class="font-semibold mb-2">Coaching Personnalisé</h4>
+                                                                                      <p class="text-sm text-neutral-200 mb-3">Sessions de coaching 1-on-1 avec des joueurs Immortal+ pour améliorer votre gameplay.</p>
+                                                                                      <div class="flex justify-between items-center">
+                                                                                          <span class="text-sm font-bold">À partir de 25€</span>
+                                                                                          <a href="#" class="text-sm bg-red-600 hover:bg-red-700 text-white py-1 px-3 rounded transition duration-300">Réserver</a>
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                              <!--FAQ Section-->
+                                                                                                    <div class="bg-neutral-900 rounded-lg shadow-lg overflow-hidden mb-16">
+                                                                                                        <div class="p-6 border-b border-neutral-700">
+                                                                                                            <h3 class="text-2xl font-bold">Questions Fréquentes sur les Agents</h3>
+                                                                                                        </div>
+
+                                                                                                        <div class="p-6">
+                                                                                                            <div class="space-y-4">
+                                                                                                                <div class="border-b border-neutral-700 pb-4">
+                                                                                                                    <button class="flex justify-between items-center w-full text-left focus:outline-none" data-faq-toggle>
+                                                                                                                        <h4 class="font-semibold text-lg">Comment choisir le meilleur agent pour mon style de jeu?</h4>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <div class="mt-2 hidden">
+                                                                                                                        <p class="text-neutral-300">Identifiez d'abord votre style de jeu: êtes-vous agressif, stratégique, supportif ou défensif? Ensuite, explorez les agents qui correspondent à ce style: les Duellistes pour un jeu agressif, les Initiateurs pour un jeu stratégique, les Contrôleurs pour le support et les Sentinelles pour la défense. Essayez plusieurs agents dans chaque catégorie pour trouver celui dont les capacités vous semblent les plus intuitives.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div class="border-b border-neutral-700 pb-4">
+                                                                                                                    <button class="flex justify-between items-center w-full text-left focus:outline-none" data-faq-toggle>
+                                                                                                                        <h4 class="font-semibold text-lg">Quels agents sont les plus faciles à apprendre pour les débutants?</h4>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <div class="mt-2 hidden">
+                                                                                                                        <p class="text-neutral-300">Pour les débutants, nous recommandons des agents avec des capacités simples à utiliser: Brimstone (contrôleur) pour ses fumées faciles à placer, Phoenix (duelliste) pour sa polyvalence et ses capacités auto-suffisantes, et Sage (sentinelle) pour son utilité défensive intuitive.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div class="border-b border-neutral-700 pb-4">
+                                                                                                                    <button class="flex justify-between items-center w-full text-left focus:outline-none" data-faq-toggle>
+                                                                                                                        <h4 class="font-semibold text-lg">Quels agents fonctionnent le mieux en soloQ vs. en équipe organisée?</h4>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <div class="mt-2 hidden">
+                                                                                                                        <p class="text-neutral-300">En soloQ, les agents indépendants comme Reyna, Jett et Chamber excellent car ils peuvent créer leurs propres opportunités sans dépendre de l'équipe. En équipe organisée, les agents axés sur la synergie comme Sova, Breach, Astra et Viper deviennent beaucoup plus puissants grâce à la coordination et la communication.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div>
+                                                                                                                    <button class="flex justify-between items-center w-full text-left focus:outline-none" data-faq-toggle>
+                                                                                                                        <h4 class="font-semibold text-lg">À quelle fréquence dois-je changer mon agent principal?</h4>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <div class="mt-2 hidden">
+                                                                                                                        <p class="text-neutral-300">Il n'y a pas de règle stricte, mais il est recommandé de maîtriser au moins 2-3 agents de différents rôles pour s'adapter aux besoins de l'équipe. Après chaque patch majeur, vérifiez si votre agent principal a subi des changements significatifs qui pourraient affecter son efficacité. Si vous atteignez un plateau de progression, essayer un nouvel agent peut vous aider à développer de nouvelles compétences et perspectives.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!--CTA Section-->
+                                        <div class="bg-gradient-to-r from-red-900 to-neutral-800 rounded-lg p-8 shadow-xl relative overflow-hidden">
+                                            <div class="absolute top-0 right-0 w-64 h-64 bg-red-500 rounded-full transform translate-x-1/3 -translate-y-1/3 opacity-20"></div>
+                                            <div class="absolute bottom-0 left-0 w-64 h-64 bg-red-500 rounded-full transform -translate-x-1/3 translate-y-1/3 opacity-20"></div>
+
+                                            <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                                                <div class="flex-1">
+                                                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Trouvez votre Agent Idéal</h3>
+                                                    <p class="text-lg text-neutral-200 mb-6">Répondez à notre questionnaire rapide pour découvrir quel agent correspond parfaitement à votre style de jeu et vos préférences.</p>
+                                                    <div class="flex flex-wrap gap-4">
+                                                        <a href="Test d'Agent.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 flex items-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                                            </svg>
+                                                            Faire le Test
+                                                        </a>
+                                                        <a href="" class="bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 flex items-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                            </svg>
+                                                            Voir les Statistiques
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full md:w-auto flex-shrink-0 md:max-w-xs">
+                                                    <div class="bg-neutral-800 rounded-lg p-5 shadow-lg border border-neutral-700">
+                                                        <h4 class="font-bold text-lg text-center mb-3">Ebook Premium</h4>
+                                                        <div class="aspect-w-3 aspect-h-4 bg-neutral-700 rounded mb-4 flex items-center justify-center">
+                                                            <div class="text-4xl font-bold text-red-500 opacity-30">AGENTS</div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <div class="flex justify-between mb-1">
+                                                                <span class="text-sm">Prix:</span>
+                                                                <span class="text-sm line-through text-neutral-400">19,99€</span>
+                                                            </div>
+                                                            <div class="flex justify-between font-bold">
+                                                                <span>Prix actuel:</span>
+                                                                <span class="text-red-500">9,99€</span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="block w-full bg-gradient-to-r from-red-600 to-red-800 text-white font-bold py-2 rounded text-center hover:from-red-700 hover:to-red-900 transition duration-300">
+                                                            Acheter Maintenant
+                                                        </a>
+                                                        <p class="text-xs text-neutral-400 text-center mt-2">Guide complet de tous les agents</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                </div >
+                                                                                            </section >
+                                                                                        </div >
+
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                                                                // Comparison Tool
+                                                                                                const agent1Select = document.getElementById('agent1');
+                                            const agent2Select = document.getElementById('agent2');
+                                            const compareBtn = document.getElementById('compareBtn');
+                                            const comparisonResults = document.getElementById('comparisonResults');
+
+                                            if (compareBtn) {
+                                                compareBtn.addEventListener('click', function () {
+                                                    // In a real implementation, you would fetch data about the selected agents
+                                                    // and update the comparison results dynamically
+                                                    if (agent1Select.value && agent2Select.value) {
+                                                        comparisonResults.classList.remove('hidden');
+                                                        // Scroll to results
+                                                        comparisonResults.scrollIntoView({ behavior: 'smooth' });
+                                                    } else {
+                                                        alert('Veuillez sélectionner deux agents à comparer');
+                                                    }
+                                                });
+                                                                                                }
+
+                                            // FAQ Toggles
+                                            const faqToggles = document.querySelectorAll('[data-faq-toggle]');
+
+                                                                                                faqToggles.forEach(toggle => {
+                                                toggle.addEventListener('click', function () {
+                                                    const content = this.nextElementSibling;
+                                                    const isHidden = content.classList.contains('hidden');
+
+                                                    // Close all other FAQs
+                                                    document.querySelectorAll('[data-faq-toggle] + div').forEach(div => {
+                                                        div.classList.add('hidden');
+                                                    });
+
+                                                    // Reset all toggle icons
+                                                    document.querySelectorAll('[data-faq-toggle] svg').forEach(svg => {
+                                                        svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />';
+                                                    });
+
+                                                    if (isHidden) {
+                                                        content.classList.remove('hidden');
+                                                        this.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />';
+                                                    }
+                                                });
+                                                                                                });
+
+                                                                                                // Animation on scroll
+                                                                                                const observer = new IntersectionObserver((entries) => {
+                                                entries.forEach(entry => {
+                                                    if (entry.isIntersecting) {
+                                                        entry.target.classList.add('animate__animated');
+                                                        entry.target.classList.add(entry.target.dataset.animation || 'animate__fadeIn');
+                                                    }
+                                                });
+                                                                                                }, {
+                                                threshold: 0.1
+                                                                                                });
+
+                                                                                                document.querySelectorAll('.animate__animated').forEach(element => {
+                                                observer.observe(element);
+                                                                                                });
+                                                                                            });
+                                </script>
 
 
 
