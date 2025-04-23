@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jett: Pourquoi elle domine le méta actuel (2025)"
-date:  2025-04-22 10:00:00 +0100
+date: 2025-04-22 10:00:00 +0100
 category:  Agents
 excerpt: "Une analyse approfondie de Jett, l'agent le plus utilisé dans les tournois professionnels et pourquoi sa mobilité reste inégalée dans le méta actuel."
 image: "https://i.postimg.cc/jjYfGWtb/valorant-ascent-carte-guide.webp"
