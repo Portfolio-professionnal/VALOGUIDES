@@ -17,199 +17,327 @@ google_site_verification: ""
 <element id="9bb9b927-9526-49f6-884e-221dc52bae62" data-section-id="9bb9b927-9526-49f6-884e-221dc52bae62">
 
 <div id="root">
-    <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 text-white pt-28 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center" aria-labelledby="hero-title">
-        <!-- Background Valorant pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="%23ff4655"%3e%3cpath d="M0 .5A.5.5 0 0 1 .5 0h31a.5.5 0 0 1 .5.5v31a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5V.5z"/%3e%3c/svg%3e')] opacity-10"></div>
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-red-950/20 to-slate-900 text-white pt-28 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center" aria-labelledby="hero-title">
+        <!-- Particules Valorant améliorées -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute w-3 h-3 bg-red-500 rounded-full animate-bounce opacity-70" style="top: 15%; left: 10%; animation-delay: 0s; animation-duration: 6s;"></div>
+            <div class="absolute w-2 h-2 bg-cyan-400 rounded-full animate-bounce opacity-50" style="top: 70%; left: 80%; animation-delay: 2s; animation-duration: 8s;"></div>
+            <div class="absolute w-1.5 h-1.5 bg-yellow-400 rounded-full animate-bounce opacity-60" style="top: 30%; left: 75%; animation-delay: 4s; animation-duration: 7s;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full animate-ping opacity-40" style="top: 85%; left: 15%; animation-delay: 1s;"></div>
+            <div class="absolute w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse opacity-50" style="top: 10%; left: 90%; animation-delay: 3s;"></div>
         </div>
 
-        <!-- Geometric shapes -->
+        <!-- Background moderne -->
         <div class="absolute inset-0">
-            <div class="absolute top-20 right-20 w-40 h-40 border-2 border-red-500/20 rotate-45 rounded-lg"></div>
-            <div class="absolute bottom-32 left-16 w-32 h-32 border-2 border-cyan-400/20 rotate-12 rounded-lg"></div>
-            <div class="absolute top-40 left-1/3 w-24 h-24 border-2 border-yellow-400/20 -rotate-12 rounded-lg"></div>
+            <div class="absolute top-0 right-0 w-80 h-80 bg-red-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
         </div>
 
         <div class="container mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2">
-                    <!-- Badge -->
-                    <div class="inline-flex items-center gap-3 bg-red-500/10 border border-red-500/30 rounded-full px-6 py-3 mb-8">
-                        <div class="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
-                        <span class="text-red-400 font-semibold text-sm">PATCH 9.01 • AGENT VYSE</span>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <!-- Badge officiel Riot -->
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 rounded-full font-bold text-sm mb-8 border-2 border-red-500 shadow-lg shadow-red-500/20 animate-pulse">
+                        <div class="w-3 h-3 bg-white rounded-full animate-ping mr-3"></div>
+                        <span class="uppercase tracking-wider">GUIDES OFFICIELS • PATCH 9.01 • ÉPISODE 9</span>
                     </div>
 
-                    <!-- Titre principal -->
-                    <h1 id="hero-title" class="text-6xl md:text-7xl font-black mb-6 leading-tight">
-                        Le blog <span class="text-red-500">Valorant</span>
+                    <!-- Titre principal Valorant -->
+                    <h1 id="hero-title" class="text-7xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tight">
+                        <span class="text-red-500 drop-shadow-[0_0_30px_rgba(239,68,68,0.8)]">VALORANT</span>
                         <br>
-                        qui dit tout
+                        <span class="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">GUIDES</span>
+                        <br>
+                        <span class="text-cyan-400 text-5xl md:text-6xl drop-shadow-[0_0_30px_rgba(34,211,238,0.6)]">ULTRA</span>
                     </h1>
 
-                    <!-- Sous-titre -->
-                    <div class="relative mb-8 h-20">
+                    <!-- Sous-titre rotatif sarcastique -->
+                    <div class="relative mb-8 h-24">
                         <div class="text-rotating absolute inset-0 flex flex-col justify-center">
-                            <p class="text-2xl md:text-3xl text-gray-300 font-semibold mb-2 opacity-100 transition-opacity duration-500" data-text="Guides, tips et stratégies sans bullshit">
-                                Guides, tips et stratégies sans bullshit
+                            <p class="text-2xl md:text-3xl text-gray-300 font-bold mb-2 opacity-100 transition-opacity duration-500 uppercase tracking-wide" data-text="DE IRON À RADIANT : SECRETS DES CHAMPIONS">
+                                DE IRON À RADIANT : SECRETS DES CHAMPIONS
                             </p>
-                            <p class="text-lg text-gray-400 opacity-100 transition-opacity duration-500" data-subtext="Pour arrêter de hardstuck et monter enfin">
-                                Pour arrêter de hardstuck et monter enfin
+                            <p class="text-lg text-gray-400 opacity-100 transition-opacity duration-500 font-medium" data-subtext="Les techniques que les pros cachent (enfin révélées)">
+                                Les techniques que les pros cachent (enfin révélées)
                             </p>
                         </div>
                     </div>
 
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <a href="#latest-articles" class="bg-red-600 hover:bg-red-700 text-white py-4 px-8 rounded-lg font-bold text-lg transition-all hover:scale-105 text-center shadow-lg">
-                            <span class="flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7" />
+                    <!-- CTA Buttons Valorant -->
+                    <div class="flex flex-col sm:flex-row gap-6 mb-12">
+                        <a href="#latest-articles" class="group relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 px-8 rounded-lg font-black text-lg transition-all duration-300 text-center shadow-xl hover:shadow-2xl hover:shadow-red-500/20 transform hover:-translate-y-2 border-2 border-red-500 uppercase tracking-wider">
+                            <span class="relative z-10 flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7" />
                                 </svg>
-                                Voir les guides
+                                MAÎTRISER LES AGENTS
                             </span>
                         </a>
-                        <a href="#agents-overview" class="border-2 border-gray-600 hover:border-red-500 text-gray-300 hover:text-red-500 py-4 px-8 rounded-lg font-bold text-lg transition-all hover:scale-105 text-center">
-                            <span class="flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <a href="#agents-overview" class="group relative bg-transparent border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white py-4 px-8 rounded-lg font-black text-lg transition-all duration-300 text-center transform hover:-translate-y-2 hover:shadow-lg hover:shadow-red-500/20 uppercase tracking-wider">
+                            <span class="flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                 </svg>
-                                Les agents
+                                DOMINER LES MAPS
                             </span>
                         </a>
                     </div>
 
-                    <!-- Barre de recherche intelligente -->
-                    <div class="relative mb-8">
-                        <input type="search" 
-                               id="search-hero"
-                               placeholder="Cherche un agent, une map, un guide..." 
-                               class="w-full py-4 pl-6 pr-12 bg-gray-800 border-2 border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-500 transition-all duration-200">
-                        <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        
-                        <!-- Dropdown suggestions -->
-                        <div id="search-suggestions" class="absolute top-full left-0 right-0 mt-2 bg-gray-800 border border-gray-600 rounded-lg shadow-xl hidden z-50 max-h-80 overflow-y-auto">
-                            <!-- Les suggestions seront injectées ici -->
+                    <!-- Catégories principales Valorant -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 border border-gray-600 hover:border-red-500 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-1 hover:shadow-xl">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-black text-white uppercase tracking-wide">STRATÉGIES ULTRA</div>
+                                    <div class="text-xs text-gray-400 font-medium">Attaque & Défense Pro</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 border border-gray-600 hover:border-cyan-400 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-1 hover:shadow-xl">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-black text-white uppercase tracking-wide">RÉGLAGES CHAMPION</div>
+                                    <div class="text-xs text-gray-400 font-medium">Config Perfectionnée</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Stats simples -->
-                    <div class="grid grid-cols-3 gap-6 text-center">
-                        <div>
-                            <div class="text-3xl font-black text-red-500 mb-1">150+</div>
-                            <div class="text-sm text-gray-400">Articles</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-black text-cyan-400 mb-1">24</div>
-                            <div class="text-sm text-gray-400">Agents</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-black text-yellow-400 mb-1">11</div>
-                            <div class="text-sm text-gray-400">Maps</div>
-                        </div>
+                    <!-- Mise à jour Valorant -->
+                    <div class="flex items-center text-sm text-gray-400 font-medium">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
+                        <span class="text-cyan-400 font-black uppercase tracking-wider">LIVE UPDATE</span>
+                        <span class="mx-2">•</span>
+                        <span>Épisode 9 • Patch 9.01 • Agent VYSE disponible</span>
                     </div>
                 </div>
 
-                <!-- Partie droite - Latest content preview -->
-                <div class="w-full lg:w-1/2">
-                    <div class="bg-gray-800/30 backdrop-blur rounded-2xl border border-gray-700/50 p-8">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                            <span class="text-green-400 font-semibold text-sm">DERNIERS ARTICLES</span>
-                        </div>
+                <div class="w-full md:w-1/2 relative">
+                    <!-- Derniers articles du blog -->
+                    <div class="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur rounded-2xl p-8 border border-gray-600 hover:border-red-500/50 transition-all duration-300">
+                        <h3 class="font-black text-2xl text-white mb-6 uppercase tracking-wide">Derniers Articles</h3>
                         
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors cursor-pointer group">
-                                <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
                                     <span class="text-white font-bold">J</span>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1 group-hover:text-red-400 transition-colors">Comment jouer Jett sans int</h4>
-                                    <p class="text-gray-400 text-sm">Tips pour arrêter de dash dans les murs</p>
-                                    <span class="text-xs text-gray-500">Il y a 2 jours</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white text-sm">Jett : Comment ne plus whiff ses dashes</h4>
+                                    <p class="text-xs text-gray-400">Guide pour arrêter de dash dans les murs</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors cursor-pointer group">
-                                <div class="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                                <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center">
                                     <span class="text-white font-bold">A</span>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">Ascent : arrête de rush mid</h4>
-                                    <p class="text-gray-400 text-sm">Stratégies qui marchent vraiment</p>
-                                    <span class="text-xs text-gray-500">Il y a 5 jours</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white text-sm">Ascent : Pourquoi Mid > Rush A</h4>
+                                    <p class="text-xs text-gray-400">Stratégies pour les têtes brûlées</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors cursor-pointer group">
-                                <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                                <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center">
                                     <span class="text-white font-bold">⚙</span>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Settings pour pas whiff</h4>
-                                    <p class="text-gray-400 text-sm">Config optimale pour ton aim de merde</p>
-                                    <span class="text-xs text-gray-500">Il y a 1 semaine</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white text-sm">Settings : Config pour aim de robot</h4>
+                                    <p class="text-xs text-gray-400">Sensibilité et crosshair optimaux</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-6 text-center">
-                            <a href="#latest" class="text-red-400 hover:text-red-300 font-semibold text-sm inline-flex items-center gap-1 transition-colors">
-                                Voir tout
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        <a href="#blog" class="mt-6 inline-block text-red-400 font-bold text-sm hover:text-red-300 transition-colors">
+                            Voir tous les articles →
+                        </a>
+                    </div>
+
+                    <!-- Barre de recherche fonctionnelle -->
+                    <div class="mt-8">
+                        <div class="relative">
+                            <input type="search"
+                                   id="search-hero"
+                                   placeholder="Recherche Jett, Ascent, lineups..."
+                                   class="w-full py-4 pl-6 pr-16 rounded-xl bg-gray-800/80 backdrop-blur border-2 border-gray-600 focus:outline-none focus:border-red-500 text-white transition-all duration-300 hover:border-red-500/50 placeholder-gray-400 font-medium shadow-xl">
+                            <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 rounded-lg p-3 transition-all duration-300">
+                                <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
-                            </a>
+                            </button>
                         </div>
+                        
+                        <!-- Suggestions de recherche -->
+                        <div id="search-suggestions" class="absolute w-full mt-2 bg-gray-800 border border-gray-600 rounded-lg shadow-xl hidden z-50"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Catégories simplifiées -->
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700 hover:border-red-500 transition-all cursor-pointer group hover:-translate-y-1">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
-                    <div class="text-lg font-bold text-white mb-1">Agents</div>
-                    <div class="text-sm text-gray-400">Comment les jouer</div>
+            <!-- Catégories Ultra Valorant -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 text-center border border-gray-600 hover:border-red-500 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
+                    <div class="text-sm font-black text-white uppercase tracking-wide">AGENTS</div>
+                    <div class="text-xs text-gray-400 font-medium">24 Guides Ultra</div>
                 </div>
-                <div class="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-400 transition-all cursor-pointer group hover:-translate-y-1">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🗺️</div>
-                    <div class="text-lg font-bold text-white mb-1">Maps</div>
-                    <div class="text-sm text-gray-400">Stratégies & callouts</div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 text-center border border-gray-600 hover:border-cyan-400 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🗺️</div>
+                    <div class="text-sm font-black text-white uppercase tracking-wide">MAPS</div>
+                    <div class="text-xs text-gray-400 font-medium">Stratégies Secrètes</div>
                 </div>
-                <div class="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700 hover:border-yellow-400 transition-all cursor-pointer group hover:-translate-y-1">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">⚙️</div>
-                    <div class="text-lg font-bold text-white mb-1">Settings</div>
-                    <div class="text-sm text-gray-400">Config & réglages</div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 text-center border border-gray-600 hover:border-yellow-400 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">⚙️</div>
+                    <div class="text-sm font-black text-white uppercase tracking-wide">SETTINGS</div>
+                    <div class="text-xs text-gray-400 font-medium">Config Champion</div>
                 </div>
-                <div class="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700 hover:border-purple-400 transition-all cursor-pointer group hover:-translate-y-1">
-                    <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">📝</div>
-                    <div class="text-lg font-bold text-white mb-1">Guides</div>
-                    <div class="text-sm text-gray-400">Tips & astuces</div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 text-center border border-gray-600 hover:border-blue-400 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎮</div>
+                    <div class="text-sm font-black text-white uppercase tracking-wide">GAMEPLAY</div>
+                    <div class="text-xs text-gray-400 font-medium">Techniques Avancées</div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-6 text-center border border-gray-600 hover:border-green-400 transition-all duration-300 cursor-pointer group hover:transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📰</div>
+                    <div class="text-sm font-black text-white uppercase tracking-wide">BLOG</div>
+                    <div class="text-xs text-gray-400 font-medium">Articles & News</div>
+                </div>
+            </div>
+
+            <!-- Stats du blog -->
+            <div class="mt-16 grid grid-cols-2 gap-8 text-center">
+                <div class="bg-gradient-to-br from-gray-800/50 to-transparent rounded-xl p-6 border border-gray-700/50">
+                    <div class="text-4xl font-black text-cyan-400 mb-2 drop-shadow-lg">24</div>
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-wider">AGENTS COUVERTS</div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800/50 to-transparent rounded-xl p-6 border border-gray-700/50">
+                    <div class="text-4xl font-black text-yellow-400 mb-2 drop-shadow-lg">11</div>
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-wider">MAPS ANALYSÉES</div>
                 </div>
             </div>
         </div>
     </section>
     
     <script>
-        // Contenu rotatif
+        // Base de données de contenu pour la recherche
+        const searchDatabase = [
+            // Agents
+            { title: 'Jett Guide Ultra Complet', type: 'agent', url: '/agents/jett.html', description: 'Dash mechanics et positioning' },
+            { title: 'Reyna Tips Carry SoloQ', type: 'agent', url: '/agents/reyna.html', description: 'Comment dominer avec Reyna' },
+            { title: 'Sova Lineups Secrets', type: 'agent', url: '/agents/sova.html', description: 'Lineups impossibles révélés' },
+            { title: 'Phoenix Guide Débutant', type: 'agent', url: '/agents/phoenix.html', description: 'Jouer Phoenix sans int' },
+            { title: 'Sage Healing & Wall Tips', type: 'agent', url: '/agents/sage.html', description: 'Support efficace' },
+            { title: 'Viper Post-Plant Setups', type: 'agent', url: '/agents/viper.html', description: 'Contrôle toxic maximal' },
+            
+            // Maps
+            { title: 'Ascent Domination Guide', type: 'map', url: '/maps/ascent.html', description: 'Stratégies site A et B' },
+            { title: 'Bind Téléporteurs Secrets', type: 'map', url: '/maps/bind.html', description: 'Maîtriser les TP' },
+            { title: 'Haven Triple Site Control', type: 'map', url: '/maps/haven.html', description: 'Gérer 3 sites comme un pro' },
+            { title: 'Split Vertical Strategies', type: 'map', url: '/maps/split.html', description: 'Cordes et hauteurs' },
+            { title: 'Icebox Long Range Guide', type: 'map', url: '/maps/icebox.html', description: 'Sniper paradise tips' },
+            
+            // Settings & Tips
+            { title: 'Settings Pro Configuration', type: 'settings', url: '/guides/settings.html', description: 'Config optimale révélée' },
+            { title: 'Sensibilité & Crosshair Guide', type: 'settings', url: '/guides/aim.html', description: 'Aim de robot légal' },
+            { title: 'FPS Optimization Guide', type: 'settings', url: '/guides/fps.html', description: 'Performance maximale' },
+            
+            // Stratégies
+            { title: 'Anti-Eco Strategies', type: 'strategy', url: '/guides/anti-eco.html', description: 'Contrer les eco rounds' },
+            { title: 'Retake Techniques', type: 'strategy', url: '/guides/retake.html', description: 'Comment reprendre un site' },
+            { title: 'Economy Management', type: 'strategy', url: '/guides/eco.html', description: 'Gestion de l\'économie' }
+        ];
+
+        // Fonction de recherche
+        function performSearch(query) {
+            if (query.length < 2) return [];
+            
+            return searchDatabase.filter(item => 
+                item.title.toLowerCase().includes(query.toLowerCase()) ||
+                item.description.toLowerCase().includes(query.toLowerCase()) ||
+                item.type.toLowerCase().includes(query.toLowerCase())
+            ).slice(0, 6); // Limite à 6 résultats
+        }
+
+        // Afficher les suggestions
+        function displaySuggestions(suggestions) {
+            const suggestionsContainer = document.getElementById('search-suggestions');
+            
+            if (suggestions.length === 0) {
+                suggestionsContainer.classList.add('hidden');
+                return;
+            }
+            
+            suggestionsContainer.innerHTML = suggestions.map(item => `
+                <a href="${item.url}" class="block p-4 hover:bg-gray-700 transition-colors border-b border-gray-600 last:border-b-0">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-${getTypeColor(item.type)} rounded-md flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">${getTypeIcon(item.type)}</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-bold text-white text-sm">${item.title}</div>
+                            <div class="text-xs text-gray-400">${item.description}</div>
+                        </div>
+                        <div class="text-xs text-gray-500 uppercase">${item.type}</div>
+                    </div>
+                </a>
+            `).join('');
+            
+            suggestionsContainer.classList.remove('hidden');
+        }
+
+        // Helper functions
+        function getTypeColor(type) {
+            switch(type) {
+                case 'agent': return 'red-500';
+                case 'map': return 'cyan-500';
+                case 'settings': return 'yellow-500';
+                case 'strategy': return 'purple-500';
+                default: return 'gray-500';
+            }
+        }
+
+        function getTypeIcon(type) {
+            switch(type) {
+                case 'agent': return '👤';
+                case 'map': return '🗺️';
+                case 'settings': return '⚙️';
+                case 'strategy': return '📋';
+                default: return '📄';
+            }
+        }
+
+        // Contenu rotatif amélioré avec plus de sarcasme
         const contentRotation = [
             {
-                text: "Guides, tips et stratégies sans bullshit",
-                subtext: "Pour arrêter de hardstuck et monter enfin"
+                text: "DE IRON À RADIANT : SECRETS DES CHAMPIONS",
+                subtext: "Les techniques que les pros cachent (enfin révélées)"
             },
             {
-                text: "Analyses des agents qui claquent vraiment",
-                subtext: "Spoiler : Phoenix n'est toujours pas viable"
+                text: "STRATÉGIES ULTRA POUR TOUTES LES MAPS",
+                subtext: "Executes mortels que personne ne voit venir"
             },
             {
-                text: "Stratégies maps qui marchent en ranked",
-                subtext: "Plus de rush A sans cerveau"
+                text: "RÉGLAGES & CONFIG DES CHAMPIONS DU MONDE",
+                subtext: "Settings parfaits pour aim de robot (légal)"
             },
             {
-                text: "Config et réglages pour pas whiff",
-                subtext: "Parce que ton aim a besoin d'aide"
+                text: "GUIDES SANS BULLSHIT ET CONSEILS VRAIS",
+                subtext: "On dit les vraies choses (pas comme les autres)"
+            },
+            {
+                text: "LINEUPS IMPOSSIBLES & TECHNIQUES INTERDITES",
+                subtext: "Secrets que même Riot ne connaît pas"
             }
         ];
 
@@ -220,6 +348,7 @@ google_site_verification: ""
             const subtextElement = document.querySelector('[data-subtext]');
             
             if (textElement && subtextElement) {
+                // Fade out
                 textElement.style.opacity = '0';
                 subtextElement.style.opacity = '0';
                 
@@ -228,136 +357,51 @@ google_site_verification: ""
                     textElement.textContent = contentRotation[currentContent].text;
                     subtextElement.textContent = contentRotation[currentContent].subtext;
                     
+                    // Fade in
                     textElement.style.opacity = '1';
                     subtextElement.style.opacity = '1';
                 }, 300);
             }
         }
 
-        // Base de données de contenu pour la recherche
-        const searchDatabase = [
-            // Agents
-            {type: 'agent', name: 'Jett', description: 'Guide complet Jett - Dash, positioning, ult', url: '/agents/jett.html'},
-            {type: 'agent', name: 'Reyna', description: 'Comment carry avec Reyna en soloQ', url: '/agents/reyna.html'},
-            {type: 'agent', name: 'Sova', description: 'Lineups Sova pour toutes les maps', url: '/agents/sova.html'},
-            {type: 'agent', name: 'Sage', description: 'Guide Sage - Healing, walls, revive', url: '/agents/sage.html'},
-            {type: 'agent', name: 'Phoenix', description: 'Phoenix guide (si tu y tiens vraiment)', url: '/agents/phoenix.html'},
-            {type: 'agent', name: 'Raze', description: 'Explosions et satchels Raze', url: '/agents/raze.html'},
-            {type: 'agent', name: 'Breach', description: 'Flash et stuns Breach', url: '/agents/breach.html'},
-            {type: 'agent', name: 'Omen', description: 'Smokes et TP Omen', url: '/agents/omen.html'},
-            {type: 'agent', name: 'Viper', description: 'Lineups et walls Viper', url: '/agents/viper.html'},
-            {type: 'agent', name: 'Cypher', description: 'Setups Cypher pour chaque map', url: '/agents/cypher.html'},
-            {type: 'agent', name: 'Killjoy', description: 'Turrets et mollys Killjoy', url: '/agents/killjoy.html'},
-            {type: 'agent', name: 'Skye', description: 'Flash et heal Skye', url: '/agents/skye.html'},
-            
-            // Maps
-            {type: 'map', name: 'Ascent', description: 'Stratégies Ascent - Mid control et executes', url: '/maps/ascent.html'},
-            {type: 'map', name: 'Bind', description: 'Téléporteurs Bind et stratégies', url: '/maps/bind.html'},
-            {type: 'map', name: 'Haven', description: 'Haven 3 sites - Stratégies défense/attaque', url: '/maps/haven.html'},
-            {type: 'map', name: 'Split', description: 'Split callouts et stratégies', url: '/maps/split.html'},
-            {type: 'map', name: 'Icebox', description: 'Icebox ziplines et positioning', url: '/maps/icebox.html'},
-            {type: 'map', name: 'Breeze', description: 'Breeze longues distances et sniper', url: '/maps/breeze.html'},
-            {type: 'map', name: 'Fracture', description: 'Fracture H-design et stratégies', url: '/maps/fracture.html'},
-            {type: 'map', name: 'Pearl', description: 'Pearl callouts et rotations', url: '/maps/pearl.html'},
-            {type: 'map', name: 'Lotus', description: 'Lotus 3 sites et rotations', url: '/maps/lotus.html'},
-            
-            // Guides généraux
-            {type: 'guide', name: 'Sensibilité', description: 'Trouver sa sensibilité parfaite', url: '/guides/sensibilite.html'},
-            {type: 'guide', name: 'Crosshair', description: 'Réglages crosshair optimal', url: '/guides/crosshair.html'},
-            {type: 'guide', name: 'Aim', description: 'Améliorer son aim rapidement', url: '/guides/aim.html'},
-            {type: 'guide', name: 'Ranked', description: 'Monter en ranked efficacement', url: '/guides/ranked.html'},
-            {type: 'guide', name: 'SoloQ', description: 'Survivre à la soloQ', url: '/guides/soloq.html'},
-            {type: 'guide', name: 'Team', description: 'Jouer en équipe', url: '/guides/team.html'},
-            {type: 'guide', name: 'Économie', description: 'Gestion économique Valorant', url: '/guides/economie.html'}
-        ];
-
-        // Fonction de recherche
-        function performSearch(query) {
-            if (!query || query.length < 2) {
-                document.getElementById('search-suggestions').classList.add('hidden');
-                return;
-            }
-            
-            const results = searchDatabase.filter(item => 
-                item.name.toLowerCase().includes(query.toLowerCase()) ||
-                item.description.toLowerCase().includes(query.toLowerCase())
-            ).slice(0, 6);
-            
-            const suggestionsDiv = document.getElementById('search-suggestions');
-            
-            if (results.length > 0) {
-                const html = results.map(item => {
-                    const typeColors = {
-                        agent: 'bg-red-600',
-                        map: 'bg-cyan-600', 
-                        guide: 'bg-yellow-600'
-                    };
-                    
-                    const typeIcons = {
-                        agent: '👤',
-                        map: '🗺️',
-                        guide: '📝'
-                    };
-                    
-                    return `
-                        <a href="${item.url}" class="flex items-center gap-4 p-4 hover:bg-gray-700/50 transition-colors border-b border-gray-700 last:border-0">
-                            <div class="w-10 h-10 ${typeColors[item.type]} rounded-lg flex items-center justify-center text-white text-sm">
-                                ${typeIcons[item.type]}
-                            </div>
-                            <div class="flex-1">
-                                <div class="font-semibold text-white text-sm">${item.name}</div>
-                                <div class="text-gray-400 text-xs">${item.description}</div>
-                            </div>
-                            <div class="text-xs text-gray-500 uppercase">${item.type}</div>
-                        </a>
-                    `;
-                }).join('');
-                
-                suggestionsDiv.innerHTML = html;
-                suggestionsDiv.classList.remove('hidden');
-            } else {
-                suggestionsDiv.innerHTML = `
-                    <div class="p-4 text-center text-gray-400">
-                        <div class="text-2xl mb-2">😅</div>
-                        <div>Aucun résultat pour "${query}"</div>
-                        <div class="text-xs mt-1">Essaie "jett", "ascent" ou "aim"</div>
-                    </div>
-                `;
-                suggestionsDiv.classList.remove('hidden');
-            }
-        }
-
-        // Event listeners
+        // Initialisation de la recherche
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('search-hero');
-            const suggestionsDiv = document.getElementById('search-suggestions');
+            const suggestionsContainer = document.getElementById('search-suggestions');
             
-            // Recherche en temps réel
-            searchInput.addEventListener('input', function() {
-                performSearch(this.value);
-            });
+            if (searchInput) {
+                let searchTimeout;
+                
+                searchInput.addEventListener('input', function() {
+                    const query = this.value.trim();
+                    
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        if (query.length >= 2) {
+                            const suggestions = performSearch(query);
+                            displaySuggestions(suggestions);
+                        } else {
+                            suggestionsContainer.classList.add('hidden');
+                        }
+                    }, 200);
+                });
+                
+                // Cacher suggestions si clic ailleurs
+                document.addEventListener('click', function(e) {
+                    if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+                        suggestionsContainer.classList.add('hidden');
+                    }
+                });
+            }
             
-            // Cacher les suggestions quand on clique ailleurs
-            document.addEventListener('click', function(e) {
-                if (!searchInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
-                    suggestionsDiv.classList.add('hidden');
-                }
-            });
-            
-            // Montrer les suggestions au focus
-            searchInput.addEventListener('focus', function() {
-                if (this.value.length >= 2) {
-                    performSearch(this.value);
-                }
-            });
-            
-            // Rotation du contenu toutes les 4 secondes
-            setInterval(rotateContent, 4000);
+            // Rotation du contenu toutes les 5 secondes
+            setInterval(rotateContent, 5000);
         });
     </script>
 </div>
 
 </element>
+
 
 <element id="01429ff6-57b5-4159-9dab-8c4079117932" data-section-id="01429ff6-57b5-4159-9dab-8c4079117932">
 
