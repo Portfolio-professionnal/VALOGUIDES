@@ -24,6 +24,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+      :root {
+  --primary: #FF4655;
+  --primary-light: #FF6B7A;
+  --primary-dark: #E03E4A;
+  --secondary: #426BFF;
+  --neutral-900: #0F1923;
+  --neutral-800: #1F2731;
+  --neutral-700: #363B4A;
+}
+
+.badge-primary { @apply bg-red-500/20 text-red-400 text-xs px-3 py-1 rounded-full font-medium; }
+.badge-secondary { @apply bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full font-medium; }
+.badge-neutral { @apply bg-gray-500/20 text-gray-400 text-xs px-3 py-1 rounded-full font-medium; }
+.card-standard { @apply bg-neutral-800 border border-neutral-700 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300; }
+
+/* Le reste de ton CSS existant... */
+.particle {
+    animation: float 6s ease-in-out infinite;
+}
 
         h1, h2, h3, h4, h5, h6 {
             font-family: "Rubik", sans-serif !important;
@@ -32,6 +51,7 @@
         body, div, p {
             font-family: "Inter", sans-serif !important;
         }
+      
     </style>
 
 
